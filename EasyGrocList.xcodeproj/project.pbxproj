@@ -1,0 +1,1230 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB0C53801AE65AD00089968D /* Grocery_list_icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0C537F1AE65AD00089968D /* Grocery_list_icon_120.png */; };
+		DB0C53821AE65BA70089968D /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0C53811AE65BA70089968D /* Icon-60@2x.png */; };
+		DB3940E11BB4B12F004D601E /* EasyGrocTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3940E01BB4B12F004D601E /* EasyGrocTranslator.m */; };
+		DB3940E41BB84796004D601E /* EasyGrocDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3940E31BB84796004D601E /* EasyGrocDecoder.m */; };
+		DB5079D11B25B72E0094838A /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5079D01B25B72E0094838A /* KeychainItemWrapper.m */; };
+		DB5079D41B25B7910094838A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5079D31B25B7910094838A /* Security.framework */; };
+		DB51F69F1ADD365500C3ADB7 /* InAppPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = DB51F69E1ADD365500C3ADB7 /* InAppPurchase.m */; };
+		DB51F6A41ADDC9BB00C3ADB7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB51F6A31ADDC9BB00C3ADB7 /* StoreKit.framework */; };
+		DB7BFAFA1C1D936900D68CEE /* IsSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7BFAF81C1D936900D68CEE /* IsSelected.png */; };
+		DB7BFAFB1C1D936900D68CEE /* NotSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7BFAF91C1D936900D68CEE /* NotSelected.png */; };
+		DB82B4C4175A12C2005CDC73 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB82B4BE175A12C1005CDC73 /* Photo.m */; };
+		DB82B4C5175A12C2005CDC73 /* PhotoDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB82B4C0175A12C1005CDC73 /* PhotoDisplayViewController.m */; };
+		DB82B4C6175A12C2005CDC73 /* PhotoDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB82B4C1175A12C2005CDC73 /* PhotoDisplayViewController.xib */; };
+		DB82B4C7175A12C2005CDC73 /* TapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB82B4C3175A12C2005CDC73 /* TapDetectingImageView.m */; };
+		DB82B4CB175A24F1005CDC73 /* SlideScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB82B4CA175A24F1005CDC73 /* SlideScrollView.m */; };
+		DB881C6C1C62E5DA00A2D0EA /* libsharing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB881C691C62E2DF00A2D0EA /* libsharing.a */; };
+		DBA254051BF3C4C900E04844 /* EasyGrocContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA254031BF3C4C900E04844 /* EasyGrocContactsViewController.m */; };
+		DBA254061BF3C4C900E04844 /* EasyGrocContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA254041BF3C4C900E04844 /* EasyGrocContactsViewController.xib */; };
+		DBB936FD1AE3CA4D00F1AD3B /* WRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB936FC1AE3CA4D00F1AD3B /* WRowController.m */; };
+		DBBA05EE1AABB40F001E9959 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA05ED1AABB40F001E9959 /* InterfaceController.m */; };
+		DBBA05F11AABB40F001E9959 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA05F01AABB40F001E9959 /* NotificationController.m */; };
+		DBBA05F41AABB40F001E9959 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA05F31AABB40F001E9959 /* GlanceController.m */; };
+		DBBA06021AABB40F001E9959 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBA06001AABB40F001E9959 /* Interface.storyboard */; };
+		DBBA06131AADABC4001E9959 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBA06121AADABC4001E9959 /* WatchKit.framework */; };
+		DBBA06181AD203A7001E9959 /* EasyGrocList.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = DBE8528316E0168600F709E7 /* EasyGrocList.xcdatamodeld */; };
+		DBBA061B1AD2A491001E9959 /* DataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA061A1AD2A491001E9959 /* DataAccessor.m */; };
+		DBBA061E1AD350E6001E9959 /* ListNames.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA061D1AD350E6001E9959 /* ListNames.m */; };
+		DBBA06211AD351FF001E9959 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA06201AD351FF001E9959 /* List.m */; };
+		DBBF2BAC16EF4E170083912F /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BAA16EF4E170083912F /* AddViewController.m */; };
+		DBBF2BAD16EF4E170083912F /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BAB16EF4E170083912F /* AddViewController.xib */; };
+		DBBF2BB81701B9580083912F /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BB71701B9570083912F /* camera.png */; };
+		DBBF2BBB1708F66D0083912F /* MasterList.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BBA1708F66D0083912F /* MasterList.m */; };
+		DBBF2BBF170AF7B20083912F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BBD170AF7B10083912F /* ListViewController.m */; };
+		DBBF2BC0170AF7B20083912F /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BBE170AF7B10083912F /* ListViewController.xib */; };
+		DBBF2BC3170C49230083912F /* MasterListNames.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BC2170C49230083912F /* MasterListNames.m */; };
+		DBBF2BC6170EEDB30083912F /* DataOps.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BC5170EEDB30083912F /* DataOps.m */; };
+		DBBF2BC9170EEF1D0083912F /* LocalMasterListNames.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BC8170EEF1C0083912F /* LocalMasterListNames.m */; };
+		DBBF2BCC170EEF6E0083912F /* LocalMasterList.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BCB170EEF6E0083912F /* LocalMasterList.m */; };
+		DBBF2BD0172D28280083912F /* TemplListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BCE172D28270083912F /* TemplListViewController.m */; };
+		DBBF2BD1172D28280083912F /* TemplListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BCF172D28280083912F /* TemplListViewController.xib */; };
+		DBBF2BD71737CE310083912F /* delete_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BD61737CE300083912F /* delete_button.png */; };
+		DBBF2BF21749749E0083912F /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BF11749749D0083912F /* List.m */; };
+		DBBF2BF5174978ED0083912F /* ListNames.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BF4174978EC0083912F /* ListNames.m */; };
+		DBBF2BF917497B760083912F /* List1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BF717497B730083912F /* List1ViewController.m */; };
+		DBBF2BFA17497B760083912F /* List1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BF817497B750083912F /* List1ViewController.xib */; };
+		DBBF2BFE175442A30083912F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BFC175442A10083912F /* MainViewController.m */; };
+		DBBF2BFF175442A30083912F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BFD175442A20083912F /* MainViewController.xib */; };
+		DBBF2C051756B5510083912F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBF2C041756B5500083912F /* MobileCoreServices.framework */; };
+		DBDCDB141BF04432001A277A /* 895-user-group@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDCDB121BF04432001A277A /* 895-user-group@2x.png */; };
+		DBDCDB151BF04432001A277A /* 895-user-group@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDCDB131BF04432001A277A /* 895-user-group@3x.png */; };
+		DBDCDB181BF04473001A277A /* 895-user-group-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDCDB161BF04473001A277A /* 895-user-group-selected@2x.png */; };
+		DBDCDB191BF04473001A277A /* 895-user-group-selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDCDB171BF04473001A277A /* 895-user-group-selected@3x.png */; };
+		DBDCDB1B1BF05505001A277A /* 802-dog-house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDCDB1A1BF05505001A277A /* 802-dog-house@2x.png */; };
+		DBDCDB1D1BF0551F001A277A /* 802-dog-house-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDCDB1C1BF0551F001A277A /* 802-dog-house-selected@2x.png */; };
+		DBDCDB201BF0C5D5001A277A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDCDB1F1BF0C5D5001A277A /* HomeViewController.m */; };
+		DBE8526A16E0168600F709E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8526916E0168600F709E7 /* UIKit.framework */; };
+		DBE8526C16E0168600F709E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8526B16E0168600F709E7 /* Foundation.framework */; };
+		DBE8526E16E0168600F709E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8526D16E0168600F709E7 /* CoreGraphics.framework */; };
+		DBE8527016E0168600F709E7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8526F16E0168600F709E7 /* CoreData.framework */; };
+		DBE8527616E0168600F709E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBE8527416E0168600F709E7 /* InfoPlist.strings */; };
+		DBE8527816E0168600F709E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE8527716E0168600F709E7 /* main.m */; };
+		DBE8527C16E0168600F709E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE8527B16E0168600F709E7 /* AppDelegate.m */; };
+		DBE8527E16E0168600F709E7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE8527D16E0168600F709E7 /* Default.png */; };
+		DBE8528016E0168600F709E7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE8527F16E0168600F709E7 /* Default@2x.png */; };
+		DBE8528216E0168600F709E7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE8528116E0168600F709E7 /* Default-568h@2x.png */; };
+		DBE8528516E0168600F709E7 /* EasyGrocList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBE8528316E0168600F709E7 /* EasyGrocList.xcdatamodeld */; };
+		DBE8528E16E0168700F709E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8526916E0168600F709E7 /* UIKit.framework */; };
+		DBE8528F16E0168700F709E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8526B16E0168600F709E7 /* Foundation.framework */; };
+		DBE8529016E0168700F709E7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8526F16E0168600F709E7 /* CoreData.framework */; };
+		DBE8529816E0168700F709E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBE8529616E0168700F709E7 /* InfoPlist.strings */; };
+		DBE8529B16E0168700F709E7 /* EasyGrocListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE8529A16E0168700F709E7 /* EasyGrocListTests.m */; };
+		DBE852AF16E6BBC400F709E7 /* MainListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE852AD16E6BBC400F709E7 /* MainListViewController.m */; };
+		DBE852B016E6BBC400F709E7 /* MainListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE852AE16E6BBC400F709E7 /* MainListViewController.xib */; };
+		DBF61DA31BB175780093B83A /* EasyGrocShareMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF61DA21BB175780093B83A /* EasyGrocShareMgr.m */; };
+		DBFCDACA1AE740B400E7D683 /* Grocery_list_icon_180.png in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDAC91AE740B400E7D683 /* Grocery_list_icon_180.png */; };
+		DBFCDAD01AE7453300E7D683 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDACF1AE7453300E7D683 /* Images.xcassets */; };
+		DBFCDAD31AE7531200E7D683 /* Images_watchkit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */; };
+		DBFCDAD41AE7541000E7D683 /* Images_watchkit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */; };
+		E9ECCBBD1C704FFD004D68E9 /* EasyGrocList WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DBBA05E71AABB40F001E9959 /* EasyGrocList WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E9ECCBC01C704FFD004D68E9 /* EasyGrocList WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DBBA05F91AABB40F001E9959 /* EasyGrocList WatchKit App.app */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB881C681C62E2DF00A2D0EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB881C631C62E2DF00A2D0EA /* sharing.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DB881C3A1C5F0E4A00A2D0EA;
+			remoteInfo = sharing;
+		};
+		DB881C6A1C62E2F000A2D0EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB881C631C62E2DF00A2D0EA /* sharing.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DB881C391C5F0E4A00A2D0EA;
+			remoteInfo = sharing;
+		};
+		DBE8529116E0168700F709E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBE8525C16E0168600F709E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBE8526416E0168600F709E7;
+			remoteInfo = EasyGrocList;
+		};
+		E9ECCBBB1C704FFD004D68E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBE8525C16E0168600F709E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBBA05E61AABB40F001E9959;
+			remoteInfo = "EasyGrocList WatchKit Extension";
+		};
+		E9ECCBBE1C704FFD004D68E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBE8525C16E0168600F709E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBBA05F81AABB40F001E9959;
+			remoteInfo = "EasyGrocList WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E9ECCBC11C704FFD004D68E9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E9ECCBBD1C704FFD004D68E9 /* EasyGrocList WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9ECCBC21C704FFD004D68E9 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E9ECCBC01C704FFD004D68E9 /* EasyGrocList WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DB0C537F1AE65AD00089968D /* Grocery_list_icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grocery_list_icon_120.png; path = Images/Grocery_list_icon_120.png; sourceTree = SOURCE_ROOT; };
+		DB0C53811AE65BA70089968D /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "Images/Icon-60@2x.png"; sourceTree = SOURCE_ROOT; };
+		DB3940DF1BB4B12F004D601E /* EasyGrocTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyGrocTranslator.h; sourceTree = "<group>"; };
+		DB3940E01BB4B12F004D601E /* EasyGrocTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyGrocTranslator.m; sourceTree = "<group>"; };
+		DB3940E21BB84796004D601E /* EasyGrocDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyGrocDecoder.h; sourceTree = "<group>"; };
+		DB3940E31BB84796004D601E /* EasyGrocDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyGrocDecoder.m; sourceTree = "<group>"; };
+		DB3940E51BB8AF57004D601E /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		DB5079D01B25B72E0094838A /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		DB5079D21B25B74B0094838A /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		DB5079D31B25B7910094838A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DB51F69E1ADD365500C3ADB7 /* InAppPurchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchase.m; sourceTree = "<group>"; };
+		DB51F6A01ADD366900C3ADB7 /* InAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchase.h; sourceTree = "<group>"; };
+		DB51F6A31ADDC9BB00C3ADB7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DB7BFAF81C1D936900D68CEE /* IsSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IsSelected.png; sourceTree = "<group>"; };
+		DB7BFAF91C1D936900D68CEE /* NotSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotSelected.png; sourceTree = "<group>"; };
+		DB82B4BD175A12C1005CDC73 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		DB82B4BE175A12C1005CDC73 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		DB82B4BF175A12C1005CDC73 /* PhotoDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDisplayViewController.h; sourceTree = "<group>"; };
+		DB82B4C0175A12C1005CDC73 /* PhotoDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDisplayViewController.m; sourceTree = "<group>"; };
+		DB82B4C1175A12C2005CDC73 /* PhotoDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoDisplayViewController.xib; sourceTree = "<group>"; };
+		DB82B4C2175A12C2005CDC73 /* TapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDetectingImageView.h; sourceTree = "<group>"; };
+		DB82B4C3175A12C2005CDC73 /* TapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDetectingImageView.m; sourceTree = "<group>"; };
+		DB82B4C9175A24F1005CDC73 /* SlideScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideScrollView.h; sourceTree = "<group>"; };
+		DB82B4CA175A24F1005CDC73 /* SlideScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideScrollView.m; sourceTree = "<group>"; };
+		DB881C631C62E2DF00A2D0EA /* sharing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sharing.xcodeproj; path = ../sharing/sharing.xcodeproj; sourceTree = "<group>"; };
+		DBA254021BF3C4C900E04844 /* EasyGrocContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyGrocContactsViewController.h; sourceTree = "<group>"; };
+		DBA254031BF3C4C900E04844 /* EasyGrocContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyGrocContactsViewController.m; sourceTree = "<group>"; };
+		DBA254041BF3C4C900E04844 /* EasyGrocContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EasyGrocContactsViewController.xib; sourceTree = "<group>"; };
+		DBB936FC1AE3CA4D00F1AD3B /* WRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRowController.m; sourceTree = "<group>"; };
+		DBBA05E71AABB40F001E9959 /* EasyGrocList WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EasyGrocList WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBBA05EA1AABB40F001E9959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBBA05EB1AABB40F001E9959 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		DBBA05EC1AABB40F001E9959 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		DBBA05ED1AABB40F001E9959 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		DBBA05EF1AABB40F001E9959 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		DBBA05F01AABB40F001E9959 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		DBBA05F21AABB40F001E9959 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		DBBA05F31AABB40F001E9959 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		DBBA05F91AABB40F001E9959 /* EasyGrocList WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EasyGrocList WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBBA05FF1AABB40F001E9959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBBA06011AABB40F001E9959 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		DBBA06121AADABC4001E9959 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		DBBA06141AADB334001E9959 /* WRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRowController.h; sourceTree = "<group>"; };
+		DBBA06171AC030BA001E9959 /* EasyGrocList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = EasyGrocList.entitlements; sourceTree = "<group>"; };
+		DBBA06191AD2A491001E9959 /* DataAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataAccessor.h; sourceTree = "<group>"; };
+		DBBA061A1AD2A491001E9959 /* DataAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataAccessor.m; sourceTree = "<group>"; };
+		DBBA061C1AD350E6001E9959 /* ListNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListNames.h; sourceTree = "<group>"; };
+		DBBA061D1AD350E6001E9959 /* ListNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListNames.m; sourceTree = "<group>"; };
+		DBBA061F1AD351FF001E9959 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
+		DBBA06201AD351FF001E9959 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
+		DBBA06221AD7F152001E9959 /* EasyGrocList WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "EasyGrocList WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		DBBF2BA916EF4E170083912F /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		DBBF2BAA16EF4E170083912F /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		DBBF2BAB16EF4E170083912F /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
+		DBBF2BB71701B9570083912F /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = Images/camera.png; sourceTree = SOURCE_ROOT; };
+		DBBF2BB91708F66D0083912F /* MasterList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterList.h; sourceTree = "<group>"; };
+		DBBF2BBA1708F66D0083912F /* MasterList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterList.m; sourceTree = "<group>"; };
+		DBBF2BBC170AF7B10083912F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		DBBF2BBD170AF7B10083912F /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		DBBF2BBE170AF7B10083912F /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		DBBF2BC1170C49220083912F /* MasterListNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterListNames.h; sourceTree = "<group>"; };
+		DBBF2BC2170C49230083912F /* MasterListNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterListNames.m; sourceTree = "<group>"; };
+		DBBF2BC4170EEDB20083912F /* DataOps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataOps.h; sourceTree = "<group>"; };
+		DBBF2BC5170EEDB30083912F /* DataOps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataOps.m; sourceTree = "<group>"; };
+		DBBF2BC7170EEF1C0083912F /* LocalMasterListNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalMasterListNames.h; sourceTree = "<group>"; };
+		DBBF2BC8170EEF1C0083912F /* LocalMasterListNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalMasterListNames.m; sourceTree = "<group>"; };
+		DBBF2BCA170EEF6D0083912F /* LocalMasterList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalMasterList.h; sourceTree = "<group>"; };
+		DBBF2BCB170EEF6E0083912F /* LocalMasterList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalMasterList.m; sourceTree = "<group>"; };
+		DBBF2BCD172D28270083912F /* TemplListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplListViewController.h; sourceTree = "<group>"; };
+		DBBF2BCE172D28270083912F /* TemplListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplListViewController.m; sourceTree = "<group>"; };
+		DBBF2BCF172D28280083912F /* TemplListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemplListViewController.xib; sourceTree = "<group>"; };
+		DBBF2BD61737CE300083912F /* delete_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = delete_button.png; path = Images/delete_button.png; sourceTree = SOURCE_ROOT; };
+		DBBF2BF01749749C0083912F /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
+		DBBF2BF11749749D0083912F /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
+		DBBF2BF3174978EC0083912F /* ListNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListNames.h; sourceTree = "<group>"; };
+		DBBF2BF4174978EC0083912F /* ListNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListNames.m; sourceTree = "<group>"; };
+		DBBF2BF617497B730083912F /* List1ViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = List1ViewController.h; sourceTree = "<group>"; };
+		DBBF2BF717497B730083912F /* List1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List1ViewController.m; sourceTree = "<group>"; };
+		DBBF2BF817497B750083912F /* List1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = List1ViewController.xib; sourceTree = "<group>"; };
+		DBBF2BFB175442A00083912F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		DBBF2BFC175442A10083912F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		DBBF2BFD175442A20083912F /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		DBBF2C041756B5500083912F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		DBDCDB121BF04432001A277A /* 895-user-group@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "895-user-group@2x.png"; sourceTree = "<group>"; };
+		DBDCDB131BF04432001A277A /* 895-user-group@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "895-user-group@3x.png"; sourceTree = "<group>"; };
+		DBDCDB161BF04473001A277A /* 895-user-group-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "895-user-group-selected@2x.png"; sourceTree = "<group>"; };
+		DBDCDB171BF04473001A277A /* 895-user-group-selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "895-user-group-selected@3x.png"; sourceTree = "<group>"; };
+		DBDCDB1A1BF05505001A277A /* 802-dog-house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "802-dog-house@2x.png"; sourceTree = "<group>"; };
+		DBDCDB1C1BF0551F001A277A /* 802-dog-house-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "802-dog-house-selected@2x.png"; sourceTree = "<group>"; };
+		DBDCDB1E1BF0C5D5001A277A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		DBDCDB1F1BF0C5D5001A277A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		DBE8526516E0168600F709E7 /* EasyGrocList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyGrocList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBE8526916E0168600F709E7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DBE8526B16E0168600F709E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DBE8526D16E0168600F709E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DBE8526F16E0168600F709E7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DBE8527316E0168600F709E7 /* EasyGrocList-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EasyGrocList-Info.plist"; sourceTree = "<group>"; };
+		DBE8527516E0168600F709E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DBE8527716E0168600F709E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBE8527916E0168600F709E7 /* EasyGrocList-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyGrocList-Prefix.pch"; sourceTree = "<group>"; };
+		DBE8527A16E0168600F709E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DBE8527B16E0168600F709E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DBE8527D16E0168600F709E7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DBE8527F16E0168600F709E7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DBE8528116E0168600F709E7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DBE8528416E0168600F709E7 /* EasyGrocList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EasyGrocList.xcdatamodel; sourceTree = "<group>"; };
+		DBE8528B16E0168700F709E7 /* EasyGrocListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyGrocListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBE8529516E0168700F709E7 /* EasyGrocListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EasyGrocListTests-Info.plist"; sourceTree = "<group>"; };
+		DBE8529716E0168700F709E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DBE8529916E0168700F709E7 /* EasyGrocListTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyGrocListTests.h; sourceTree = "<group>"; };
+		DBE8529A16E0168700F709E7 /* EasyGrocListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyGrocListTests.m; sourceTree = "<group>"; };
+		DBE852AC16E6BBC300F709E7 /* MainListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainListViewController.h; sourceTree = "<group>"; };
+		DBE852AD16E6BBC400F709E7 /* MainListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainListViewController.m; sourceTree = "<group>"; };
+		DBE852AE16E6BBC400F709E7 /* MainListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainListViewController.xib; sourceTree = "<group>"; };
+		DBF61DA11BB175780093B83A /* EasyGrocShareMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyGrocShareMgr.h; sourceTree = "<group>"; };
+		DBF61DA21BB175780093B83A /* EasyGrocShareMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyGrocShareMgr.m; sourceTree = "<group>"; };
+		DBFCDAC91AE740B400E7D683 /* Grocery_list_icon_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grocery_list_icon_180.png; sourceTree = "<group>"; };
+		DBFCDACF1AE7453300E7D683 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images_watchkit.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBBA05E41AABB40F001E9959 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE8526216E0168600F709E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB881C6C1C62E5DA00A2D0EA /* libsharing.a in Frameworks */,
+				DB5079D41B25B7910094838A /* Security.framework in Frameworks */,
+				DB51F6A41ADDC9BB00C3ADB7 /* StoreKit.framework in Frameworks */,
+				DBBA06131AADABC4001E9959 /* WatchKit.framework in Frameworks */,
+				DBBF2C051756B5510083912F /* MobileCoreServices.framework in Frameworks */,
+				DBE8526A16E0168600F709E7 /* UIKit.framework in Frameworks */,
+				DBE8526C16E0168600F709E7 /* Foundation.framework in Frameworks */,
+				DBE8526E16E0168600F709E7 /* CoreGraphics.framework in Frameworks */,
+				DBE8527016E0168600F709E7 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE8528716E0168700F709E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBE8528E16E0168700F709E7 /* UIKit.framework in Frameworks */,
+				DBE8528F16E0168700F709E7 /* Foundation.framework in Frameworks */,
+				DBE8529016E0168700F709E7 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB881C641C62E2DF00A2D0EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB881C691C62E2DF00A2D0EA /* libsharing.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBBA05E81AABB40F001E9959 /* EasyGrocList WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DBBA06141AADB334001E9959 /* WRowController.h */,
+				DBB936FC1AE3CA4D00F1AD3B /* WRowController.m */,
+				DBBA06221AD7F152001E9959 /* EasyGrocList WatchKit Extension.entitlements */,
+				DBBA061A1AD2A491001E9959 /* DataAccessor.m */,
+				DBBA06191AD2A491001E9959 /* DataAccessor.h */,
+				DBBA05EC1AABB40F001E9959 /* InterfaceController.h */,
+				DBBA05ED1AABB40F001E9959 /* InterfaceController.m */,
+				DBBA05EF1AABB40F001E9959 /* NotificationController.h */,
+				DBBA05F01AABB40F001E9959 /* NotificationController.m */,
+				DBBA05F21AABB40F001E9959 /* GlanceController.h */,
+				DBBA05F31AABB40F001E9959 /* GlanceController.m */,
+				DBBA05E91AABB40F001E9959 /* Supporting Files */,
+				DBBA061C1AD350E6001E9959 /* ListNames.h */,
+				DBBA061D1AD350E6001E9959 /* ListNames.m */,
+				DBBA061F1AD351FF001E9959 /* List.h */,
+				DBBA06201AD351FF001E9959 /* List.m */,
+			);
+			path = "EasyGrocList WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		DBBA05E91AABB40F001E9959 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBBA05EA1AABB40F001E9959 /* Info.plist */,
+				DBBA05EB1AABB40F001E9959 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBBA05FD1AABB40F001E9959 /* EasyGrocList WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				DBBA06001AABB40F001E9959 /* Interface.storyboard */,
+				DBBA05FE1AABB40F001E9959 /* Supporting Files */,
+				DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */,
+			);
+			path = "EasyGrocList WatchKit App";
+			sourceTree = "<group>";
+		};
+		DBBA05FE1AABB40F001E9959 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBBA05FF1AABB40F001E9959 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBE8525A16E0168600F709E7 = {
+			isa = PBXGroup;
+			children = (
+				DB881C631C62E2DF00A2D0EA /* sharing.xcodeproj */,
+				DBFCDAC91AE740B400E7D683 /* Grocery_list_icon_180.png */,
+				DBE8527116E0168600F709E7 /* EasyGrocList */,
+				DBE8529316E0168700F709E7 /* EasyGrocListTests */,
+				DBBA05E81AABB40F001E9959 /* EasyGrocList WatchKit Extension */,
+				DBBA05FD1AABB40F001E9959 /* EasyGrocList WatchKit App */,
+				DBE8526816E0168600F709E7 /* Frameworks */,
+				DBE8526616E0168600F709E7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBE8526616E0168600F709E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBE8526516E0168600F709E7 /* EasyGrocList.app */,
+				DBE8528B16E0168700F709E7 /* EasyGrocListTests.xctest */,
+				DBBA05E71AABB40F001E9959 /* EasyGrocList WatchKit Extension.appex */,
+				DBBA05F91AABB40F001E9959 /* EasyGrocList WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBE8526816E0168600F709E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB5079D31B25B7910094838A /* Security.framework */,
+				DB51F6A31ADDC9BB00C3ADB7 /* StoreKit.framework */,
+				DBBA06121AADABC4001E9959 /* WatchKit.framework */,
+				DBBF2C041756B5500083912F /* MobileCoreServices.framework */,
+				DBE8526916E0168600F709E7 /* UIKit.framework */,
+				DBE8526B16E0168600F709E7 /* Foundation.framework */,
+				DBE8526D16E0168600F709E7 /* CoreGraphics.framework */,
+				DBE8526F16E0168600F709E7 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBE8527116E0168600F709E7 /* EasyGrocList */ = {
+			isa = PBXGroup;
+			children = (
+				DB5079D21B25B74B0094838A /* KeychainItemWrapper.h */,
+				DB5079D01B25B72E0094838A /* KeychainItemWrapper.m */,
+				DBBA06171AC030BA001E9959 /* EasyGrocList.entitlements */,
+				DBBF2BFD175442A20083912F /* MainViewController.xib */,
+				DB82B4BD175A12C1005CDC73 /* Photo.h */,
+				DB82B4BE175A12C1005CDC73 /* Photo.m */,
+				DB82B4BF175A12C1005CDC73 /* PhotoDisplayViewController.h */,
+				DB82B4C0175A12C1005CDC73 /* PhotoDisplayViewController.m */,
+				DB82B4C9175A24F1005CDC73 /* SlideScrollView.h */,
+				DB82B4CA175A24F1005CDC73 /* SlideScrollView.m */,
+				DB82B4C1175A12C2005CDC73 /* PhotoDisplayViewController.xib */,
+				DB82B4C2175A12C2005CDC73 /* TapDetectingImageView.h */,
+				DB82B4C3175A12C2005CDC73 /* TapDetectingImageView.m */,
+				DBBF2BF617497B730083912F /* List1ViewController.h */,
+				DBBF2BF717497B730083912F /* List1ViewController.m */,
+				DBBF2BBC170AF7B10083912F /* ListViewController.h */,
+				DBBF2BBD170AF7B10083912F /* ListViewController.m */,
+				DBBF2BC4170EEDB20083912F /* DataOps.h */,
+				DBBF2BC5170EEDB30083912F /* DataOps.m */,
+				DBBF2BF817497B750083912F /* List1ViewController.xib */,
+				DBBF2BBE170AF7B10083912F /* ListViewController.xib */,
+				DBE852AE16E6BBC400F709E7 /* MainListViewController.xib */,
+				DBBF2BCE172D28270083912F /* TemplListViewController.m */,
+				DBBF2BCF172D28280083912F /* TemplListViewController.xib */,
+				DBBF2BCD172D28270083912F /* TemplListViewController.h */,
+				DB51F6A01ADD366900C3ADB7 /* InAppPurchase.h */,
+				DB51F69E1ADD365500C3ADB7 /* InAppPurchase.m */,
+				DBBF2BA916EF4E170083912F /* AddViewController.h */,
+				DBBF2BAA16EF4E170083912F /* AddViewController.m */,
+				DBBF2BAB16EF4E170083912F /* AddViewController.xib */,
+				DBE8528316E0168600F709E7 /* EasyGrocList.xcdatamodeld */,
+				DBBF2BC1170C49220083912F /* MasterListNames.h */,
+				DBBF2BC7170EEF1C0083912F /* LocalMasterListNames.h */,
+				DBBF2BCA170EEF6D0083912F /* LocalMasterList.h */,
+				DB3940E51BB8AF57004D601E /* Constants.h */,
+				DBF61DA11BB175780093B83A /* EasyGrocShareMgr.h */,
+				DBF61DA21BB175780093B83A /* EasyGrocShareMgr.m */,
+				DB3940DF1BB4B12F004D601E /* EasyGrocTranslator.h */,
+				DB3940E01BB4B12F004D601E /* EasyGrocTranslator.m */,
+				DB3940E21BB84796004D601E /* EasyGrocDecoder.h */,
+				DB3940E31BB84796004D601E /* EasyGrocDecoder.m */,
+				DBE8527A16E0168600F709E7 /* AppDelegate.h */,
+				DBE8527B16E0168600F709E7 /* AppDelegate.m */,
+				DBBF2BCB170EEF6E0083912F /* LocalMasterList.m */,
+				DBBF2BC8170EEF1C0083912F /* LocalMasterListNames.m */,
+				DBBF2BC2170C49230083912F /* MasterListNames.m */,
+				DBBF2BB91708F66D0083912F /* MasterList.h */,
+				DBBF2BF01749749C0083912F /* List.h */,
+				DBE852AC16E6BBC300F709E7 /* MainListViewController.h */,
+				DBE852AD16E6BBC400F709E7 /* MainListViewController.m */,
+				DBBF2BFB175442A00083912F /* MainViewController.h */,
+				DBBF2BFC175442A10083912F /* MainViewController.m */,
+				DBA254031BF3C4C900E04844 /* EasyGrocContactsViewController.m */,
+				DBA254021BF3C4C900E04844 /* EasyGrocContactsViewController.h */,
+				DBBF2BF3174978EC0083912F /* ListNames.h */,
+				DBBF2BF4174978EC0083912F /* ListNames.m */,
+				DBBF2BBA1708F66D0083912F /* MasterList.m */,
+				DBA254041BF3C4C900E04844 /* EasyGrocContactsViewController.xib */,
+				DBDCDB1E1BF0C5D5001A277A /* HomeViewController.h */,
+				DBDCDB1F1BF0C5D5001A277A /* HomeViewController.m */,
+				DBBF2BF11749749D0083912F /* List.m */,
+				DBE8527216E0168600F709E7 /* Supporting Files */,
+				DBFCDACF1AE7453300E7D683 /* Images.xcassets */,
+			);
+			path = EasyGrocList;
+			sourceTree = "<group>";
+		};
+		DBE8527216E0168600F709E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBDCDB1C1BF0551F001A277A /* 802-dog-house-selected@2x.png */,
+				DBDCDB1A1BF05505001A277A /* 802-dog-house@2x.png */,
+				DB7BFAF81C1D936900D68CEE /* IsSelected.png */,
+				DB7BFAF91C1D936900D68CEE /* NotSelected.png */,
+				DBDCDB121BF04432001A277A /* 895-user-group@2x.png */,
+				DBDCDB161BF04473001A277A /* 895-user-group-selected@2x.png */,
+				DBDCDB171BF04473001A277A /* 895-user-group-selected@3x.png */,
+				DBDCDB131BF04432001A277A /* 895-user-group@3x.png */,
+				DBBF2BD61737CE300083912F /* delete_button.png */,
+				DBBF2BB71701B9570083912F /* camera.png */,
+				DBE8527316E0168600F709E7 /* EasyGrocList-Info.plist */,
+				DBE8527416E0168600F709E7 /* InfoPlist.strings */,
+				DBE8527716E0168600F709E7 /* main.m */,
+				DBE8527916E0168600F709E7 /* EasyGrocList-Prefix.pch */,
+				DB0C53811AE65BA70089968D /* Icon-60@2x.png */,
+				DBE8527D16E0168600F709E7 /* Default.png */,
+				DB0C537F1AE65AD00089968D /* Grocery_list_icon_120.png */,
+				DBE8527F16E0168600F709E7 /* Default@2x.png */,
+				DBE8528116E0168600F709E7 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBE8529316E0168700F709E7 /* EasyGrocListTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBE8529916E0168700F709E7 /* EasyGrocListTests.h */,
+				DBE8529A16E0168700F709E7 /* EasyGrocListTests.m */,
+				DBE8529416E0168700F709E7 /* Supporting Files */,
+			);
+			path = EasyGrocListTests;
+			sourceTree = "<group>";
+		};
+		DBE8529416E0168700F709E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBE8529516E0168700F709E7 /* EasyGrocListTests-Info.plist */,
+				DBE8529616E0168700F709E7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBBA05E61AABB40F001E9959 /* EasyGrocList WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBBA060D1AABB40F001E9959 /* Build configuration list for PBXNativeTarget "EasyGrocList WatchKit Extension" */;
+			buildPhases = (
+				DBBA05E31AABB40F001E9959 /* Sources */,
+				DBBA05E41AABB40F001E9959 /* Frameworks */,
+				DBBA05E51AABB40F001E9959 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EasyGrocList WatchKit Extension";
+			productName = "EasyGrocList WatchKit Extension";
+			productReference = DBBA05E71AABB40F001E9959 /* EasyGrocList WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		DBBA05F81AABB40F001E9959 /* EasyGrocList WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBBA060C1AABB40F001E9959 /* Build configuration list for PBXNativeTarget "EasyGrocList WatchKit App" */;
+			buildPhases = (
+				DBBA05F71AABB40F001E9959 /* Resources */,
+				E9ECCBC11C704FFD004D68E9 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9ECCBBC1C704FFD004D68E9 /* PBXTargetDependency */,
+			);
+			name = "EasyGrocList WatchKit App";
+			productName = "EasyGrocList WatchKit App";
+			productReference = DBBA05F91AABB40F001E9959 /* EasyGrocList WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		DBE8526416E0168600F709E7 /* EasyGrocList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBE8529E16E0168700F709E7 /* Build configuration list for PBXNativeTarget "EasyGrocList" */;
+			buildPhases = (
+				DBE8526116E0168600F709E7 /* Sources */,
+				DBE8526216E0168600F709E7 /* Frameworks */,
+				DBE8526316E0168600F709E7 /* Resources */,
+				E9ECCBC21C704FFD004D68E9 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB881C6B1C62E2F000A2D0EA /* PBXTargetDependency */,
+				E9ECCBBF1C704FFD004D68E9 /* PBXTargetDependency */,
+			);
+			name = EasyGrocList;
+			productName = EasyGrocList;
+			productReference = DBE8526516E0168600F709E7 /* EasyGrocList.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DBE8528A16E0168700F709E7 /* EasyGrocListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBE852A116E0168700F709E7 /* Build configuration list for PBXNativeTarget "EasyGrocListTests" */;
+			buildPhases = (
+				DBE8528616E0168700F709E7 /* Sources */,
+				DBE8528716E0168700F709E7 /* Frameworks */,
+				DBE8528816E0168700F709E7 /* Resources */,
+				DBE8528916E0168700F709E7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBE8529216E0168700F709E7 /* PBXTargetDependency */,
+			);
+			name = EasyGrocListTests;
+			productName = EasyGrocListTests;
+			productReference = DBE8528B16E0168700F709E7 /* EasyGrocListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBE8525C16E0168600F709E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastTestingUpgradeCheck = 0630;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Ninan Thomas";
+				TargetAttributes = {
+					DBBA05E61AABB40F001E9959 = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 3JEQ693MKL;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					DBBA05F81AABB40F001E9959 = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 3JEQ693MKL;
+					};
+					DBE8526416E0168600F709E7 = {
+						DevelopmentTeam = 3JEQ693MKL;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = DBE8525F16E0168600F709E7 /* Build configuration list for PBXProject "EasyGrocList" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBE8525A16E0168600F709E7;
+			productRefGroup = DBE8526616E0168600F709E7 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DB881C641C62E2DF00A2D0EA /* Products */;
+					ProjectRef = DB881C631C62E2DF00A2D0EA /* sharing.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				DBE8526416E0168600F709E7 /* EasyGrocList */,
+				DBE8528A16E0168700F709E7 /* EasyGrocListTests */,
+				DBBA05E61AABB40F001E9959 /* EasyGrocList WatchKit Extension */,
+				DBBA05F81AABB40F001E9959 /* EasyGrocList WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DB881C691C62E2DF00A2D0EA /* libsharing.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libsharing.a;
+			remoteRef = DB881C681C62E2DF00A2D0EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBBA05E51AABB40F001E9959 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBFCDAD41AE7541000E7D683 /* Images_watchkit.xcassets in Resources */,
+				DB0C53801AE65AD00089968D /* Grocery_list_icon_120.png in Resources */,
+				DB0C53821AE65BA70089968D /* Icon-60@2x.png in Resources */,
+				DBBA06181AD203A7001E9959 /* EasyGrocList.xcdatamodeld in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBBA05F71AABB40F001E9959 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBFCDAD31AE7531200E7D683 /* Images_watchkit.xcassets in Resources */,
+				DBBA06021AABB40F001E9959 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE8526316E0168600F709E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA254061BF3C4C900E04844 /* EasyGrocContactsViewController.xib in Resources */,
+				DBFCDACA1AE740B400E7D683 /* Grocery_list_icon_180.png in Resources */,
+				DBDCDB1B1BF05505001A277A /* 802-dog-house@2x.png in Resources */,
+				DBE8527616E0168600F709E7 /* InfoPlist.strings in Resources */,
+				DBE8527E16E0168600F709E7 /* Default.png in Resources */,
+				DBE8528016E0168600F709E7 /* Default@2x.png in Resources */,
+				DBDCDB141BF04432001A277A /* 895-user-group@2x.png in Resources */,
+				DBE8528216E0168600F709E7 /* Default-568h@2x.png in Resources */,
+				DBDCDB191BF04473001A277A /* 895-user-group-selected@3x.png in Resources */,
+				DBE852B016E6BBC400F709E7 /* MainListViewController.xib in Resources */,
+				DBFCDAD01AE7453300E7D683 /* Images.xcassets in Resources */,
+				DBBF2BAD16EF4E170083912F /* AddViewController.xib in Resources */,
+				DBBF2BB81701B9580083912F /* camera.png in Resources */,
+				DBBF2BC0170AF7B20083912F /* ListViewController.xib in Resources */,
+				DBDCDB151BF04432001A277A /* 895-user-group@3x.png in Resources */,
+				DB7BFAFB1C1D936900D68CEE /* NotSelected.png in Resources */,
+				DBBF2BD1172D28280083912F /* TemplListViewController.xib in Resources */,
+				DBBF2BD71737CE310083912F /* delete_button.png in Resources */,
+				DBDCDB1D1BF0551F001A277A /* 802-dog-house-selected@2x.png in Resources */,
+				DBDCDB181BF04473001A277A /* 895-user-group-selected@2x.png in Resources */,
+				DBBF2BFA17497B760083912F /* List1ViewController.xib in Resources */,
+				DBBF2BFF175442A30083912F /* MainViewController.xib in Resources */,
+				DB7BFAFA1C1D936900D68CEE /* IsSelected.png in Resources */,
+				DB82B4C6175A12C2005CDC73 /* PhotoDisplayViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE8528816E0168700F709E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBE8529816E0168700F709E7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DBE8528916E0168700F709E7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBBA05E31AABB40F001E9959 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBBA06211AD351FF001E9959 /* List.m in Sources */,
+				DBBA061E1AD350E6001E9959 /* ListNames.m in Sources */,
+				DBBA05F11AABB40F001E9959 /* NotificationController.m in Sources */,
+				DBB936FD1AE3CA4D00F1AD3B /* WRowController.m in Sources */,
+				DBBA061B1AD2A491001E9959 /* DataAccessor.m in Sources */,
+				DBBA05EE1AABB40F001E9959 /* InterfaceController.m in Sources */,
+				DBBA05F41AABB40F001E9959 /* GlanceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE8526116E0168600F709E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBE8527816E0168600F709E7 /* main.m in Sources */,
+				DBE8527C16E0168600F709E7 /* AppDelegate.m in Sources */,
+				DB3940E11BB4B12F004D601E /* EasyGrocTranslator.m in Sources */,
+				DBE8528516E0168600F709E7 /* EasyGrocList.xcdatamodeld in Sources */,
+				DBE852AF16E6BBC400F709E7 /* MainListViewController.m in Sources */,
+				DBBF2BAC16EF4E170083912F /* AddViewController.m in Sources */,
+				DBBF2BBB1708F66D0083912F /* MasterList.m in Sources */,
+				DB5079D11B25B72E0094838A /* KeychainItemWrapper.m in Sources */,
+				DBBF2BBF170AF7B20083912F /* ListViewController.m in Sources */,
+				DBBF2BC3170C49230083912F /* MasterListNames.m in Sources */,
+				DBBF2BC6170EEDB30083912F /* DataOps.m in Sources */,
+				DBBF2BC9170EEF1D0083912F /* LocalMasterListNames.m in Sources */,
+				DB3940E41BB84796004D601E /* EasyGrocDecoder.m in Sources */,
+				DBBF2BCC170EEF6E0083912F /* LocalMasterList.m in Sources */,
+				DBBF2BD0172D28280083912F /* TemplListViewController.m in Sources */,
+				DBA254051BF3C4C900E04844 /* EasyGrocContactsViewController.m in Sources */,
+				DBBF2BF21749749E0083912F /* List.m in Sources */,
+				DBF61DA31BB175780093B83A /* EasyGrocShareMgr.m in Sources */,
+				DBBF2BF5174978ED0083912F /* ListNames.m in Sources */,
+				DBBF2BF917497B760083912F /* List1ViewController.m in Sources */,
+				DB51F69F1ADD365500C3ADB7 /* InAppPurchase.m in Sources */,
+				DBDCDB201BF0C5D5001A277A /* HomeViewController.m in Sources */,
+				DBBF2BFE175442A30083912F /* MainViewController.m in Sources */,
+				DB82B4C4175A12C2005CDC73 /* Photo.m in Sources */,
+				DB82B4C5175A12C2005CDC73 /* PhotoDisplayViewController.m in Sources */,
+				DB82B4C7175A12C2005CDC73 /* TapDetectingImageView.m in Sources */,
+				DB82B4CB175A24F1005CDC73 /* SlideScrollView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE8528616E0168700F709E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBE8529B16E0168700F709E7 /* EasyGrocListTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB881C6B1C62E2F000A2D0EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sharing;
+			targetProxy = DB881C6A1C62E2F000A2D0EA /* PBXContainerItemProxy */;
+		};
+		DBE8529216E0168700F709E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBE8526416E0168600F709E7 /* EasyGrocList */;
+			targetProxy = DBE8529116E0168700F709E7 /* PBXContainerItemProxy */;
+		};
+		E9ECCBBC1C704FFD004D68E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBBA05E61AABB40F001E9959 /* EasyGrocList WatchKit Extension */;
+			targetProxy = E9ECCBBB1C704FFD004D68E9 /* PBXContainerItemProxy */;
+		};
+		E9ECCBBF1C704FFD004D68E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBBA05F81AABB40F001E9959 /* EasyGrocList WatchKit App */;
+			targetProxy = E9ECCBBE1C704FFD004D68E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DBBA06001AABB40F001E9959 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBBA06011AABB40F001E9959 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		DBE8527416E0168600F709E7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBE8527516E0168600F709E7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DBE8529616E0168700F709E7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBE8529716E0168700F709E7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBBA06081AABB40F001E9959 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = "EasyGrocList WatchKit Extension/EasyGrocList WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "EasyGrocList WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "EasyGrocList WatchKit Extension";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		DBBA06091AABB40F001E9959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = "EasyGrocList WatchKit Extension/EasyGrocList WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "EasyGrocList WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "EasyGrocList WatchKit Extension";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		DBBA060A1AABB40F001E9959 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IBSC_MODULE = EasyGrocList_WatchKit_Extension;
+				INFOPLIST_FILE = "EasyGrocList WatchKit App/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp;
+				PRODUCT_NAME = "EasyGrocList WatchKit App";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		DBBA060B1AABB40F001E9959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IBSC_MODULE = EasyGrocList_WatchKit_Extension;
+				INFOPLIST_FILE = "EasyGrocList WatchKit App/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp;
+				PRODUCT_NAME = "EasyGrocList WatchKit App";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		DBE8529C16E0168700F709E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DBE8529D16E0168700F709E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBE8529F16E0168700F709E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = EasyGrocList/EasyGrocList.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EasyGrocList/EasyGrocList-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = /Users/nin234/projects/sharing;
+				INFOPLIST_FILE = "EasyGrocList/EasyGrocList-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				ONLY_ACTIVE_ARCH = NO;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-ObjC",
+					"-v",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rekhaninan.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = EasyGrocList;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DBE852A016E0168700F709E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = EasyGrocList/EasyGrocList.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EasyGrocList/EasyGrocList-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = /Users/nin234/projects/sharing;
+				INFOPLIST_FILE = "EasyGrocList/EasyGrocList-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				ONLY_ACTIVE_ARCH = NO;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rekhaninan.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = EasyGrocList;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DBE852A216E0168700F709E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EasyGrocList.app/EasyGrocList";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EasyGrocList/EasyGrocList-Prefix.pch";
+				INFOPLIST_FILE = "EasyGrocListTests/EasyGrocListTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rekhaninan.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = EasyGrocListTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		DBE852A316E0168700F709E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EasyGrocList.app/EasyGrocList";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EasyGrocList/EasyGrocList-Prefix.pch";
+				INFOPLIST_FILE = "EasyGrocListTests/EasyGrocListTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rekhaninan.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = EasyGrocListTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBBA060C1AABB40F001E9959 /* Build configuration list for PBXNativeTarget "EasyGrocList WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBBA060A1AABB40F001E9959 /* Debug */,
+				DBBA060B1AABB40F001E9959 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBBA060D1AABB40F001E9959 /* Build configuration list for PBXNativeTarget "EasyGrocList WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBBA06081AABB40F001E9959 /* Debug */,
+				DBBA06091AABB40F001E9959 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBE8525F16E0168600F709E7 /* Build configuration list for PBXProject "EasyGrocList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBE8529C16E0168700F709E7 /* Debug */,
+				DBE8529D16E0168700F709E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBE8529E16E0168700F709E7 /* Build configuration list for PBXNativeTarget "EasyGrocList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBE8529F16E0168700F709E7 /* Debug */,
+				DBE852A016E0168700F709E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBE852A116E0168700F709E7 /* Build configuration list for PBXNativeTarget "EasyGrocListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBE852A216E0168700F709E7 /* Debug */,
+				DBE852A316E0168700F709E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DBE8528316E0168600F709E7 /* EasyGrocList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DBE8528416E0168600F709E7 /* EasyGrocList.xcdatamodel */,
+			);
+			currentVersion = DBE8528416E0168600F709E7 /* EasyGrocList.xcdatamodel */;
+			path = EasyGrocList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DBE8525C16E0168600F709E7 /* Project object */;
+}

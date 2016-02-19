@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="List" representedClassName="List" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="hidden" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="item" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="rowno" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="ListNames" representedClassName="ListNames" syncable="YES">
+        <attribute name="current" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picurl" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MasterList" representedClassName="MasterList" syncable="YES">
+        <attribute name="item" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="rowno" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="MasterListNames" representedClassName="MasterListNames" syncable="YES">
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="List" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="ListNames" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="MasterList" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="MasterListNames" positionX="160" positionY="192" width="128" height="60"/>
+    </elements>
+</model>

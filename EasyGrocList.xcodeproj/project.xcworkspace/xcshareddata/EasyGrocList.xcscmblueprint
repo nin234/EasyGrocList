@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B0408C514B3EC85DD67B81D28AE513CD30998075",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9657CDFAF5560EDBEC5BD15EACCA678C80183690" : 0,
+    "B0408C514B3EC85DD67B81D28AE513CD30998075" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "90C8D11E-ED63-4C86-8DA4-3AEEF1755120",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9657CDFAF5560EDBEC5BD15EACCA678C80183690" : "sharing\/",
+    "B0408C514B3EC85DD67B81D28AE513CD30998075" : "EasyGrocList\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "EasyGrocList",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "EasyGrocList.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/nin234\/Dropbox\/git\/sharing",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9657CDFAF5560EDBEC5BD15EACCA678C80183690"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/nin234\/Dropbox\/git\/EasyGrocList\/",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B0408C514B3EC85DD67B81D28AE513CD30998075"
+    }
+  ]
+}

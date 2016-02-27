@@ -18,6 +18,7 @@
 #import "EasyGrocShareMgr.h"
 #import "MainViewController.h"
 #import "EasyGrocContactsViewController.h"
+#import "sharing/HomeViewController.h"
 
 enum eActionSheet
 {
@@ -25,7 +26,7 @@ enum eActionSheet
     eActnShetInAppPurchse
 };
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate, HomeViewControllerDelegate>
 {
     AddViewController *aVw;
      bool bKvInit;

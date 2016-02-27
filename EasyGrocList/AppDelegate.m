@@ -13,7 +13,7 @@
 #import "TemplListViewController.h"
 #import "PhotoDisplayViewController.h"
 #import "EasyGrocContactsViewController.h"
-#import "HomeViewController.h"
+#import "sharing/HomeViewController.h"
 
 @implementation AppDelegate
 
@@ -599,6 +599,7 @@
     
     UINavigationController *mainVwNavCntrl = [[UINavigationController alloc] initWithRootViewController:aViewController1];
     HomeViewController *homeCntrl = [[HomeViewController alloc] init];
+    [homeCntrl setDelegate:self];
     UIImage *imageHome = [UIImage imageNamed:@"802-dog-house@2x.png"];
     UIImage *imageHomeSel = [UIImage imageNamed:@"895-dog-house-selected@2x.png"];
     homeCntrl.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:imageHome selectedImage:imageHomeSel];

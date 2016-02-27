@@ -61,7 +61,6 @@
 		DBDCDB191BF04473001A277A /* 895-user-group-selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDCDB171BF04473001A277A /* 895-user-group-selected@3x.png */; };
 		DBDCDB1B1BF05505001A277A /* 802-dog-house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDCDB1A1BF05505001A277A /* 802-dog-house@2x.png */; };
 		DBDCDB1D1BF0551F001A277A /* 802-dog-house-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDCDB1C1BF0551F001A277A /* 802-dog-house-selected@2x.png */; };
-		DBDCDB201BF0C5D5001A277A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDCDB1F1BF0C5D5001A277A /* HomeViewController.m */; };
 		DBE8526A16E0168600F709E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8526916E0168600F709E7 /* UIKit.framework */; };
 		DBE8526C16E0168600F709E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8526B16E0168600F709E7 /* Foundation.framework */; };
 		DBE8526E16E0168600F709E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8526D16E0168600F709E7 /* CoreGraphics.framework */; };
@@ -242,8 +241,6 @@
 		DBDCDB171BF04473001A277A /* 895-user-group-selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "895-user-group-selected@3x.png"; sourceTree = "<group>"; };
 		DBDCDB1A1BF05505001A277A /* 802-dog-house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "802-dog-house@2x.png"; sourceTree = "<group>"; };
 		DBDCDB1C1BF0551F001A277A /* 802-dog-house-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "802-dog-house-selected@2x.png"; sourceTree = "<group>"; };
-		DBDCDB1E1BF0C5D5001A277A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		DBDCDB1F1BF0C5D5001A277A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		DBE8526516E0168600F709E7 /* EasyGrocList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyGrocList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE8526916E0168600F709E7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DBE8526B16E0168600F709E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -470,8 +467,6 @@
 				DBBF2BF4174978EC0083912F /* ListNames.m */,
 				DBBF2BBA1708F66D0083912F /* MasterList.m */,
 				DBA254041BF3C4C900E04844 /* EasyGrocContactsViewController.xib */,
-				DBDCDB1E1BF0C5D5001A277A /* HomeViewController.h */,
-				DBDCDB1F1BF0C5D5001A277A /* HomeViewController.m */,
 				DBBF2BF11749749D0083912F /* List.m */,
 				DBE8527216E0168600F709E7 /* Supporting Files */,
 				DBFCDACF1AE7453300E7D683 /* Images.xcassets */,
@@ -794,7 +789,6 @@
 				DBBF2BF5174978ED0083912F /* ListNames.m in Sources */,
 				DBBF2BF917497B760083912F /* List1ViewController.m in Sources */,
 				DB51F69F1ADD365500C3ADB7 /* InAppPurchase.m in Sources */,
-				DBDCDB201BF0C5D5001A277A /* HomeViewController.m in Sources */,
 				DBBF2BFE175442A30083912F /* MainViewController.m in Sources */,
 				DB82B4C4175A12C2005CDC73 /* Photo.m in Sources */,
 				DB82B4C5175A12C2005CDC73 /* PhotoDisplayViewController.m in Sources */,

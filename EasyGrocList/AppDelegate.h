@@ -12,13 +12,14 @@
 #import "ListViewController.h"
 #import "List1ViewController.h"
 #import "DataOps.h"
-#import "InAppPurchase.h"
+#import "sharing/InAppPurchase.h"
 #import "KeychainItemWrapper.h"
 #import "sharing/NtwIntf.h"
 #import "EasyGrocShareMgr.h"
 #import "MainViewController.h"
 #import "EasyGrocContactsViewController.h"
 #import "sharing/HomeViewController.h"
+#import "sharing/AppShrUtil.h"
 
 enum eActionSheet
 {
@@ -26,7 +27,7 @@ enum eActionSheet
     eActnShetInAppPurchse
 };
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate, HomeViewControllerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate, HomeViewControllerDelegate, InAppPurchaseDelegate>
 {
     AddViewController *aVw;
      bool bKvInit;
@@ -58,7 +59,7 @@ enum eActionSheet
 @property (nonatomic, retain) NSURL *pDocsDir;
 
 @property (nonatomic, retain) EasyGrocShareMgr *pShrMgr;
-@property bool purchased;
+
 @property long long no_of_lists;
 @property long long no_of_template_lists;
 @property long long no_of_edits;
@@ -66,6 +67,7 @@ enum eActionSheet
 @property (nonatomic, retain) KeychainItemWrapper *kchain;
 @property (nonatomic, retain) MainViewController *aViewController1;
 @property (nonatomic, retain) EasyGrocContactsViewController  *selFrndCntrl;
+@property (nonatomic, retain) AppShrUtil *appUtl;
 
 
 - (void)saveContext;

@@ -27,7 +27,6 @@
 @synthesize pPicsDir;
 @synthesize pDocsDir;
 @synthesize inapp;
-@synthesize purchased;
 @synthesize fetchQueue;
 
 @synthesize navViewController;
@@ -41,6 +40,7 @@
 @synthesize pShrMgr;
 @synthesize aViewController1;
 @synthesize selFrndCntrl;
+@synthesize appUtl;
 
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -50,11 +50,8 @@
 -(void) setPurchsd : (NSString *)trid
 {
     NSLog(@"Setting purchased to true");
-    purchased = true;
-    NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];
-    [kvlocal setBool:YES forKey:@"Purchased"];
-    [kvlocal setObject:trid forKey:@"TransactionId"];
-    
+    [appUtl setPurchsdTokens:trid];
+    appUtl.purchased = true;
     [kchain setObject:@"true" forKey:(__bridge id)kSecAttrAccount];
     [inapp stop];
     [dataSync setInAppCancelTimer:false];
@@ -80,8 +77,8 @@
 - (void)itemAdd
 {
     MainViewController *pMainVwCntrl = [self.navViewController.viewControllers objectAtIndex:0];
-    NSLog(@"AppDelegate:itemAdd no_of_list=%lld purchased=%d", no_of_lists, purchased);
-    if (!purchased && no_of_lists >= 2)
+    NSLog(@"AppDelegate:itemAdd no_of_list=%lld purchased=%d", no_of_lists, appUtl.purchased);
+    if (!appUtl.purchased && no_of_lists >= 2)
     {
         NSLog(@"Cannot add a new item without upgrade COUNT=%lu", (unsigned long)[pMainVwCntrl.pAllItms.list count]);
         UIAlertView *pAvw = [[UIAlertView alloc] initWithTitle:@"Purchase/restore now" message:@"Only two lists allowed with free version. Please Purchase/restore now to add unlimited number of lists" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -128,14 +125,14 @@
     [self.dataSync addTemplItem:pListView.name itemsDic:pListView.itemMp];
     ++no_of_template_lists;
      [kchain setObject:[[NSNumber numberWithLongLong:no_of_template_lists] stringValue] forKey:(__bridge id)kSecAttrComment];
-    if (purchased)
+    if (appUtl.purchased)
         [self.pShrMgr storeTemplItemInCloud:pListView.name itemsDic:pListView.itemMp];
     return;
 }
 
 - (void)templItemEdit
 {
-    if (!purchased && no_of_template_edits > 2)
+    if (!appUtl.purchased && no_of_template_edits > 2)
     {
         NSLog(@"Cannot edit item further without upgrade edit count =%lu", (unsigned long)no_of_template_edits);
         UIAlertView *pAvw = [[UIAlertView alloc] initWithTitle:@"Purchase/restore now" message:@"Please purchase/restore now for unlimited number of edits" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -169,7 +166,7 @@
      [self templItemDisplay:pListView.name lstcntr:pListView];
     ++no_of_template_edits;
      [kchain setObject:[[NSNumber numberWithLongLong:no_of_template_edits] stringValue] forKey:(__bridge id)kSecAttrDescription];
-    if (purchased)
+    if (appUtl.purchased)
         [self.pShrMgr storeTemplItemInCloud:pListView.name itemsDic:pListView.itemMp];
     return;
 }
@@ -246,7 +243,7 @@
 
 -(void) itemEdit
 {
-    if (!purchased && no_of_edits > 2)
+    if (!appUtl.purchased && no_of_edits > 2)
     {
         NSLog(@"Cannot edit item further without upgrade edit count =%lu", (unsigned long)no_of_edits);
         UIAlertView *pAvw = [[UIAlertView alloc] initWithTitle:@"Purchase/restore now" message:@"Please upgrade/restore now for unlimited number of edits" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -357,7 +354,7 @@
             
         case 1:
         {
-            if (!purchased)
+            if (!appUtl.purchased)
             {
                 NSLog(@"Cannot share item further without upgrade");
                 UIAlertView *pAvw = [[UIAlertView alloc] initWithTitle:@"Purchase/restore now" message:@"Please upgrade now for sharing" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -449,7 +446,7 @@
 {
     kchain = [[KeychainItemWrapper alloc] initWithIdentifier:@"InAppData" accessGroup:@"3JEQ693MKL.com.rekhaninan.EasyGrocList"];
     
-    purchased = false;
+   
     NSString *listno = [kchain objectForKey:(__bridge id)kSecValueData];
     if (listno != nil)
         no_of_lists = [listno longLongValue];
@@ -475,13 +472,15 @@
 
    
     inapp = [[InAppPurchase alloc] init];
+    [inapp setDelegate:self];
+    [inapp setProductId:@"com.rekhaninan.easygroclist_unlocked"];
     [[SKPaymentQueue defaultQueue] addTransactionObserver:inapp];
 
     NSString *purchKeyChain = [kchain objectForKey:(__bridge id)kSecAttrAccount];
     if (purchKeyChain != nil && [purchKeyChain isEqualToString:@"true"])
     {
         NSLog(@"Purchased true in key chain");
-        purchased = true;
+        appUtl.purchased = true;
     }
     else if (purchKeyChain == nil)
     {
@@ -495,7 +494,7 @@
         [kchain setObject:@"false" forKey:(__bridge id)kSecAttrAccount];
     }
     
-    if (purchased)
+    if (appUtl.purchased)
     {
         NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];
         
@@ -532,7 +531,7 @@
         }
     }
 
-    if (bChange && purchased)
+    if (bChange && appUtl.purchased)
     {
         NSString *dToken = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
         
@@ -551,7 +550,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+    appUtl = [[AppShrUtil alloc] init];
     bShrMgrStarted = false;
     bSystemAbrt = false;
     pFlMgr = [[NSFileManager alloc] init];
@@ -613,22 +612,9 @@
     //[self.window addSubview:self.navViewController.view];
     [self.window setRootViewController:self.navViewController];
     [self.window makeKeyAndVisible];
-    if (purchased)
-        [self registerForRemoteNotifications];
+    if (appUtl.purchased)
+        [appUtl registerForRemoteNotifications];
     return YES;
-}
-
--(void) registerForRemoteNotifications
-{
-    UIUserNotificationType types = UIUserNotificationTypeBadge |
-    UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
-    UIUserNotificationSettings *mySettings =
-    [UIUserNotificationSettings settingsForTypes:types categories:nil];
-    [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
-    
-    // Register for remote notifications.
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
-    return;
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler

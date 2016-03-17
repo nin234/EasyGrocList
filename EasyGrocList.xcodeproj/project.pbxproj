@@ -13,7 +13,6 @@
 		DB3940E41BB84796004D601E /* EasyGrocDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3940E31BB84796004D601E /* EasyGrocDecoder.m */; };
 		DB5079D11B25B72E0094838A /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5079D01B25B72E0094838A /* KeychainItemWrapper.m */; };
 		DB5079D41B25B7910094838A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5079D31B25B7910094838A /* Security.framework */; };
-		DB51F69F1ADD365500C3ADB7 /* InAppPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = DB51F69E1ADD365500C3ADB7 /* InAppPurchase.m */; };
 		DB51F6A41ADDC9BB00C3ADB7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB51F6A31ADDC9BB00C3ADB7 /* StoreKit.framework */; };
 		DB7BFAFA1C1D936900D68CEE /* IsSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7BFAF81C1D936900D68CEE /* IsSelected.png */; };
 		DB7BFAFB1C1D936900D68CEE /* NotSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7BFAF91C1D936900D68CEE /* NotSelected.png */; };
@@ -162,8 +161,6 @@
 		DB5079D01B25B72E0094838A /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		DB5079D21B25B74B0094838A /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		DB5079D31B25B7910094838A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		DB51F69E1ADD365500C3ADB7 /* InAppPurchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchase.m; sourceTree = "<group>"; };
-		DB51F6A01ADD366900C3ADB7 /* InAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchase.h; sourceTree = "<group>"; };
 		DB51F6A31ADDC9BB00C3ADB7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DB7BFAF81C1D936900D68CEE /* IsSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IsSelected.png; sourceTree = "<group>"; };
 		DB7BFAF91C1D936900D68CEE /* NotSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotSelected.png; sourceTree = "<group>"; };
@@ -434,8 +431,6 @@
 				DBBF2BCE172D28270083912F /* TemplListViewController.m */,
 				DBBF2BCF172D28280083912F /* TemplListViewController.xib */,
 				DBBF2BCD172D28270083912F /* TemplListViewController.h */,
-				DB51F6A01ADD366900C3ADB7 /* InAppPurchase.h */,
-				DB51F69E1ADD365500C3ADB7 /* InAppPurchase.m */,
 				DBBF2BA916EF4E170083912F /* AddViewController.h */,
 				DBBF2BAA16EF4E170083912F /* AddViewController.m */,
 				DBBF2BAB16EF4E170083912F /* AddViewController.xib */,
@@ -788,7 +783,6 @@
 				DBF61DA31BB175780093B83A /* EasyGrocShareMgr.m in Sources */,
 				DBBF2BF5174978ED0083912F /* ListNames.m in Sources */,
 				DBBF2BF917497B760083912F /* List1ViewController.m in Sources */,
-				DB51F69F1ADD365500C3ADB7 /* InAppPurchase.m in Sources */,
 				DBBF2BFE175442A30083912F /* MainViewController.m in Sources */,
 				DB82B4C4175A12C2005CDC73 /* Photo.m in Sources */,
 				DB82B4C5175A12C2005CDC73 /* PhotoDisplayViewController.m in Sources */,

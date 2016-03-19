@@ -362,16 +362,12 @@
             }
             else
             {
-                //to do create a user interface for sharing. for now will start a network interface object for connecting which should ideally be after inapp purchase
-                
                 if (!bShrMgrStarted)
                 {
-                    pShrMgr = [[EasyGrocShareMgr alloc] init];
-                    selFrndCntrl.pShrMgr = pShrMgr;
                     [pShrMgr start];
                     bShrMgrStarted = true;
                 }
-                [self showShareView];
+                [appUtl showShareView];
                
             }
         }
@@ -384,22 +380,10 @@
 }
 
 
--(void) shareNow
-{
-    
-}
-
 -(void) switchRootView
 {
     [self.window setRootViewController:self.navViewController];
     tabBarController.selectedIndex = 0;
-}
-
--(void) showShareView
-{
-    
-    [self.window setRootViewController:self.tabBarController];
-    return;
 }
 
 
@@ -550,8 +534,7 @@
     
     [self paymentInit];
 
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     MainViewController *aViewController = [[MainViewController alloc]
                                            initWithNibName:nil bundle:nil];
@@ -560,6 +543,7 @@
     self.navViewController = navCntrl;
     
     selFrndCntrl = [[EasyGrocContactsViewController alloc] initWithNibName:nil bundle:nil];
+    selFrndCntrl.pShrMgr = pShrMgr;
     
    
     aViewController1 = [[MainViewController alloc]
@@ -588,6 +572,8 @@
     //[self.window addSubview:self.navViewController.view];
     [self.window setRootViewController:self.navViewController];
     [self.window makeKeyAndVisible];
+    appUtl.window = self.window;
+    appUtl.tabBarController = self.tabBarController;
     if (appUtl.purchased)
         [appUtl registerForRemoteNotifications];
     return YES;

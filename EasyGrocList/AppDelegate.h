@@ -37,7 +37,7 @@ enum eActionSheet
     
 }
 
-@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, retain) UIWindow *window;
 
 @property (nonatomic, retain) IBOutlet UINavigationController *navViewController;
 
@@ -90,7 +90,6 @@ enum eActionSheet
 -(void) templItemEditCancel;
 -(void) showPicList:(NSString *)name pictName:(NSString *)picName imagePicker:(UIImagePickerController *) imagePick;
 -(void) setPurchsd:(NSString *)trid;
--(void) shareNow;
 -(void) switchRootView;
 
 @end

@@ -57,7 +57,6 @@
     [dataSync setInAppCancelTimer:false];
     if (!bShrMgrStarted)
     {
-        pShrMgr = [[EasyGrocShareMgr alloc] init];
         [pShrMgr start];
         bShrMgrStarted = true;
     }
@@ -513,32 +512,7 @@
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
-    NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];
-    NSData *tokenNow = [kvlocal dataForKey:@"NotToken"];
-    NSLog(@"Did register for remote notification with token %@ tokenNow=%@", deviceToken, tokenNow);
-    bool bChange = false;
-    if (tokenNow == nil)
-    {
-        [kvlocal setObject:deviceToken forKey:@"NotToken"];
-        bChange = true;
-    }
-    else
-    {
-        if (![deviceToken isEqualToData:tokenNow])
-        {
-            [kvlocal setObject:deviceToken forKey:@"NotToken"];
-            bChange = true;
-        }
-    }
-
-    if (bChange && appUtl.purchased)
-    {
-        NSString *dToken = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
-        
-        dToken = [dToken stringByReplacingOccurrencesOfString:@" " withString:@""];
-        NSLog(@"device token %@", dToken);
-        [pShrMgr storeDeviceToken:dToken];
-    }
+    [appUtl didRegisterForRemoteNotification:deviceToken];
     return;
 }
 
@@ -550,7 +524,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    pShrMgr = [[EasyGrocShareMgr alloc] init];
     appUtl = [[AppShrUtil alloc] init];
+    appUtl.pShrMgr = pShrMgr;
     bShrMgrStarted = false;
     bSystemAbrt = false;
     pFlMgr = [[NSFileManager alloc] init];

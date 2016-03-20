@@ -6,18 +6,18 @@
 //  Copyright © 2015 Ninan Thomas. All rights reserved.
 //
 
-#import "EasyGrocContactsViewController.h"
+#import "SharingDelegate.h"
 #import <sharing/FriendDetails.h>
 #import "AppDelegate.h"
 #import "List.h"
 
 //const NSInteger SELECTION_INDICATOR_TAG = 53322;
 
-@interface EasyGrocContactsViewController ()
+@interface SharingDelegate ()
 
 @end
 
-@implementation EasyGrocContactsViewController
+@implementation SharingDelegate
 
 -(void) shareNow
 {

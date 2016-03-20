@@ -17,7 +17,7 @@
 #import "sharing/NtwIntf.h"
 #import "EasyGrocShareMgr.h"
 #import "MainViewController.h"
-#import "EasyGrocContactsViewController.h"
+#import "SharingDelegate.h"
 #import "sharing/HomeViewController.h"
 #import "sharing/AppShrUtil.h"
 
@@ -66,7 +66,7 @@ enum eActionSheet
 @property long long no_of_template_edits;
 @property (nonatomic, retain) KeychainItemWrapper *kchain;
 @property (nonatomic, retain) MainViewController *aViewController1;
-@property (nonatomic, retain) EasyGrocContactsViewController  *selFrndCntrl;
+@property (nonatomic, retain) SharingDelegate  *selFrndCntrl;
 @property (nonatomic, retain) AppShrUtil *appUtl;
 
 

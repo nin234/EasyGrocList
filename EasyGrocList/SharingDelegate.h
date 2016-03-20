@@ -11,7 +11,7 @@
 #import <sharing/ContactsViewController.h>
 
 
-@interface EasyGrocContactsViewController : ContactsViewController
+@interface SharingDelegate
 {
  
 }

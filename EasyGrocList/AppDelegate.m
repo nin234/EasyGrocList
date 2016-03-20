@@ -12,7 +12,7 @@
 #import "List1ViewController.h"
 #import "TemplListViewController.h"
 #import "PhotoDisplayViewController.h"
-#import "EasyGrocContactsViewController.h"
+#import "SharingDelegate.h"
 #import "sharing/HomeViewController.h"
 
 @implementation AppDelegate
@@ -542,7 +542,7 @@
     UINavigationController *navCntrl = [[UINavigationController alloc] initWithRootViewController:aViewController];
     self.navViewController = navCntrl;
     
-    selFrndCntrl = [[EasyGrocContactsViewController alloc] initWithNibName:nil bundle:nil];
+    selFrndCntrl = [[SharingDelegate alloc] initWithNibName:nil bundle:nil];
     selFrndCntrl.pShrMgr = pShrMgr;
     
    

@@ -22,8 +22,8 @@
 		DB82B4C7175A12C2005CDC73 /* TapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB82B4C3175A12C2005CDC73 /* TapDetectingImageView.m */; };
 		DB82B4CB175A24F1005CDC73 /* SlideScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB82B4CA175A24F1005CDC73 /* SlideScrollView.m */; };
 		DB881C6C1C62E5DA00A2D0EA /* libsharing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB881C691C62E2DF00A2D0EA /* libsharing.a */; };
-		DBA254051BF3C4C900E04844 /* EasyGrocContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA254031BF3C4C900E04844 /* EasyGrocContactsViewController.m */; };
-		DBA254061BF3C4C900E04844 /* EasyGrocContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA254041BF3C4C900E04844 /* EasyGrocContactsViewController.xib */; };
+		DBA254051BF3C4C900E04844 /* SharingDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA254031BF3C4C900E04844 /* SharingDelegate.m */; };
+		DBA254061BF3C4C900E04844 /* SharingDelegate.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA254041BF3C4C900E04844 /* SharingDelegate.xib */; };
 		DBB936FD1AE3CA4D00F1AD3B /* WRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB936FC1AE3CA4D00F1AD3B /* WRowController.m */; };
 		DBBA05EE1AABB40F001E9959 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA05ED1AABB40F001E9959 /* InterfaceController.m */; };
 		DBBA05F11AABB40F001E9959 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA05F01AABB40F001E9959 /* NotificationController.m */; };
@@ -174,9 +174,9 @@
 		DB82B4C9175A24F1005CDC73 /* SlideScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideScrollView.h; sourceTree = "<group>"; };
 		DB82B4CA175A24F1005CDC73 /* SlideScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideScrollView.m; sourceTree = "<group>"; };
 		DB881C631C62E2DF00A2D0EA /* sharing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sharing.xcodeproj; path = ../sharing/sharing.xcodeproj; sourceTree = "<group>"; };
-		DBA254021BF3C4C900E04844 /* EasyGrocContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyGrocContactsViewController.h; sourceTree = "<group>"; };
-		DBA254031BF3C4C900E04844 /* EasyGrocContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyGrocContactsViewController.m; sourceTree = "<group>"; };
-		DBA254041BF3C4C900E04844 /* EasyGrocContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EasyGrocContactsViewController.xib; sourceTree = "<group>"; };
+		DBA254021BF3C4C900E04844 /* SharingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharingDelegate.h; sourceTree = "<group>"; };
+		DBA254031BF3C4C900E04844 /* SharingDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharingDelegate.m; sourceTree = "<group>"; };
+		DBA254041BF3C4C900E04844 /* SharingDelegate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharingDelegate.xib; sourceTree = "<group>"; };
 		DBB936FC1AE3CA4D00F1AD3B /* WRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRowController.m; sourceTree = "<group>"; };
 		DBBA05E71AABB40F001E9959 /* EasyGrocList WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EasyGrocList WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBA05EA1AABB40F001E9959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -456,12 +456,12 @@
 				DBE852AD16E6BBC400F709E7 /* MainListViewController.m */,
 				DBBF2BFB175442A00083912F /* MainViewController.h */,
 				DBBF2BFC175442A10083912F /* MainViewController.m */,
-				DBA254031BF3C4C900E04844 /* EasyGrocContactsViewController.m */,
-				DBA254021BF3C4C900E04844 /* EasyGrocContactsViewController.h */,
+				DBA254031BF3C4C900E04844 /* SharingDelegate.m */,
+				DBA254021BF3C4C900E04844 /* SharingDelegate.h */,
 				DBBF2BF3174978EC0083912F /* ListNames.h */,
 				DBBF2BF4174978EC0083912F /* ListNames.m */,
 				DBBF2BBA1708F66D0083912F /* MasterList.m */,
-				DBA254041BF3C4C900E04844 /* EasyGrocContactsViewController.xib */,
+				DBA254041BF3C4C900E04844 /* SharingDelegate.xib */,
 				DBBF2BF11749749D0083912F /* List.m */,
 				DBE8527216E0168600F709E7 /* Supporting Files */,
 				DBFCDACF1AE7453300E7D683 /* Images.xcassets */,
@@ -691,7 +691,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBA254061BF3C4C900E04844 /* EasyGrocContactsViewController.xib in Resources */,
+				DBA254061BF3C4C900E04844 /* SharingDelegate.xib in Resources */,
 				DBFCDACA1AE740B400E7D683 /* Grocery_list_icon_180.png in Resources */,
 				DBDCDB1B1BF05505001A277A /* 802-dog-house@2x.png in Resources */,
 				DBE8527616E0168600F709E7 /* InfoPlist.strings in Resources */,
@@ -778,7 +778,7 @@
 				DB3940E41BB84796004D601E /* EasyGrocDecoder.m in Sources */,
 				DBBF2BCC170EEF6E0083912F /* LocalMasterList.m in Sources */,
 				DBBF2BD0172D28280083912F /* TemplListViewController.m in Sources */,
-				DBA254051BF3C4C900E04844 /* EasyGrocContactsViewController.m in Sources */,
+				DBA254051BF3C4C900E04844 /* SharingDelegate.m in Sources */,
 				DBBF2BF21749749E0083912F /* List.m in Sources */,
 				DBF61DA31BB175780093B83A /* EasyGrocShareMgr.m in Sources */,
 				DBBF2BF5174978ED0083912F /* ListNames.m in Sources */,

@@ -19,35 +19,13 @@
 
 @implementation SharingDelegate
 
--(void) shareNow
+-(void) shareNow:(NSString *) shareStr
 {
-    [super shareNow];
+    
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSString *listName = [pDlg.aViewController1.pAllItms getSelectedItem];
     NSArray *items = [pDlg.dataSync getList:listName];
-    
     NSUInteger nItems = [items count];
-    NSString *shareStr = [[NSString alloc] init];
-     NSUInteger cnt = [super.frndDic count];
-    bool bFnd = false;
-    for (NSUInteger i=0; i < cnt ; ++i)
-    {
-        NSNumber *numbr = [seletedItems objectAtIndex:i];
-        if ([numbr boolValue] == YES)
-        {
-            FriendDetails *frnd = [rownoFrndDetail objectForKey:[NSNumber numberWithUnsignedInteger:i]];
-            if (frnd != nil)
-            {
-                shareStr = [shareStr stringByAppendingString:frnd.name];
-                shareStr = [shareStr stringByAppendingString:@";"];
-                bFnd = true;
-            }
-        }
-        
-    }
-    
-    if (!bFnd)
-        return;
     shareStr = [shareStr stringByAppendingString:@":::"];
     
     for (NSUInteger i=0; i < nItems; ++i)

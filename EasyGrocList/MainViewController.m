@@ -146,8 +146,8 @@
 -(void) shareContactsAdd
 {
    AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    pDlg.selFrndCntrl.bModeShare = true;
-    pDlg.tabBarController.selectedIndex = 1;
+    pDlg.appUtl.selFrndCntrl.bModeShare = true;
+    pDlg.appUtl.tabBarController.selectedIndex = 1;
     
     return;
 }

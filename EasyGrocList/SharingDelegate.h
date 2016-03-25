@@ -11,12 +11,12 @@
 #import <sharing/ContactsViewController.h>
 
 
-@interface SharingDelegate
+@interface SharingDelegate : NSObject 
 {
  
 }
 
 
--(void) shareNow;
+-(void) shareNow:(NSString *) shareStr;
 
 @end

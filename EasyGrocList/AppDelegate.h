@@ -27,7 +27,7 @@ enum eActionSheet
     eActnShetInAppPurchse
 };
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate, HomeViewControllerDelegate, InAppPurchaseDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate,  InAppPurchaseDelegate>
 {
     AddViewController *aVw;
      bool bKvInit;
@@ -41,7 +41,7 @@ enum eActionSheet
 
 @property (nonatomic, retain) IBOutlet UINavigationController *navViewController;
 
-@property (nonatomic, retain)  UITabBarController  *tabBarController;
+
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
@@ -66,7 +66,7 @@ enum eActionSheet
 @property long long no_of_template_edits;
 @property (nonatomic, retain) KeychainItemWrapper *kchain;
 @property (nonatomic, retain) MainViewController *aViewController1;
-@property (nonatomic, retain) SharingDelegate  *selFrndCntrl;
+
 @property (nonatomic, retain) AppShrUtil *appUtl;
 
 
@@ -90,6 +90,5 @@ enum eActionSheet
 -(void) templItemEditCancel;
 -(void) showPicList:(NSString *)name pictName:(NSString *)picName imagePicker:(UIImagePickerController *) imagePick;
 -(void) setPurchsd:(NSString *)trid;
--(void) switchRootView;
 
 @end

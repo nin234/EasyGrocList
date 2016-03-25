@@ -30,7 +30,6 @@
 @synthesize fetchQueue;
 
 @synthesize navViewController;
-@synthesize tabBarController;
 @synthesize no_of_lists;
 @synthesize no_of_template_lists;
 @synthesize no_of_edits;
@@ -39,7 +38,7 @@
 
 @synthesize pShrMgr;
 @synthesize aViewController1;
-@synthesize selFrndCntrl;
+
 @synthesize appUtl;
 
 
@@ -380,11 +379,6 @@
 }
 
 
--(void) switchRootView
-{
-    [self.window setRootViewController:self.navViewController];
-    tabBarController.selectedIndex = 0;
-}
 
 
 
@@ -542,38 +536,27 @@
     UINavigationController *navCntrl = [[UINavigationController alloc] initWithRootViewController:aViewController];
     self.navViewController = navCntrl;
     
-    selFrndCntrl = [[SharingDelegate alloc] initWithNibName:nil bundle:nil];
-    selFrndCntrl.pShrMgr = pShrMgr;
-    
+        
    
     aViewController1 = [[MainViewController alloc]
                                            initWithNibName:nil bundle:nil];
     aViewController1.bShareView = true;
-    selFrndCntrl.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:0];
-    UINavigationController *selFrndNavCntrl = [[UINavigationController alloc] initWithRootViewController:selFrndCntrl];
+    
     
     UIImage *image = [UIImage imageNamed:@"895-user-group@2x.png"];
     UIImage *imageSel = [UIImage imageNamed:@"895-user-group-selected@2x.png"];
      aViewController1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Share" image:image selectedImage:imageSel];
     
     UINavigationController *mainVwNavCntrl = [[UINavigationController alloc] initWithRootViewController:aViewController1];
-    HomeViewController *homeCntrl = [[HomeViewController alloc] init];
-    [homeCntrl setDelegate:self];
-    UIImage *imageHome = [UIImage imageNamed:@"802-dog-house@2x.png"];
-    UIImage *imageHomeSel = [UIImage imageNamed:@"895-dog-house-selected@2x.png"];
-    homeCntrl.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:imageHome selectedImage:imageHomeSel];
-
-    NSArray* controllers = [NSArray arrayWithObjects:mainVwNavCntrl, selFrndNavCntrl, homeCntrl, nil];
-    
-    tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = controllers;
+   
     
     self.window.backgroundColor = [UIColor whiteColor];
     //[self.window addSubview:self.navViewController.view];
     [self.window setRootViewController:self.navViewController];
     [self.window makeKeyAndVisible];
     appUtl.window = self.window;
-    appUtl.tabBarController = self.tabBarController;
+    appUtl.navViewController = navViewController;
+    [appUtl initializeTabBarCntrl:mainVwNavCntrl];
     if (appUtl.purchased)
         [appUtl registerForRemoteNotifications];
     return YES;

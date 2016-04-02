@@ -18,42 +18,11 @@
 
 -(void) storeTemplItemInCloud:(NSString *)name itemsDic:(NSMutableDictionary*) itmsMp
 {
-    char *pMsgToSend = NULL;
-    int len =0;
-    pMsgToSend = [self.pTransl storeTemplItem:self.share_id itemName:name itemsDic:itmsMp msgLen:&len];
-    [self putMsgInQ:pMsgToSend msgLen:len];
+    
+    NSString *storeLst = [self.pTransl getTemplItemStr:itmsMp];
+    [self archiveItem:storeLst itemName:name];
     return;
 }
-
--(void) storeDeviceToken:(NSString *)token
-{
-    char *pMsgToSend = NULL;
-    int len =0;
-    pMsgToSend = [self.pTransl storeDeviceToken:self.share_id deviceToken:token msgLen:&len];
-    [self putMsgInQ:pMsgToSend msgLen:len];
-    return;
-}
-
--(void) getItems
-{
-    char *pMsgToSend = NULL;
-    int len =0;
-    pMsgToSend = [self.pTransl getItems:self.share_id msgLen:&len];
-    [self putMsgInQ:pMsgToSend msgLen:len];
-    return;
-}
-
-
-
--(void) shareList:(NSString *) list listName:(NSString *)name   
-{
-    char *pMsgToSend = NULL;
-    int len =0;
-    pMsgToSend = [self.pTransl shareListMsg:self.share_id shareList:list listName:name msgLen:&len];
-    [self putMsgInQ:pMsgToSend msgLen:len];
-    return;
-}
-
 
 
 - (instancetype)init

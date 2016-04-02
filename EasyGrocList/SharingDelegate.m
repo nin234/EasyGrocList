@@ -36,7 +36,7 @@
         shareStr = [shareStr stringByAppendingString:item.item];
         shareStr = [shareStr stringByAppendingString:@";"];
     }
-    [pDlg.pShrMgr shareList:shareStr listName:shareStr];
+    [pDlg.pShrMgr shareItem:shareStr listName:shareStr];
     
     
     return;

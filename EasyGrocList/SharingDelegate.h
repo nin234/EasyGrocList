@@ -11,7 +11,7 @@
 #import <sharing/ContactsViewController.h>
 
 
-@interface SharingDelegate : NSObject 
+@interface SharingDelegate : NSObject <ContactsViewControllerDelegate>
 {
  
 }

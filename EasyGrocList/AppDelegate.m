@@ -556,7 +556,8 @@
     [self.window makeKeyAndVisible];
     appUtl.window = self.window;
     appUtl.navViewController = navViewController;
-    [appUtl initializeTabBarCntrl:mainVwNavCntrl];
+    id shrDelegate = [[SharingDelegate alloc] init];
+    [appUtl initializeTabBarCntrl:mainVwNavCntrl ContactsDelegate:shrDelegate];
     if (appUtl.purchased)
         [appUtl registerForRemoteNotifications];
     return YES;

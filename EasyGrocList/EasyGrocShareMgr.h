@@ -19,8 +19,8 @@
 
 
 -(void) storeTemplItemInCloud:(NSString *)name itemsDic:(NSMutableDictionary*) itmsMp;
--(void) shareList:(NSString *) list listName: (NSString *) name;
--(void) getItems;
+
+
 - (instancetype)init;
 
 @end

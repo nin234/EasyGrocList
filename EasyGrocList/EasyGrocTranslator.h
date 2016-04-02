@@ -14,10 +14,7 @@
 @interface EasyGrocTranslator : MessageTranslator
 
 
--(char *) storeTemplItem:(long long) shareId itemName:(NSString *)name itemsDic:(NSMutableDictionary*) itmsMp msgLen :(int *) len;
--(char *) shareListMsg:(long long) shareId shareList:(NSString *) shareLst  listName: (NSString* ) name msgLen:(int *)len;
 
-
--(char *) getItems:(long long) shareId msgLen:(int *)len;
+-(NSString *) getTemplItemStr:(NSMutableDictionary*) itmsMp;
 
 @end

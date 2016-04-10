@@ -31,7 +31,9 @@
     if (self)
     {
         self.pTransl = [[EasyGrocTranslator alloc] init];
-        self.pDecoder = [[EasyGrocDecoder alloc] init];
+        EasyGrocDecoder* pDcd = [[EasyGrocDecoder alloc] init];
+        pDcd.pShrMgr = self;
+        self.pDecoder = pDcd;
     }
     return self;
 }

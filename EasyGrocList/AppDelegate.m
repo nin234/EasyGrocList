@@ -503,6 +503,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     pShrMgr = [[EasyGrocShareMgr alloc] init];
+    pShrMgr.pNtwIntf.connectAddr = @"easygroclist.ddns.net";
+    pShrMgr.pNtwIntf.connectPort = @"16972";
     appUtl = [[AppShrUtil alloc] init];
     appUtl.pShrMgr = pShrMgr;
     bShrMgrStarted = false;

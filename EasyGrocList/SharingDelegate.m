@@ -24,6 +24,25 @@
     
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSString *listName = [pDlg.aViewController1.pAllItms getSelectedItem];
+    NSDictionary *picDic = [pDlg.dataSync getPics];
+    NSString *picName = [picDic objectForKey:listName];
+    if (picName != nil)
+    {
+        NSError *err;
+        NSURL *albumurl = pDlg.pPicsDir;
+        NSURL *imgUrl;
+        
+        if (albumurl != nil && [albumurl checkResourceIsReachableAndReturnError:&err])
+        {
+            imgUrl = [albumurl URLByAppendingPathComponent:picName isDirectory:NO];
+        }
+        
+        if ([imgUrl checkResourceIsReachableAndReturnError:&err] == YES)
+        {
+            [pDlg.pShrMgr sharePicture:imgUrl metaStr:shareStr];
+        }
+        return;
+    }
     NSArray *items = [pDlg.dataSync getList:listName];
     NSUInteger nItems = [items count];
     shareStr = [shareStr stringByAppendingString:@":::"];

@@ -35,7 +35,7 @@
             
         case GET_EASYGROC_LIST_MSG:
         {
-            bRet = [self processGetListMessage:buffer msglen:mlen];
+            bRet = [self processShareItemMessage:buffer msglen:mlen];
         }
         break;
             
@@ -46,7 +46,7 @@
     return bRet;
 }
 
--(bool) processGetListMessage:(char *)buffer msglen:(ssize_t)mlen
+-(bool) processShareItemMessage:(char *)buffer msglen:(ssize_t)mlen
 {
     NSString *name = [NSString stringWithCString:(buffer + 4*sizeof(int)) encoding:NSASCIIStringEncoding];
     int namelen;

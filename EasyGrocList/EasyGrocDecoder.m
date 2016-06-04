@@ -71,7 +71,25 @@
     }
     
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [pDlg.dataSync addItem:name itemsDic:itemMp];
+    NSArray *pListNames = [pDlg.dataSync getListNames];
+    cnt = [pListNames count];
+    bool bNewItem = true;
+    for (NSUInteger i=0; i < cnt ; ++i)
+    {
+        if ([name isEqualToString:[pListNames objectAtIndex:i]])
+        {
+            bNewItem = false;
+            break;
+        }
+    }
+    if (bNewItem)
+    {
+        [pDlg.dataSync addItem:name itemsDic:itemMp];
+    }
+    else
+    {
+        [pDlg.dataSync editItem:name itemsDic:itemMp];
+    }
     return true;
 }
 

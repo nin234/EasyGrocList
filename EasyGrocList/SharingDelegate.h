@@ -9,14 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "KeychainItemWrapper.h"
 #import <sharing/ContactsViewController.h>
+#import <sharing/ShareMgr.h>
 
 
-@interface SharingDelegate : NSObject <ContactsViewControllerDelegate>
+@interface SharingDelegate : NSObject <ContactsViewControllerDelegate, ShareMgrDelegate>
 {
  
 }
 
 
 -(void) shareNow:(NSString *) shareStr;
+-(NSURL *) getPicUrl:(long long ) shareId picName:(NSString *) name itemName:(NSString *) iName;
+-(void) storeThumbNailImage:(NSURL *)picUrl;
 
 @end

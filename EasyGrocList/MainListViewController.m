@@ -161,6 +161,7 @@ const NSInteger SELECTION_INDICATOR_TAG_2 = 53323;
     if (list != nil && [list count] > indexPath.row)
     {
         NSString *text;
+        NSString *origtext;
         if(bShareView)
         {
             NSNumber* numbr = [seletedItems objectAtIndex:indexPath.row];
@@ -172,15 +173,24 @@ const NSInteger SELECTION_INDICATOR_TAG_2 = 53323;
             {
                 text = @"\u2B1C";
             }
-            text = [text stringByAppendingString:[list objectAtIndex:indexPath.row]];
+            NSString *lstName = [list objectAtIndex:indexPath.row];
+            origtext = lstName;
+            NSArray *pArr = [lstName componentsSeparatedByString:@":::"];
+            NSString *textLstName = [pArr objectAtIndex:[pArr count]-1];
+            
+            text = [text stringByAppendingString:textLstName];
             
            
         }
         else
         {
-            text = [list objectAtIndex:indexPath.row];
+            NSString *lstName = [list objectAtIndex:indexPath.row];
+            origtext = lstName;
+            NSArray *pArr = [lstName componentsSeparatedByString:@":::"];
+            NSString *textLstName = [pArr objectAtIndex:[pArr count]-1];
+            text = textLstName;
         }
-        NSString *pic = [picDic objectForKey:text];
+        NSString *pic = [picDic objectForKey:origtext];
         CGRect textFrame = CGRectMake(10, 10, 275, 25);
         if (pic != nil)
         {

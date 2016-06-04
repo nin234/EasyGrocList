@@ -959,10 +959,13 @@ editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
                 name = [name stringByAppendingString:@" "];
                 name = [name stringByAppendingString:formattedDateString];
                 default_name =name;
+                textField.text = name;
             }
             else
             {
-                textField.text = name;
+                NSArray *pArr = [name componentsSeparatedByString:@":::"];
+                NSString *textLstName = [pArr objectAtIndex:[pArr count]-1];
+                textField.text = textLstName;
             }
             textField.tag = 0;
             [cell.contentView addSubview:textField];

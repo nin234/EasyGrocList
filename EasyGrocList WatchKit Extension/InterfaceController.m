@@ -64,7 +64,7 @@
         {
             //struct stat buf;
             // stat([pFlPath UTF8String], &buf);
-            NSLog (@"Loading image in PhotoDisplayViewController %@ \n", imgUrl);
+            NSLog (@"Loading image in EasyDisplayViewController %@ \n", imgUrl);
             
             NSLog(@"Using scaled imageWithData scale=%f",  photo_scale);
            UIImage* fullScreenImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:imgUrl] scale:photo_scale];

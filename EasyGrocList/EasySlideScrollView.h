@@ -1,13 +1,13 @@
 //
-//  Photo.h
+//  EasySlideScrollView.h
 //  Shopper
 //
-//  Created by Ninan Thomas on 2/7/12.
+//  Created by Ninan Thomas on 2/20/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface Photo : UIImageView
+@interface EasySlideScrollView : UIScrollView
 
 @end

@@ -1,5 +1,5 @@
 /*
-    File: PhotoDisplayViewController.m
+    File: EasyDisplayViewController.m
 Abstract: View controller to manaage displaying a photo.
  Version: 1.0
 
@@ -45,20 +45,20 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
 
 */
 
-#import "PhotoDisplayViewController.h"
+#import "EasyDisplayViewController.h"
 #import "AppDelegate.h"
-#import "SlideScrollView.h"
+#import "EasySlideScrollView.h"
 #include <sys/stat.h>
 #include <unistd.h>
 
 #define ZOOM_VIEW_TAG 100
 #define ZOOM_STEP 1.5
 
-@interface PhotoDisplayViewController (UtilityMethods)
+@interface EasyDisplayViewController (UtilityMethods)
 - (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center;
 @end
 
-@implementation PhotoDisplayViewController
+@implementation EasyDisplayViewController
 
 //@synthesize asset;
 //@synthesize assets;
@@ -97,7 +97,7 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
 -(void) displayPhoto
 {
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    SlideScrollView *imageScrollView = (SlideScrollView *)self.view;
+    EasySlideScrollView *imageScrollView = (EasySlideScrollView *)self.view;
     NSLog(@"View dimensions frame x=%f y=%f height=%f width=%f bounds x=%f y=%f height = %f width=%f\n", [imageScrollView frame].origin.x, [imageScrollView frame].origin.y, [imageScrollView frame].size.height, [imageScrollView frame].size.width,
           [imageScrollView bounds].origin.x, [imageScrollView bounds].origin.y, [imageScrollView bounds].size.height, [imageScrollView bounds].size.width);
     [imageScrollView setBackgroundColor:[UIColor blackColor]];
@@ -119,7 +119,7 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
     {
         //struct stat buf;
         // stat([pFlPath UTF8String], &buf);
-        NSLog (@"Loading image in PhotoDisplayViewController %@ \n", imgUrl);
+        NSLog (@"Loading image in EasyDisplayViewController %@ \n", imgUrl);
         UIDevice *dev = [UIDevice currentDevice];
         
         UIImage *fullScreenImage;
@@ -136,7 +136,7 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
         }
         currURL = imgUrl;
         bPhoto = true;
-        TapDetectingImageView *imageView = [[TapDetectingImageView alloc] initWithImage:fullScreenImage];
+        EasyTapDetectingImageView *imageView = [[EasyTapDetectingImageView alloc] initWithImage:fullScreenImage];
         [imageView setDelegate:self];
         [imageView setTag:ZOOM_VIEW_TAG];
         [imageScrollView setContentSize:[imageView frame].size];
@@ -181,7 +181,7 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
 
 -(void) popView
 {
-    NSLog(@"Popping PhotoDisplayViewController\n");
+    NSLog(@"Popping EasyDisplayViewController\n");
     return;
 }
 
@@ -286,12 +286,12 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
 #pragma mark -
 #pragma mark TapDetectingImageViewDelegate methods
 
-- (void)tapDetectingImageView:(TapDetectingImageView *)view gotSingleTapAtPoint:(CGPoint)tapPoint {
+- (void)tapDetectingImageView:(EasyTapDetectingImageView *)view gotSingleTapAtPoint:(CGPoint)tapPoint {
     // single tap does nothing for now
     printf("In single tap\n");
 }
 
-- (void)tapDetectingImageView:(TapDetectingImageView *)view gotDoubleTapAtPoint:(CGPoint)tapPoint {
+- (void)tapDetectingImageView:(EasyTapDetectingImageView *)view gotDoubleTapAtPoint:(CGPoint)tapPoint {
     printf("In double tap\n");
     UIScrollView *imageScrollView = (UIScrollView *)self.view;
     // double tap zooms in
@@ -300,7 +300,7 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
     [imageScrollView zoomToRect:zoomRect animated:YES];
 }
 
-- (void)tapDetectingImageView:(TapDetectingImageView *)view gotTwoFingerTapAtPoint:(CGPoint)tapPoint {
+- (void)tapDetectingImageView:(EasyTapDetectingImageView *)view gotTwoFingerTapAtPoint:(CGPoint)tapPoint {
     printf("In two finger tap tap\n");
     UIScrollView *imageScrollView = (UIScrollView *)self.view;
     // two-finger tap zooms out
@@ -308,7 +308,7 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
     CGRect zoomRect = [self zoomRectForScale:newScale withCenter:tapPoint];
     [imageScrollView zoomToRect:zoomRect animated:YES];
 }
-- (void)tapDetectingImageView:(TapDetectingImageView *)view gotSwipe:(BOOL)left
+- (void)tapDetectingImageView:(EasyTapDetectingImageView *)view gotSwipe:(BOOL)left
 {
     return;
 }

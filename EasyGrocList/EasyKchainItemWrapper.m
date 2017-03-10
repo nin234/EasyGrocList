@@ -1,5 +1,5 @@
 /*
-     File: KeychainItemWrapper.m 
+     File: EasyKchainItemWrapper.m 
  Abstract: 
  Objective-C wrapper for accessing a single keychain item.
   
@@ -47,7 +47,7 @@
   
 */ 
 
-#import "KeychainItemWrapper.h"
+#import "EasyKchainItemWrapper.h"
 #import <Security/Security.h>
 
 /*
@@ -73,7 +73,7 @@ See the header file Security/SecItem.h for more details.
 
 */
 
-@interface KeychainItemWrapper (PrivateMethods)
+@interface EasyKchainItemWrapper (PrivateMethods)
 /*
 The decision behind the following two methods (secItemFormatToDictionary and dictionaryToSecItemFormat) was
 to encapsulate the transition between what the detail view controller was expecting (NSString *) and what the
@@ -87,7 +87,7 @@ Keychain API expects as a validly constructed container class.
 
 @end
 
-@implementation KeychainItemWrapper
+@implementation EasyKchainItemWrapper
 
 @synthesize keychainItemData, genericPasswordQuery;
 

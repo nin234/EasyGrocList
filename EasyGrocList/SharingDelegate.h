@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KeychainItemWrapper.h"
+#import "EasyKchainItemWrapper.h"
 #import <sharing/ContactsViewController.h>
 #import <sharing/ShareMgr.h>
 

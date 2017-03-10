@@ -7,16 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AddViewController.h"
+#import "EasyAddViewController.h"
 #import "TemplListViewController.h"
 #import "ListViewController.h"
 #import "List1ViewController.h"
-#import "DataOps.h"
+#import "EasyDataOps.h"
 #import "sharing/InAppPurchase.h"
-#import "KeychainItemWrapper.h"
+#import "EasyKchainItemWrapper.h"
 #import "sharing/NtwIntf.h"
 #import "EasyGrocShareMgr.h"
-#import "MainViewController.h"
+#import "EasyViewController.h"
 #import "SharingDelegate.h"
 #import "sharing/HomeViewController.h"
 #import "sharing/AppShrUtil.h"
@@ -29,7 +29,7 @@ enum eActionSheet
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate,  InAppPurchaseDelegate>
 {
-    AddViewController *aVw;
+    EasyAddViewController *aVw;
      bool bKvInit;
     enum eActionSheet eAction;
     bool bShrMgrStarted;
@@ -50,7 +50,7 @@ enum eActionSheet
 @property dispatch_queue_t fetchQueue;
 @property (nonatomic, retain) NSString *pSearchStr;
 @property (nonatomic, retain) NSString *pSearchStr1;
-@property (nonatomic, retain) DataOps *dataSync;
+@property (nonatomic, retain) EasyDataOps *dataSync;
 @property (nonatomic, retain) NSString *mlistName;
 @property (nonatomic, retain) NSString *listName;
 @property (nonatomic, retain) NSFileManager *pFlMgr;
@@ -64,8 +64,8 @@ enum eActionSheet
 @property long long no_of_template_lists;
 @property long long no_of_edits;
 @property long long no_of_template_edits;
-@property (nonatomic, retain) KeychainItemWrapper *kchain;
-@property (nonatomic, retain) MainViewController *aViewController1;
+@property (nonatomic, retain) EasyKchainItemWrapper *kchain;
+@property (nonatomic, retain) EasyViewController *aViewController1;
 
 @property (nonatomic, retain) AppShrUtil *appUtl;
 

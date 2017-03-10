@@ -1,5 +1,5 @@
 //
-//  MainListViewController.h
+//  EasyListViewController.h
 //  EasyGrocList
 //
 //  Created by Ninan Thomas on 3/5/13.
@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainListViewController : UITableViewController <UITextFieldDelegate>
+/**
+ <#Description#>
+ */
+@interface EasyListViewController : UITableViewController <UITextFieldDelegate>
 {
     
     NSDictionary *picDic;

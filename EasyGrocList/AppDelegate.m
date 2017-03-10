@@ -7,11 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "AddViewController.h"
+#import "EasyAddViewController.h"
 #import "ListViewController.h"
 #import "List1ViewController.h"
 #import "TemplListViewController.h"
-#import "PhotoDisplayViewController.h"
+#import "EasyDisplayViewController.h"
 #import "SharingDelegate.h"
 #import "sharing/HomeViewController.h"
 
@@ -74,7 +74,7 @@
 
 - (void)itemAdd
 {
-    MainViewController *pMainVwCntrl = [self.navViewController.viewControllers objectAtIndex:0];
+    EasyViewController *pMainVwCntrl = [self.navViewController.viewControllers objectAtIndex:0];
     NSLog(@"AppDelegate:itemAdd no_of_list=%lld purchased=%d", no_of_lists, appUtl.purchased);
     if (!appUtl.purchased && no_of_lists >= 2)
     {
@@ -86,7 +86,7 @@
     pSearchStr = nil;
     pMainVwCntrl.pSearchBar.text = nil;
     [pMainVwCntrl.pSearchBar resignFirstResponder];
-    AddViewController *aViewController = [[AddViewController alloc]
+    EasyAddViewController *aViewController = [[EasyAddViewController alloc]
                                           initWithNibName:nil bundle:nil];
     aVw = aViewController;
     [self.navViewController pushViewController:aViewController animated:YES];
@@ -106,7 +106,7 @@
     UIActionSheet *pSh;
     pSh = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Purchase", @"Restore Purchases", nil];
     
-    MainViewController *pMainVwCntrl = [self.navViewController.viewControllers objectAtIndex:0];
+    EasyViewController *pMainVwCntrl = [self.navViewController.viewControllers objectAtIndex:0];
     [pSh showInView:pMainVwCntrl.pAllItms.tableView];
     [pSh setDelegate:self];
 
@@ -212,7 +212,7 @@
 {
     [imagePick dismissViewControllerAnimated:NO completion:^{
     [self popView];
-    PhotoDisplayViewController *photoVwCntrl = [PhotoDisplayViewController alloc];
+    EasyDisplayViewController *photoVwCntrl = [EasyDisplayViewController alloc];
     photoVwCntrl.picName = picName;
     photoVwCntrl.listName = name;
     photoVwCntrl = [photoVwCntrl initWithNibName:nil bundle:nil];
@@ -339,7 +339,7 @@
         case 0:
         {
             
-            MainViewController *pMainVwCntrl = [self.navViewController.viewControllers objectAtIndex:0];
+            EasyViewController *pMainVwCntrl = [self.navViewController.viewControllers objectAtIndex:0];
             
             pSearchStr = nil;
             pMainVwCntrl.pSearchBar.text = nil;
@@ -411,7 +411,7 @@
   
     
     pSh = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Template Lists", @"Share", nil];
-    MainViewController *pMainVwCntrl = [self.navViewController.viewControllers objectAtIndex:0];
+    EasyViewController *pMainVwCntrl = [self.navViewController.viewControllers objectAtIndex:0];
     [pSh showInView:pMainVwCntrl.pAllItms.tableView];
     [pSh setDelegate:self];
 
@@ -421,7 +421,7 @@
 
 -(void) paymentInit
 {
-    kchain = [[KeychainItemWrapper alloc] initWithIdentifier:@"InAppData" accessGroup:@"3JEQ693MKL.com.rekhaninan.EasyGrocList"];
+    kchain = [[EasyKchainItemWrapper alloc] initWithIdentifier:@"InAppData" accessGroup:@"3JEQ693MKL.com.rekhaninan.EasyGrocList"];
     
    
     NSString *listno = [kchain objectForKey:(__bridge id)kSecValueData];
@@ -525,14 +525,14 @@
     pDocsDir = [pHdir URLByAppendingPathComponent:@"/Documents/"];
     pPicsDir = [pHdir URLByAppendingPathComponent:@"/Documents/pictures/"];
     
-    dataSync = [[DataOps alloc] init];
+    dataSync = [[EasyDataOps alloc] init];
     [dataSync start];
     
     [self paymentInit];
 
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    MainViewController *aViewController = [[MainViewController alloc]
+    EasyViewController *aViewController = [[EasyViewController alloc]
                                            initWithNibName:nil bundle:nil];
     
     UINavigationController *navCntrl = [[UINavigationController alloc] initWithRootViewController:aViewController];
@@ -540,7 +540,7 @@
     
         
    
-    aViewController1 = [[MainViewController alloc]
+    aViewController1 = [[EasyViewController alloc]
                                            initWithNibName:nil bundle:nil];
     aViewController1.bShareView = true;
     

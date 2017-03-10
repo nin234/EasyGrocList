@@ -1,23 +1,23 @@
 //
-//  MainListViewController.m
+//  EasyListViewController.m
 //  EasyGrocList
 //
 //  Created by Ninan Thomas on 3/5/13.
 //  Copyright (c) 2013 Ninan Thomas. All rights reserved.
 //
 
-#import "MainListViewController.h"
+#import "EasyListViewController.h"
 #import "AppDelegate.h"
 #import "List1ViewController.h"
-#import "PhotoDisplayViewController.h"
+#import "EasyDisplayViewController.h"
 
 const NSInteger SELECTION_INDICATOR_TAG_2 = 53323;
 
-@interface MainListViewController ()
+@interface EasyListViewController ()
 
 @end
 
-@implementation MainListViewController
+@implementation EasyListViewController
 
 @synthesize list;
 @synthesize bShareView;
@@ -205,7 +205,7 @@ const NSInteger SELECTION_INDICATOR_TAG_2 = 53323;
             if ([thumburl checkResourceIsReachableAndReturnError:&err] == YES)
             {
                 UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:thumburl]];
-                NSLog(@"Set icon image %@ for picture list in MainListViewController\n", pic);
+                NSLog(@"Set icon image %@ for picture list in EasyListViewController\n", pic);
                 cell.imageView.image = image;
             }
             textFrame = CGRectMake(70, 10, 275, 25);
@@ -360,7 +360,7 @@ const NSInteger SELECTION_INDICATOR_TAG_2 = 53323;
         NSString *pic = [picDic objectForKey:item];
         if (pic != nil)
         {
-            PhotoDisplayViewController *photoVwCntrl = [PhotoDisplayViewController alloc];
+            EasyDisplayViewController *photoVwCntrl = [EasyDisplayViewController alloc];
             photoVwCntrl.picName = pic;
             photoVwCntrl.listName = item;
             photoVwCntrl = [photoVwCntrl initWithNibName:nil bundle:nil];

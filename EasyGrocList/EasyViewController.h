@@ -1,5 +1,5 @@
 //
-//  MainViewController.h
+//  EasyViewController.h
 //  EasyGrocList
 //
 //  Created by Ninan Thomas on 3/5/13.
@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MainListViewController.h"
+#import "EasyListViewController.h"
 
-@interface MainViewController : UIViewController <UISearchBarDelegate>
+@interface EasyViewController : UIViewController <UISearchBarDelegate>
 
-@property (strong, nonatomic) MainListViewController *pAllItms;
+@property (strong, nonatomic) EasyListViewController *pAllItms;
 @property (strong, nonatomic) UISearchBar *pSearchBar;
 @property (nonatomic) bool bShareView;
 

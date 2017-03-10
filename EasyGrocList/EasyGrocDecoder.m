@@ -33,7 +33,7 @@
     {
        
             
-        case GET_EASYGROC_LIST_MSG:
+        case SHARE_ITEM_MSG:
         {
             bRet = [self processShareItemMessage:buffer msglen:mlen];
         }
@@ -52,12 +52,17 @@
     int namelen;
     memcpy(buffer + 2*sizeof(int), &namelen, sizeof(int));
     NSString *list = [NSString stringWithCString:(buffer + 4*sizeof(int) + namelen) encoding:NSASCIIStringEncoding];
-    NSArray *listItems = [list componentsSeparatedByString:@";"];
+    NSArray *listItems = [list componentsSeparatedByString:@"]:;"];
     NSMutableDictionary *itemMp;
     itemMp = [[NSMutableDictionary alloc] init];
     NSUInteger cnt = [listItems count];
     for (NSUInteger i=0; i < cnt; ++i)
     {
+        if (i == 0)
+        {
+            //to be filled with code to set share id and share name in list
+            continue;
+        }
         NSString *itemrow = [listItems objectAtIndex:i];
         NSArray *itemrowarr = [itemrow componentsSeparatedByString:@":"];
         NSUInteger cnt1 = [itemrowarr count];

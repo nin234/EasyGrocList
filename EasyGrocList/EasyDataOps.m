@@ -1,24 +1,24 @@
 //
-//  DataOps.m
+//  EasyDataOps.m
 //  EasyGrocList
 //
 //  Created by Ninan Thomas on 4/5/13.
 //  Copyright (c) 2013 Ninan Thomas. All rights reserved.
 //
 
-#import "DataOps.h"
+#import "EasyDataOps.h"
 #import "AppDelegate.h"
 #import "MasterList.h"
 #import "List.h"
 #import "MasterListNames.h"
 #import "ListNames.h"
-#import "MainViewController.h"
+#import "EasyViewController.h"
 #import "List1ViewController.h"
 
-#define TIMER_INTERVAL_DATAOPS 3
+#define TIMER_INTERVAL_EasyDataOps 3
 #define INAPP_SKIP_COUNT 40
 
-@implementation DataOps
+@implementation EasyDataOps
 
 @synthesize masterListCnt;
 @synthesize listCnt;
@@ -69,7 +69,7 @@
             // NSLog(@"Waiting for work\n");
             if (bInitialMainScrnRefresh)
             {
-                NSDate *checkTime = [NSDate dateWithTimeIntervalSinceNow:TIMER_INTERVAL_DATAOPS];
+                NSDate *checkTime = [NSDate dateWithTimeIntervalSinceNow:TIMER_INTERVAL_EasyDataOps];
                 [workToDo waitUntilDate:checkTime];
             }
             else
@@ -256,7 +256,7 @@
     dispatch_sync(dispatch_get_main_queue(), ^{
         NSArray *vws = [pDlg.navViewController viewControllers];
         NSUInteger vwcnt = [vws count];
-        //NSLog(@"No of view controllers DataOps:updateLstVwCntrl %lu", (unsigned long)vwcnt);
+        //NSLog(@"No of view controllers EasyDataOps:updateLstVwCntrl %lu", (unsigned long)vwcnt);
         for (NSUInteger i=0; i < vwcnt; ++i)
         {
             if ([[vws objectAtIndex:i] isMemberOfClass:[List1ViewController class]])
@@ -265,7 +265,7 @@
                 [pLst refreshList];
                 [pLst.tableView reloadData];
             }
-          //  NSLog(@"View controller class DataOps:updateLstVwCntrl %@", NSStringFromClass([[vws objectAtIndex:i] class]));
+          //  NSLog(@"View controller class EasyDataOps:updateLstVwCntrl %@", NSStringFromClass([[vws objectAtIndex:i] class]));
             
 
         }
@@ -281,9 +281,9 @@
         NSUInteger vwcnt = [vws count];
         for (NSUInteger i=0; i < vwcnt; ++i)
         {
-            if ([[vws objectAtIndex:i] isMemberOfClass:[MainViewController class]])
+            if ([[vws objectAtIndex:i] isMemberOfClass:[EasyViewController class]])
             {
-                MainViewController *pLst = [vws objectAtIndex:i];
+                EasyViewController *pLst = [vws objectAtIndex:i];
                 [pLst.pAllItms refreshList];
                 [pLst.pAllItms.tableView reloadData];
             }
@@ -636,7 +636,7 @@
     dispatch_sync(dispatch_get_main_queue(), ^{
         NSArray *vws = [pDlg.navViewController viewControllers];
         NSUInteger vwcnt = [vws count];
-        //NSLog(@"No of view controllers DataOps:updateMasterLstVwCntrl %lu", (unsigned long)vwcnt);
+        //NSLog(@"No of view controllers EasyDataOps:updateMasterLstVwCntrl %lu", (unsigned long)vwcnt);
         for (NSUInteger i=0; i < vwcnt; ++i)
         {
             if ([[vws objectAtIndex:i] isMemberOfClass:[ListViewController class]])
@@ -655,7 +655,7 @@
             }
             else
             {
-               // NSLog(@"View controller class DataOps:updateMasterLstVwCntrl %@", NSStringFromClass([[vws objectAtIndex:i] class]));
+               // NSLog(@"View controller class EasyDataOps:updateMasterLstVwCntrl %@", NSStringFromClass([[vws objectAtIndex:i] class]));
             }
         }
     });

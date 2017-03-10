@@ -1,5 +1,5 @@
 //
-//  AddViewController.h
+//  EasyAddViewController.h
 //  EasyGrocList
 //
 //  Created by Ninan Thomas on 3/12/13.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface AddViewController : UITableViewController <UIImagePickerControllerDelegate>
+@interface EasyAddViewController : UITableViewController <UIImagePickerControllerDelegate>
 {
     NSInteger mcnt;
     NSArray *masterList;

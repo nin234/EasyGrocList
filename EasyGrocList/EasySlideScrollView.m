@@ -1,14 +1,14 @@
 //
-//  SlideScrollView.m
+//  EasySlideScrollView.m
 //  Shopper
 //
 //  Created by Ninan Thomas on 2/20/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "SlideScrollView.h"
+#import "EasySlideScrollView.h"
 
-@implementation SlideScrollView
+@implementation EasySlideScrollView
 
 
 - (BOOL)touchesShouldCancelInContentView:(UIView *)view

@@ -45,10 +45,10 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
 
 */
 
-@protocol TapDetectingImageViewDelegate;
+@protocol EasyTapDetectingImageViewDelegate;
 #include <sys/time.h>
 
-@interface TapDetectingImageView : UIImageView {
+@interface EasyTapDetectingImageView : UIImageView {
 	
     //id <TapDetectingImageViewDelegate> delegate;
     
@@ -60,7 +60,7 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
     struct timeval lastTouchTime;
 }
 
-@property (nonatomic, assign) id <TapDetectingImageViewDelegate> delegate;
+@property (nonatomic, assign) id <EasyTapDetectingImageViewDelegate> delegate;
 
 @end
 
@@ -68,13 +68,13 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
 /*
  Protocol for the tap-detecting image view's delegate.
  */
-@protocol TapDetectingImageViewDelegate <NSObject>
+@protocol EasyTapDetectingImageViewDelegate <NSObject>
 
 @optional
-- (void)tapDetectingImageView:(TapDetectingImageView *)view gotSingleTapAtPoint:(CGPoint)tapPoint;
-- (void)tapDetectingImageView:(TapDetectingImageView *)view gotDoubleTapAtPoint:(CGPoint)tapPoint;
-- (void)tapDetectingImageView:(TapDetectingImageView *)view gotTwoFingerTapAtPoint:(CGPoint)tapPoint;
-- (void)tapDetectingImageView:(TapDetectingImageView *)view gotSwipe:(BOOL)left;
+- (void)tapDetectingImageView:(EasyTapDetectingImageView *)view gotSingleTapAtPoint:(CGPoint)tapPoint;
+- (void)tapDetectingImageView:(EasyTapDetectingImageView *)view gotDoubleTapAtPoint:(CGPoint)tapPoint;
+- (void)tapDetectingImageView:(EasyTapDetectingImageView *)view gotTwoFingerTapAtPoint:(CGPoint)tapPoint;
+- (void)tapDetectingImageView:(EasyTapDetectingImageView *)view gotSwipe:(BOOL)left;
 
 @end
 

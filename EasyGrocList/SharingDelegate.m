@@ -50,6 +50,10 @@
     NSArray *items = [pDlg.dataSync getList:listName];
     NSUInteger nItems = [items count];
     shareStr = [shareStr stringByAppendingString:@":::"];
+     shareStr =  [shareStr stringByAppendingFormat:@"%ld", pDlg.pShrMgr.share_id];
+    shareStr = [shareStr stringByAppendingString:@":"];
+    shareStr =  [shareStr stringByAppendingFormat:@"%ld", pDlg.pShrMgr.share_id];
+    
     
     for (NSUInteger i=0; i < nItems; ++i)
     {
@@ -57,9 +61,9 @@
         shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithLongLong:item.rowno] stringValue]];
         shareStr = [shareStr stringByAppendingString:@":"];
         shareStr = [shareStr stringByAppendingString:item.item];
-        shareStr = [shareStr stringByAppendingString:@";"];
+        shareStr = [shareStr stringByAppendingString:@"]:;"];
     }
-    [pDlg.pShrMgr shareItem:shareStr listName:shareStr];
+    [pDlg.pShrMgr shareItem:shareStr listName:listName];
     
     
     return;

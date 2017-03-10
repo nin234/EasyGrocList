@@ -1,19 +1,19 @@
 //
-//  MainViewController.m
+//  EasyViewController.m
 //  EasyGrocList
 //
 //  Created by Ninan Thomas on 3/5/13.
 //  Copyright (c) 2013 Ninan Thomas. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "EasyViewController.h"
 #import "AppDelegate.h"
 
-@interface MainViewController ()
+@interface EasyViewController ()
 
 @end
 
-@implementation MainViewController
+@implementation EasyViewController
 
 @synthesize bShareView;
 
@@ -42,7 +42,7 @@
         [self.pSearchBar setDelegate:self];
         [self.view addSubview:self.pSearchBar];
     }
-    self.pAllItms = [[MainListViewController alloc]
+    self.pAllItms = [[EasyListViewController alloc]
                      initWithNibName:nil bundle:nil];
     self.pAllItms.bShareView = bShareView;
     CGFloat yoffset;

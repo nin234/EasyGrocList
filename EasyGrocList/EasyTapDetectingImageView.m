@@ -45,7 +45,7 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
 
 */
 
-#import "TapDetectingImageView.h"
+#import "EasyTapDetectingImageView.h"
 
 #define DOUBLE_TAP_DELAY 0.35
 #define HORIZ_SWIPE_DRAG_MIN  12
@@ -54,7 +54,7 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
 
 CGPoint midpointBetweenPoints(CGPoint a, CGPoint b);
 
-@interface TapDetectingImageView ()
+@interface EasyTapDetectingImageView ()
 - (void)handleSingleTap;
 - (void)handleDoubleTap;
 - (void)handleTwoFingerTap;
@@ -62,7 +62,7 @@ CGPoint midpointBetweenPoints(CGPoint a, CGPoint b);
 -  (void) handleRightSwipe;
 @end
 
-@implementation TapDetectingImageView
+@implementation EasyTapDetectingImageView
 
 @synthesize delegate;
 
@@ -250,9 +250,11 @@ CGPoint midpointBetweenPoints(CGPoint a, CGPoint b);
 
 @end
 
+/*
 CGPoint midpointBetweenPoints(CGPoint a, CGPoint b) {
     CGFloat x = (a.x + b.x) / 2.0;
     CGFloat y = (a.y + b.y) / 2.0;
     return CGPointMake(x, y);
 }
+ */
                     

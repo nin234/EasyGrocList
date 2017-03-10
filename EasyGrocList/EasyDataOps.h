@@ -1,5 +1,5 @@
 //
-//  DataOps.h
+//  EasyDataOps.h
 //  EasyGrocList
 //
 //  Created by Ninan Thomas on 4/5/13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DataOps : NSThread
+@interface EasyDataOps : NSThread
 {
     NSMutableArray *masterListNames;
     NSMutableArray *masterListMps;

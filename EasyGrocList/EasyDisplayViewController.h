@@ -1,5 +1,5 @@
 /*
-    File: PhotoDisplayViewController.h
+    File: EasyDisplayViewController.h
 Abstract: View controller to manaage displaying a photo.
  Version: 1.0
 
@@ -48,16 +48,16 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <UIKit/UIKit.h>
 
-#import "TapDetectingImageView.h"
-#import "Photo.h"
+#import "EasyTapDetectingImageView.h"
+#import "EasyPhoto.h"
 
 
-@interface PhotoDisplayViewController : UIViewController<UIScrollViewDelegate, TapDetectingImageViewDelegate, UIActionSheetDelegate> {
+@interface EasyDisplayViewController : UIViewController<UIScrollViewDelegate, EasyTapDetectingImageViewDelegate, UIActionSheetDelegate> {
   //  ALAsset *asset;
-    IBOutlet Photo *photoImageView;
+    IBOutlet EasyPhoto *photoImageView;
    //  NSMutableArray *assets;
 
-    TapDetectingImageView *currView;
+    EasyTapDetectingImageView *currView;
     CGFloat photo_scale;
     
 }

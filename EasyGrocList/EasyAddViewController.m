@@ -1,12 +1,12 @@
 //
-//  AddViewController.m
+//  EasyAddViewController.m
 //  EasyGrocList
 //
 //  Created by Ninan Thomas on 3/12/13.
 //  Copyright (c) 2013 Ninan Thomas. All rights reserved.
 //
 
-#import "AddViewController.h"
+#import "EasyAddViewController.h"
 #import "AppDelegate.h"
 #import "List1ViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
@@ -15,11 +15,11 @@
 #include <stdlib.h>
 #include <sys/time.h>
 
-@interface AddViewController ()
+@interface EasyAddViewController ()
 
 @end
 
-@implementation AddViewController
+@implementation EasyAddViewController
 
 @synthesize imagePickerController;
 

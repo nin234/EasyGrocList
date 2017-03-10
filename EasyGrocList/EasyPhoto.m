@@ -1,18 +1,18 @@
 //
-//  Photo.m
+//  EasyPhoto.m
 //  Shopper
 //
 //  Created by Ninan Thomas on 2/7/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "Photo.h"
+#import "EasyPhoto.h"
 
-@implementation Photo
+@implementation EasyPhoto
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    printf("got touches begin event in photo\n");
+    printf("got touches begin event in EasyPhoto\n");
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event

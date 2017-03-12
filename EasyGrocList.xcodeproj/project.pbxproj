@@ -18,11 +18,6 @@
 		DB51F6A41ADDC9BB00C3ADB7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB51F6A31ADDC9BB00C3ADB7 /* StoreKit.framework */; };
 		DB7BFAFA1C1D936900D68CEE /* IsSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7BFAF81C1D936900D68CEE /* IsSelected.png */; };
 		DB7BFAFB1C1D936900D68CEE /* NotSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7BFAF91C1D936900D68CEE /* NotSelected.png */; };
-		DB82B4C4175A12C2005CDC73 /* EasyPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DB82B4BE175A12C1005CDC73 /* EasyPhoto.m */; };
-		DB82B4C5175A12C2005CDC73 /* EasyDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB82B4C0175A12C1005CDC73 /* EasyDisplayViewController.m */; };
-		DB82B4C6175A12C2005CDC73 /* EasyDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB82B4C1175A12C2005CDC73 /* EasyDisplayViewController.xib */; };
-		DB82B4C7175A12C2005CDC73 /* EasyTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB82B4C3175A12C2005CDC73 /* EasyTapDetectingImageView.m */; };
-		DB82B4CB175A24F1005CDC73 /* EasySlideScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB82B4CA175A24F1005CDC73 /* EasySlideScrollView.m */; };
 		DBA254051BF3C4C900E04844 /* SharingDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA254031BF3C4C900E04844 /* SharingDelegate.m */; };
 		DBA254061BF3C4C900E04844 /* SharingDelegate.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA254041BF3C4C900E04844 /* SharingDelegate.xib */; };
 		DBB936FD1AE3CA4D00F1AD3B /* WRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB936FC1AE3CA4D00F1AD3B /* WRowController.m */; };
@@ -35,25 +30,8 @@
 		DBBA061B1AD2A491001E9959 /* DataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA061A1AD2A491001E9959 /* DataAccessor.m */; };
 		DBBA061E1AD350E6001E9959 /* ListNames.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA061D1AD350E6001E9959 /* ListNames.m */; };
 		DBBA06211AD351FF001E9959 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA06201AD351FF001E9959 /* List.m */; };
-		DBBF2BAC16EF4E170083912F /* EasyAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BAA16EF4E170083912F /* EasyAddViewController.m */; };
-		DBBF2BAD16EF4E170083912F /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BAB16EF4E170083912F /* AddViewController.xib */; };
 		DBBF2BB81701B9580083912F /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BB71701B9570083912F /* camera.png */; };
-		DBBF2BBB1708F66D0083912F /* MasterList.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BBA1708F66D0083912F /* MasterList.m */; };
-		DBBF2BBF170AF7B20083912F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BBD170AF7B10083912F /* ListViewController.m */; };
-		DBBF2BC0170AF7B20083912F /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BBE170AF7B10083912F /* ListViewController.xib */; };
-		DBBF2BC3170C49230083912F /* MasterListNames.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BC2170C49230083912F /* MasterListNames.m */; };
-		DBBF2BC6170EEDB30083912F /* EasyDataOps.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BC5170EEDB30083912F /* EasyDataOps.m */; };
-		DBBF2BC9170EEF1D0083912F /* LocalMasterListNames.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BC8170EEF1C0083912F /* LocalMasterListNames.m */; };
-		DBBF2BCC170EEF6E0083912F /* LocalMasterList.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BCB170EEF6E0083912F /* LocalMasterList.m */; };
-		DBBF2BD0172D28280083912F /* TemplListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BCE172D28270083912F /* TemplListViewController.m */; };
-		DBBF2BD1172D28280083912F /* TemplListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BCF172D28280083912F /* TemplListViewController.xib */; };
 		DBBF2BD71737CE310083912F /* delete_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BD61737CE300083912F /* delete_button.png */; };
-		DBBF2BF21749749E0083912F /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BF11749749D0083912F /* List.m */; };
-		DBBF2BF5174978ED0083912F /* ListNames.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BF4174978EC0083912F /* ListNames.m */; };
-		DBBF2BF917497B760083912F /* List1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BF717497B730083912F /* List1ViewController.m */; };
-		DBBF2BFA17497B760083912F /* List1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BF817497B750083912F /* List1ViewController.xib */; };
-		DBBF2BFE175442A30083912F /* EasyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2BFC175442A10083912F /* EasyViewController.m */; };
-		DBBF2BFF175442A30083912F /* EasyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BFD175442A20083912F /* EasyViewController.xib */; };
 		DBBF2C051756B5510083912F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBF2C041756B5500083912F /* MobileCoreServices.framework */; };
 		DBDCDB141BF04432001A277A /* 895-user-group@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDCDB121BF04432001A277A /* 895-user-group@2x.png */; };
 		DBDCDB151BF04432001A277A /* 895-user-group@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDCDB131BF04432001A277A /* 895-user-group@3x.png */; };
@@ -77,8 +55,6 @@
 		DBE8529016E0168700F709E7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8526F16E0168600F709E7 /* CoreData.framework */; };
 		DBE8529816E0168700F709E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBE8529616E0168700F709E7 /* InfoPlist.strings */; };
 		DBE8529B16E0168700F709E7 /* EasyGrocListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE8529A16E0168700F709E7 /* EasyGrocListTests.m */; };
-		DBE852AF16E6BBC400F709E7 /* EasyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE852AD16E6BBC400F709E7 /* EasyListViewController.m */; };
-		DBE852B016E6BBC400F709E7 /* EasyListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE852AE16E6BBC400F709E7 /* EasyListViewController.xib */; };
 		DBF61DA31BB175780093B83A /* EasyGrocShareMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF61DA21BB175780093B83A /* EasyGrocShareMgr.m */; };
 		DBFCDACA1AE740B400E7D683 /* Grocery_list_icon_180.png in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDAC91AE740B400E7D683 /* Grocery_list_icon_180.png */; };
 		DBFCDAD01AE7453300E7D683 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDACF1AE7453300E7D683 /* Images.xcassets */; };
@@ -167,15 +143,6 @@
 		DB51F6A31ADDC9BB00C3ADB7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DB7BFAF81C1D936900D68CEE /* IsSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IsSelected.png; sourceTree = "<group>"; };
 		DB7BFAF91C1D936900D68CEE /* NotSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotSelected.png; sourceTree = "<group>"; };
-		DB82B4BD175A12C1005CDC73 /* EasyPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EasyPhoto.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		DB82B4BE175A12C1005CDC73 /* EasyPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EasyPhoto.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		DB82B4BF175A12C1005CDC73 /* EasyDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EasyDisplayViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		DB82B4C0175A12C1005CDC73 /* EasyDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EasyDisplayViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		DB82B4C1175A12C2005CDC73 /* EasyDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EasyDisplayViewController.xib; sourceTree = "<group>"; };
-		DB82B4C2175A12C2005CDC73 /* EasyTapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyTapDetectingImageView.h; sourceTree = "<group>"; };
-		DB82B4C3175A12C2005CDC73 /* EasyTapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyTapDetectingImageView.m; sourceTree = "<group>"; };
-		DB82B4C9175A24F1005CDC73 /* EasySlideScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasySlideScrollView.h; sourceTree = "<group>"; };
-		DB82B4CA175A24F1005CDC73 /* EasySlideScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasySlideScrollView.m; sourceTree = "<group>"; };
 		DBA254021BF3C4C900E04844 /* SharingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharingDelegate.h; sourceTree = "<group>"; };
 		DBA254031BF3C4C900E04844 /* SharingDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharingDelegate.m; sourceTree = "<group>"; };
 		DBA254041BF3C4C900E04844 /* SharingDelegate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharingDelegate.xib; sourceTree = "<group>"; };
@@ -202,37 +169,8 @@
 		DBBA061F1AD351FF001E9959 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		DBBA06201AD351FF001E9959 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		DBBA06221AD7F152001E9959 /* EasyGrocList WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "EasyGrocList WatchKit Extension.entitlements"; sourceTree = "<group>"; };
-		DBBF2BA916EF4E170083912F /* EasyAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyAddViewController.h; sourceTree = "<group>"; };
-		DBBF2BAA16EF4E170083912F /* EasyAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EasyAddViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		DBBF2BAB16EF4E170083912F /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
 		DBBF2BB71701B9570083912F /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = Images/camera.png; sourceTree = SOURCE_ROOT; };
-		DBBF2BB91708F66D0083912F /* MasterList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterList.h; sourceTree = "<group>"; };
-		DBBF2BBA1708F66D0083912F /* MasterList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterList.m; sourceTree = "<group>"; };
-		DBBF2BBC170AF7B10083912F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
-		DBBF2BBD170AF7B10083912F /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
-		DBBF2BBE170AF7B10083912F /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
-		DBBF2BC1170C49220083912F /* MasterListNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterListNames.h; sourceTree = "<group>"; };
-		DBBF2BC2170C49230083912F /* MasterListNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterListNames.m; sourceTree = "<group>"; };
-		DBBF2BC4170EEDB20083912F /* EasyDataOps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyDataOps.h; sourceTree = "<group>"; };
-		DBBF2BC5170EEDB30083912F /* EasyDataOps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyDataOps.m; sourceTree = "<group>"; };
-		DBBF2BC7170EEF1C0083912F /* LocalMasterListNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalMasterListNames.h; sourceTree = "<group>"; };
-		DBBF2BC8170EEF1C0083912F /* LocalMasterListNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalMasterListNames.m; sourceTree = "<group>"; };
-		DBBF2BCA170EEF6D0083912F /* LocalMasterList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalMasterList.h; sourceTree = "<group>"; };
-		DBBF2BCB170EEF6E0083912F /* LocalMasterList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalMasterList.m; sourceTree = "<group>"; };
-		DBBF2BCD172D28270083912F /* TemplListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplListViewController.h; sourceTree = "<group>"; };
-		DBBF2BCE172D28270083912F /* TemplListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplListViewController.m; sourceTree = "<group>"; };
-		DBBF2BCF172D28280083912F /* TemplListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemplListViewController.xib; sourceTree = "<group>"; };
 		DBBF2BD61737CE300083912F /* delete_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = delete_button.png; path = Images/delete_button.png; sourceTree = SOURCE_ROOT; };
-		DBBF2BF01749749C0083912F /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
-		DBBF2BF11749749D0083912F /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
-		DBBF2BF3174978EC0083912F /* ListNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListNames.h; sourceTree = "<group>"; };
-		DBBF2BF4174978EC0083912F /* ListNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListNames.m; sourceTree = "<group>"; };
-		DBBF2BF617497B730083912F /* List1ViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = List1ViewController.h; sourceTree = "<group>"; };
-		DBBF2BF717497B730083912F /* List1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List1ViewController.m; sourceTree = "<group>"; };
-		DBBF2BF817497B750083912F /* List1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = List1ViewController.xib; sourceTree = "<group>"; };
-		DBBF2BFB175442A00083912F /* EasyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EasyViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		DBBF2BFC175442A10083912F /* EasyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EasyViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		DBBF2BFD175442A20083912F /* EasyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EasyViewController.xib; sourceTree = "<group>"; };
 		DBBF2C041756B5500083912F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DBDCDB121BF04432001A277A /* 895-user-group@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "895-user-group@2x.png"; sourceTree = "<group>"; };
 		DBDCDB131BF04432001A277A /* 895-user-group@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "895-user-group@3x.png"; sourceTree = "<group>"; };
@@ -260,9 +198,6 @@
 		DBE8529716E0168700F709E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DBE8529916E0168700F709E7 /* EasyGrocListTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyGrocListTests.h; sourceTree = "<group>"; };
 		DBE8529A16E0168700F709E7 /* EasyGrocListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyGrocListTests.m; sourceTree = "<group>"; };
-		DBE852AC16E6BBC300F709E7 /* EasyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = EasyListViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		DBE852AD16E6BBC400F709E7 /* EasyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EasyListViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		DBE852AE16E6BBC400F709E7 /* EasyListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EasyListViewController.xib; sourceTree = "<group>"; };
 		DBF61DA11BB175780093B83A /* EasyGrocShareMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyGrocShareMgr.h; sourceTree = "<group>"; };
 		DBF61DA21BB175780093B83A /* EasyGrocShareMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyGrocShareMgr.m; sourceTree = "<group>"; };
 		DBFCDAC91AE740B400E7D683 /* Grocery_list_icon_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grocery_list_icon_180.png; sourceTree = "<group>"; };
@@ -421,35 +356,7 @@
 				DB5079D21B25B74B0094838A /* EasyKchainItemWrapper.h */,
 				DB5079D01B25B72E0094838A /* EasyKchainItemWrapper.m */,
 				DBBA06171AC030BA001E9959 /* EasyGrocList.entitlements */,
-				DBBF2BFD175442A20083912F /* EasyViewController.xib */,
-				DB82B4BD175A12C1005CDC73 /* EasyPhoto.h */,
-				DB82B4BE175A12C1005CDC73 /* EasyPhoto.m */,
-				DB82B4BF175A12C1005CDC73 /* EasyDisplayViewController.h */,
-				DB82B4C0175A12C1005CDC73 /* EasyDisplayViewController.m */,
-				DB82B4C9175A24F1005CDC73 /* EasySlideScrollView.h */,
-				DB82B4CA175A24F1005CDC73 /* EasySlideScrollView.m */,
-				DB82B4C1175A12C2005CDC73 /* EasyDisplayViewController.xib */,
-				DB82B4C2175A12C2005CDC73 /* EasyTapDetectingImageView.h */,
-				DB82B4C3175A12C2005CDC73 /* EasyTapDetectingImageView.m */,
-				DBBF2BF617497B730083912F /* List1ViewController.h */,
-				DBBF2BF717497B730083912F /* List1ViewController.m */,
-				DBBF2BBC170AF7B10083912F /* ListViewController.h */,
-				DBBF2BBD170AF7B10083912F /* ListViewController.m */,
-				DBBF2BC4170EEDB20083912F /* EasyDataOps.h */,
-				DBBF2BC5170EEDB30083912F /* EasyDataOps.m */,
-				DBBF2BF817497B750083912F /* List1ViewController.xib */,
-				DBBF2BBE170AF7B10083912F /* ListViewController.xib */,
-				DBE852AE16E6BBC400F709E7 /* EasyListViewController.xib */,
-				DBBF2BCE172D28270083912F /* TemplListViewController.m */,
-				DBBF2BCF172D28280083912F /* TemplListViewController.xib */,
-				DBBF2BCD172D28270083912F /* TemplListViewController.h */,
-				DBBF2BA916EF4E170083912F /* EasyAddViewController.h */,
-				DBBF2BAA16EF4E170083912F /* EasyAddViewController.m */,
-				DBBF2BAB16EF4E170083912F /* AddViewController.xib */,
 				DBE8528316E0168600F709E7 /* EasyGrocList.xcdatamodeld */,
-				DBBF2BC1170C49220083912F /* MasterListNames.h */,
-				DBBF2BC7170EEF1C0083912F /* LocalMasterListNames.h */,
-				DBBF2BCA170EEF6D0083912F /* LocalMasterList.h */,
 				DB3940E51BB8AF57004D601E /* Constants.h */,
 				DBF61DA11BB175780093B83A /* EasyGrocShareMgr.h */,
 				DBF61DA21BB175780093B83A /* EasyGrocShareMgr.m */,
@@ -459,22 +366,9 @@
 				DB3940E31BB84796004D601E /* EasyGrocDecoder.m */,
 				DBE8527A16E0168600F709E7 /* AppDelegate.h */,
 				DBE8527B16E0168600F709E7 /* AppDelegate.m */,
-				DBBF2BCB170EEF6E0083912F /* LocalMasterList.m */,
-				DBBF2BC8170EEF1C0083912F /* LocalMasterListNames.m */,
-				DBBF2BC2170C49230083912F /* MasterListNames.m */,
-				DBBF2BB91708F66D0083912F /* MasterList.h */,
-				DBBF2BF01749749C0083912F /* List.h */,
-				DBE852AC16E6BBC300F709E7 /* EasyListViewController.h */,
-				DBE852AD16E6BBC400F709E7 /* EasyListViewController.m */,
-				DBBF2BFB175442A00083912F /* EasyViewController.h */,
-				DBBF2BFC175442A10083912F /* EasyViewController.m */,
 				DBA254031BF3C4C900E04844 /* SharingDelegate.m */,
 				DBA254021BF3C4C900E04844 /* SharingDelegate.h */,
-				DBBF2BF3174978EC0083912F /* ListNames.h */,
-				DBBF2BF4174978EC0083912F /* ListNames.m */,
-				DBBF2BBA1708F66D0083912F /* MasterList.m */,
 				DBA254041BF3C4C900E04844 /* SharingDelegate.xib */,
-				DBBF2BF11749749D0083912F /* List.m */,
 				DBE8527216E0168600F709E7 /* Supporting Files */,
 				DBFCDACF1AE7453300E7D683 /* Images.xcassets */,
 			);
@@ -722,21 +616,14 @@
 				DBDCDB141BF04432001A277A /* 895-user-group@2x.png in Resources */,
 				DBE8528216E0168600F709E7 /* Default-568h@2x.png in Resources */,
 				DBDCDB191BF04473001A277A /* 895-user-group-selected@3x.png in Resources */,
-				DBE852B016E6BBC400F709E7 /* EasyListViewController.xib in Resources */,
 				DBFCDAD01AE7453300E7D683 /* Images.xcassets in Resources */,
-				DBBF2BAD16EF4E170083912F /* AddViewController.xib in Resources */,
 				DBBF2BB81701B9580083912F /* camera.png in Resources */,
-				DBBF2BC0170AF7B20083912F /* ListViewController.xib in Resources */,
 				DBDCDB151BF04432001A277A /* 895-user-group@3x.png in Resources */,
 				DB7BFAFB1C1D936900D68CEE /* NotSelected.png in Resources */,
-				DBBF2BD1172D28280083912F /* TemplListViewController.xib in Resources */,
 				DBBF2BD71737CE310083912F /* delete_button.png in Resources */,
 				DBDCDB1D1BF0551F001A277A /* 802-dog-house-selected@2x.png in Resources */,
 				DBDCDB181BF04473001A277A /* 895-user-group-selected@2x.png in Resources */,
-				DBBF2BFA17497B760083912F /* List1ViewController.xib in Resources */,
-				DBBF2BFF175442A30083912F /* EasyViewController.xib in Resources */,
 				DB7BFAFA1C1D936900D68CEE /* IsSelected.png in Resources */,
-				DB82B4C6175A12C2005CDC73 /* EasyDisplayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,27 +676,10 @@
 				DBE8527C16E0168600F709E7 /* AppDelegate.m in Sources */,
 				DB3940E11BB4B12F004D601E /* EasyGrocTranslator.m in Sources */,
 				DBE8528516E0168600F709E7 /* EasyGrocList.xcdatamodeld in Sources */,
-				DBE852AF16E6BBC400F709E7 /* EasyListViewController.m in Sources */,
-				DBBF2BAC16EF4E170083912F /* EasyAddViewController.m in Sources */,
-				DBBF2BBB1708F66D0083912F /* MasterList.m in Sources */,
 				DB5079D11B25B72E0094838A /* EasyKchainItemWrapper.m in Sources */,
-				DBBF2BBF170AF7B20083912F /* ListViewController.m in Sources */,
-				DBBF2BC3170C49230083912F /* MasterListNames.m in Sources */,
-				DBBF2BC6170EEDB30083912F /* EasyDataOps.m in Sources */,
-				DBBF2BC9170EEF1D0083912F /* LocalMasterListNames.m in Sources */,
 				DB3940E41BB84796004D601E /* EasyGrocDecoder.m in Sources */,
-				DBBF2BCC170EEF6E0083912F /* LocalMasterList.m in Sources */,
-				DBBF2BD0172D28280083912F /* TemplListViewController.m in Sources */,
 				DBA254051BF3C4C900E04844 /* SharingDelegate.m in Sources */,
-				DBBF2BF21749749E0083912F /* List.m in Sources */,
 				DBF61DA31BB175780093B83A /* EasyGrocShareMgr.m in Sources */,
-				DBBF2BF5174978ED0083912F /* ListNames.m in Sources */,
-				DBBF2BF917497B760083912F /* List1ViewController.m in Sources */,
-				DBBF2BFE175442A30083912F /* EasyViewController.m in Sources */,
-				DB82B4C4175A12C2005CDC73 /* EasyPhoto.m in Sources */,
-				DB82B4C5175A12C2005CDC73 /* EasyDisplayViewController.m in Sources */,
-				DB82B4C7175A12C2005CDC73 /* EasyTapDetectingImageView.m in Sources */,
-				DB82B4CB175A24F1005CDC73 /* EasySlideScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

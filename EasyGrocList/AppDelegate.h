@@ -7,33 +7,29 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EasyAddViewController.h"
-#import "TemplListViewController.h"
-#import "ListViewController.h"
-#import "List1ViewController.h"
-#import "EasyDataOps.h"
+#import "common/EasyAddViewController.h"
+#import "common/TemplListViewController.h"
+#import "common/ListViewController.h"
+#import "common/List1ViewController.h"
+#import "common/DataOps.h"
 #import "sharing/InAppPurchase.h"
 #import "EasyKchainItemWrapper.h"
 #import "sharing/NtwIntf.h"
 #import "EasyGrocShareMgr.h"
-#import "EasyViewController.h"
+#import "common/EasyViewController.h"
 #import "SharingDelegate.h"
 #import "sharing/HomeViewController.h"
 #import "sharing/AppShrUtil.h"
 
-enum eActionSheet
-{
-    eActnShetMainScreen,
-    eActnShetInAppPurchse
-};
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate,  InAppPurchaseDelegate>
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate, EasyViewControllerDelegate>
 {
     EasyAddViewController *aVw;
      bool bKvInit;
-    enum eActionSheet eAction;
-    bool bShrMgrStarted;
+    
     bool bSystemAbrt;
+    bool bShrMgrStarted;
     
 }
 
@@ -42,17 +38,12 @@ enum eActionSheet
 @property (nonatomic, retain) IBOutlet UINavigationController *navViewController;
 
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-@property (nonatomic, retain) InAppPurchase *inapp;
+
 @property dispatch_queue_t fetchQueue;
-@property (nonatomic, retain) NSString *pSearchStr;
-@property (nonatomic, retain) NSString *pSearchStr1;
-@property (nonatomic, retain) EasyDataOps *dataSync;
-@property (nonatomic, retain) NSString *mlistName;
-@property (nonatomic, retain) NSString *listName;
+
+@property (nonatomic, retain) DataOps *dataSync;
+
 @property (nonatomic, retain) NSFileManager *pFlMgr;
 @property (nonatomic, retain) NSURL *pThumbNailsDir;
 @property (nonatomic, retain) NSURL *pPicsDir;
@@ -65,30 +56,15 @@ enum eActionSheet
 @property long long no_of_edits;
 @property long long no_of_template_edits;
 @property (nonatomic, retain) EasyKchainItemWrapper *kchain;
-@property (nonatomic, retain) EasyViewController *aViewController1;
 
+@property (nonatomic, retain) EasyViewController*  aViewController1;
 @property (nonatomic, retain) AppShrUtil *appUtl;
-
-
-- (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
-- (void)itemAdd;
-- (void)itemAddDone;
-- (void)itemEdit;
-- (void)itemEditDone;
-- (void)itemEditCancel;
-- (void) itemAddCancel;
-- (void) itemAddOptionsCancel;
-- (void)templItemAddDone;
-- (void) templItemAddCancel;
-- (void) templItemEdit;
+
+
+
+
 - (void) popView;
--(void) templItemDisplay:(NSString *)name lstcntr:(ListViewController *) pLst;
-- (void) templItemEditDone;
--(void) itemDisplay:(NSString *)name;
--(void) itemDisplay:(NSString *)name lstcntr:(List1ViewController *)pLst;
--(void) templItemEditCancel;
--(void) showPicList:(NSString *)name pictName:(NSString *)picName imagePicker:(UIImagePickerController *) imagePick;
--(void) setPurchsd:(NSString *)trid;
+
 
 @end

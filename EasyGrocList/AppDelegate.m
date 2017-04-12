@@ -12,7 +12,6 @@
 #import "common/List1ViewController.h"
 #import "common/TemplListViewController.h"
 #import "common/EasyDisplayViewController.h"
-#import "SharingDelegate.h"
 #import "sharing/HomeViewController.h"
 #import "common/AppCmnUtil.h"
 
@@ -37,6 +36,8 @@
 @synthesize kchain;
 
 @synthesize pShrMgr;
+@synthesize pShrDelegate;
+@synthesize templViewCntrl;
 
 
 @synthesize appUtl;
@@ -89,6 +90,22 @@
     [appUtl showShareView];
     
 
+}
+
+-(void) templShareMgrStartAndShow
+{
+    if (!bShrMgrStarted)
+    {
+        [pShrMgr start];
+        bShrMgrStarted = true;
+    }
+   
+    pShrDelegate.templList = true;
+    templViewCntrl = [[TemplListViewController alloc]
+                                                initWithNibName:nil bundle:nil];
+    templViewCntrl.bShareTemplView = true;
+    [mainVwNavCntrl pushViewController:templViewCntrl animated:YES];
+    [appUtl showTemplShareView];
 }
 
 
@@ -164,7 +181,7 @@
     UIImage *imageSel = [UIImage imageNamed:@"895-user-group-selected@2x.png"];
      aViewController1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Share" image:image selectedImage:imageSel];
     
-    UINavigationController *mainVwNavCntrl = [[UINavigationController alloc] initWithRootViewController:aViewController1];
+    mainVwNavCntrl = [[UINavigationController alloc] initWithRootViewController:aViewController1];
    
 
     pAppCmnUtil.aViewController1 = aViewController1;
@@ -174,7 +191,8 @@
     [self.window makeKeyAndVisible];
     appUtl.window = self.window;
     appUtl.navViewController = navViewController;
-    id shrDelegate = [[SharingDelegate alloc] init];
+    pShrDelegate = [[SharingDelegate alloc] init];
+    id shrDelegate = pShrDelegate;
     [appUtl initializeTabBarCntrl:mainVwNavCntrl ContactsDelegate:shrDelegate];
     
     [appUtl registerForRemoteNotifications];

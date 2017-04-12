@@ -22,4 +22,6 @@
 -(NSURL *) getPicUrl:(long long ) shareId picName:(NSString *) name itemName:(NSString *) iName;
 -(void) storeThumbNailImage:(NSURL *)picUrl;
 
+@property bool templList;
+
 @end

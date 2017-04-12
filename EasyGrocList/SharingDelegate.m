@@ -9,7 +9,8 @@
 #import "SharingDelegate.h"
 #import <sharing/FriendDetails.h>
 #import "AppDelegate.h"
-#import "List.h"
+#import <common/List.h>
+#import <common/MasterList.h>
 #include "sys/time.h"
 
 //const NSInteger SELECTION_INDICATOR_TAG = 53322;
@@ -20,8 +21,25 @@
 
 @implementation SharingDelegate
 
+@synthesize templList;
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self)
+    {
+        templList = false;
+    }
+    return self;
+}
+
 -(void) shareNow:(NSString *) shareStr
 {
+    if (templList)
+    {
+        [self shareTemplList:shareStr];
+        return;
+    }
     
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSString *listName = [pDlg.aViewController1.pAllItms getSelectedItem];
@@ -50,9 +68,9 @@
     NSArray *items = [pDlg.dataSync getList:listName];
     NSUInteger nItems = [items count];
     shareStr = [shareStr stringByAppendingString:@":::"];
-     shareStr =  [shareStr stringByAppendingFormat:@"%ld", pDlg.pShrMgr.share_id];
+     shareStr =  [shareStr stringByAppendingFormat:@"%lld", pDlg.pShrMgr.share_id];
     shareStr = [shareStr stringByAppendingString:@":"];
-    shareStr =  [shareStr stringByAppendingFormat:@"%ld", pDlg.pShrMgr.share_id];
+    shareStr =  [shareStr stringByAppendingFormat:@"%lld", pDlg.pShrMgr.share_id];
     
     
     for (NSUInteger i=0; i < nItems; ++i)
@@ -67,6 +85,36 @@
     
     
     return;
+}
+
+-(void) shareTemplList:(NSString *) shareStr
+{
+    AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSString *listName = [pDlg.templViewCntrl getSelectedItem];
+    NSArray *items = [pDlg.dataSync getMasterList:listName];
+    NSUInteger nItems = [items count];
+    shareStr = [shareStr stringByAppendingString:@":::"];
+    shareStr =  [shareStr stringByAppendingFormat:@"%lld", pDlg.pShrMgr.share_id];
+    shareStr = [shareStr stringByAppendingString:@":"];
+    shareStr =  [shareStr stringByAppendingFormat:@"%lld", pDlg.pShrMgr.share_id];
+    
+    for (NSUInteger i=0; i < nItems; ++i)
+    {
+        MasterList *item = [items objectAtIndex:i];
+        shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithLongLong:item.rowno] stringValue]];
+        shareStr = [shareStr stringByAppendingString:@":"];
+        shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithInt:item.startMonth] stringValue]];
+        shareStr = [shareStr stringByAppendingString:@":"];
+        shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithInt:item.startMonth] stringValue]];
+        shareStr = [shareStr stringByAppendingString:@":"];
+        shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithInt:item.inventory] stringValue]];
+        shareStr = [shareStr stringByAppendingString:@":"];
+        shareStr = [shareStr stringByAppendingString:item.item];
+        shareStr = [shareStr stringByAppendingString:@"]:;"];
+    }
+
+    [pDlg.pShrMgr shareTemplItem:shareStr listName:listName];
+
 }
 
 -(NSURL *) getPicUrl:(long long ) shareId picName:(NSString *) name itemName:(NSString *) iName

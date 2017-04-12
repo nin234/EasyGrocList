@@ -20,16 +20,18 @@
 #import "SharingDelegate.h"
 #import "sharing/HomeViewController.h"
 #import "sharing/AppShrUtil.h"
+#import "SharingDelegate.h"
 
 
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate, EasyViewControllerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate, EasyViewControllerDelegate, TemplListViewControllerDelegate>
 {
     EasyAddViewController *aVw;
      bool bKvInit;
     
     bool bSystemAbrt;
     bool bShrMgrStarted;
+    UINavigationController *mainVwNavCntrl;
     
 }
 
@@ -59,6 +61,9 @@
 
 @property (nonatomic, retain) EasyViewController*  aViewController1;
 @property (nonatomic, retain) AppShrUtil *appUtl;
+@property (nonatomic, retain) SharingDelegate *pShrDelegate;
+@property (nonatomic, retain) TemplListViewController *templViewCntrl;
+
 - (NSURL *)applicationDocumentsDirectory;
 
 

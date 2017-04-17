@@ -105,7 +105,7 @@
         shareStr = [shareStr stringByAppendingString:@":"];
         shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithInt:item.startMonth] stringValue]];
         shareStr = [shareStr stringByAppendingString:@":"];
-        shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithInt:item.startMonth] stringValue]];
+        shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithInt:item.endMonth] stringValue]];
         shareStr = [shareStr stringByAppendingString:@":"];
         shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithInt:item.inventory] stringValue]];
         shareStr = [shareStr stringByAppendingString:@":"];

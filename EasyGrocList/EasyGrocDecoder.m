@@ -8,6 +8,7 @@
 
 #import "EasyGrocDecoder.h"
 #import "AppDelegate.h"
+#import "common/MasterList.h"
 
 @implementation EasyGrocDecoder
 
@@ -39,6 +40,12 @@
         }
         break;
             
+        case SHARE_TEMPL_ITEM_MSG:
+        {
+            bRet = [self processShareTemplItemMessage:buffer msglen:mlen];
+        }
+        break;
+
         default:
             break;
     }
@@ -46,10 +53,10 @@
     return bRet;
 }
 
--(bool) processShareItemMessage:(char *)buffer msglen:(ssize_t)mlen
+-(bool) processShareTemplItemMessage:(char *)buffer msglen:(ssize_t)mlen
 {
     NSString *name = [NSString stringWithCString:(buffer + 4*sizeof(int)) encoding:NSASCIIStringEncoding];
-    int namelen;
+    int namelen = 0;
     memcpy(buffer + 2*sizeof(int), &namelen, sizeof(int));
     NSString *list = [NSString stringWithCString:(buffer + 4*sizeof(int) + namelen) encoding:NSASCIIStringEncoding];
     NSArray *listItems = [list componentsSeparatedByString:@"]:;"];
@@ -58,11 +65,65 @@
     NSUInteger cnt = [listItems count];
     for (NSUInteger i=0; i < cnt; ++i)
     {
-        if (i == 0)
+        NSString *itemrow = [listItems objectAtIndex:i];
+        NSArray *itemrowarr = [itemrow componentsSeparatedByString:@":"];
+         NSUInteger cnt1 = [itemrowarr count];
+        if (cnt1 != 5)
         {
-            //to be filled with code to set share id and share name in list
+            NSLog(@"Invalid cnt1 %lu %lu", (unsigned long)cnt1, (unsigned long)i);
             continue;
         }
+        MasterList *mitem = [[MasterList alloc] init];
+        NSString *rownoStr = [itemrowarr objectAtIndex:0];
+        long long rowno1 = [rownoStr longLongValue];
+        NSNumber *rowno = [NSNumber numberWithLongLong:rowno1];
+        mitem.rowno = rowno1;
+        NSString *startMonthStr = [itemrowarr objectAtIndex:1];
+        mitem.startMonth = [startMonthStr intValue];
+        mitem.endMonth = [[itemrowarr objectAtIndex:2] intValue];
+        mitem.inventory = [[itemrowarr objectAtIndex:3] intValue];
+        mitem.item = [itemrowarr objectAtIndex:4];
+        
+        [itemMp setObject:mitem forKey:rowno];
+    }
+    AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSArray *pMasterListNames = [pDlg.dataSync getMasterListNames];
+    cnt = [pMasterListNames count];
+    bool bNewItem = true;
+    for (NSUInteger i=0; i < cnt ; ++i)
+    {
+        if ([name isEqualToString:[pMasterListNames objectAtIndex:i]])
+        {
+            bNewItem = false;
+            break;
+        }
+    }
+    
+    if (bNewItem)
+    {
+        [pDlg.dataSync addTemplItem:name itemsDic:itemMp];
+    }
+    else
+    {
+        [pDlg.dataSync editedTemplItem:name itemsDic:itemMp];
+    }
+    
+    return true;
+}
+
+-(bool) processShareItemMessage:(char *)buffer msglen:(ssize_t)mlen
+{
+    NSString *name = [NSString stringWithCString:(buffer + 4*sizeof(int)) encoding:NSASCIIStringEncoding];
+    int namelen = 0;
+    memcpy(buffer + 2*sizeof(int), &namelen, sizeof(int));
+    NSString *list = [NSString stringWithCString:(buffer + 4*sizeof(int) + namelen) encoding:NSASCIIStringEncoding];
+    NSArray *listItems = [list componentsSeparatedByString:@"]:;"];
+    NSMutableDictionary *itemMp;
+    itemMp = [[NSMutableDictionary alloc] init];
+    NSUInteger cnt = [listItems count];
+    for (NSUInteger i=0; i < cnt; ++i)
+    {
+        
         NSString *itemrow = [listItems objectAtIndex:i];
         NSArray *itemrowarr = [itemrow componentsSeparatedByString:@":"];
         NSUInteger cnt1 = [itemrowarr count];

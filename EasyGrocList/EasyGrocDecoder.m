@@ -58,37 +58,9 @@
     NSString *name = [NSString stringWithCString:(buffer + 4*sizeof(int)) encoding:NSASCIIStringEncoding];
     int namelen = 0;
     memcpy(buffer + 2*sizeof(int), &namelen, sizeof(int));
-    NSString *list = [NSString stringWithCString:(buffer + 4*sizeof(int) + namelen) encoding:NSASCIIStringEncoding];
-    NSArray *listItems = [list componentsSeparatedByString:@"]:;"];
-    NSMutableDictionary *itemMp;
-    itemMp = [[NSMutableDictionary alloc] init];
-    NSUInteger cnt = [listItems count];
-    for (NSUInteger i=0; i < cnt; ++i)
-    {
-        NSString *itemrow = [listItems objectAtIndex:i];
-        NSArray *itemrowarr = [itemrow componentsSeparatedByString:@":"];
-         NSUInteger cnt1 = [itemrowarr count];
-        if (cnt1 != 5)
-        {
-            NSLog(@"Invalid cnt1 %lu %lu", (unsigned long)cnt1, (unsigned long)i);
-            continue;
-        }
-        MasterList *mitem = [[MasterList alloc] init];
-        NSString *rownoStr = [itemrowarr objectAtIndex:0];
-        long long rowno1 = [rownoStr longLongValue];
-        NSNumber *rowno = [NSNumber numberWithLongLong:rowno1];
-        mitem.rowno = rowno1;
-        NSString *startMonthStr = [itemrowarr objectAtIndex:1];
-        mitem.startMonth = [startMonthStr intValue];
-        mitem.endMonth = [[itemrowarr objectAtIndex:2] intValue];
-        mitem.inventory = [[itemrowarr objectAtIndex:3] intValue];
-        mitem.item = [itemrowarr objectAtIndex:4];
-        
-        [itemMp setObject:mitem forKey:rowno];
-    }
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSArray *pMasterListNames = [pDlg.dataSync getMasterListNames];
-    cnt = [pMasterListNames count];
+    NSUInteger cnt = [pMasterListNames count];
     bool bNewItem = true;
     for (NSUInteger i=0; i < cnt ; ++i)
     {
@@ -98,14 +70,53 @@
             break;
         }
     }
+    NSString *list = [NSString stringWithCString:(buffer + 4*sizeof(int) + namelen) encoding:NSASCIIStringEncoding];
+    NSArray *listcomps = [list componentsSeparatedByString:@":;]:;"];
+    NSUInteger comps = [listcomps count];
+    for (NSUInteger j=0; j < comps; ++j)
+    {
+        NSArray *listItems = [[listcomps objectAtIndex:j] componentsSeparatedByString:@"]:;"];
+        NSMutableDictionary *itemMp;
+        itemMp = [[NSMutableDictionary alloc] init];
+        cnt = [listItems count];
+        for (NSUInteger i=0; i < cnt; ++i)
+        {
+            NSString *itemrow = [listItems objectAtIndex:i];
+            NSArray *itemrowarr = [itemrow componentsSeparatedByString:@":"];
+            NSUInteger cnt1 = [itemrowarr count];
+            if (cnt1 != 5)
+            {
+                NSLog(@"Invalid cnt1 %lu %lu", (unsigned long)cnt1, (unsigned long)i);
+                continue;
+            }
+            MasterList *mitem = [[MasterList alloc] init];
+            NSString *rownoStr = [itemrowarr objectAtIndex:0];
+            long long rowno1 = [rownoStr longLongValue];
+            NSNumber *rowno = [NSNumber numberWithLongLong:rowno1];
+            mitem.rowno = rowno1;
+            NSString *startMonthStr = [itemrowarr objectAtIndex:1];
+            mitem.startMonth = [startMonthStr intValue];
+            mitem.endMonth = [[itemrowarr objectAtIndex:2] intValue];
+            mitem.inventory = [[itemrowarr objectAtIndex:3] intValue];
+            mitem.item = [itemrowarr objectAtIndex:4];
+        
+            [itemMp setObject:mitem forKey:rowno];
+        }
+        NSString *adjstedname = name;
+        if (j == 1)
+            adjstedname= [name stringByAppendingString:@"INV"];
+        else if (j==2)
+            adjstedname = [name stringByAppendingString:@":SCRTCH"];
+            
     
-    if (bNewItem)
-    {
-        [pDlg.dataSync addTemplItem:name itemsDic:itemMp];
-    }
-    else
-    {
-        [pDlg.dataSync editedTemplItem:name itemsDic:itemMp];
+        if (bNewItem)
+        {
+            [pDlg.dataSync addTemplItem:adjstedname itemsDic:itemMp];
+        }
+        else
+        {
+            [pDlg.dataSync editedTemplItem:adjstedname itemsDic:itemMp];
+        }
     }
     
     return true;

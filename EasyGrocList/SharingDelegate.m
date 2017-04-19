@@ -92,12 +92,29 @@
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSString *listName = [pDlg.templViewCntrl getSelectedItem];
     NSArray *items = [pDlg.dataSync getMasterList:listName];
-    NSUInteger nItems = [items count];
+    
     shareStr = [shareStr stringByAppendingString:@":::"];
     shareStr =  [shareStr stringByAppendingFormat:@"%lld", pDlg.pShrMgr.share_id];
     shareStr = [shareStr stringByAppendingString:@":"];
     shareStr =  [shareStr stringByAppendingFormat:@"%lld", pDlg.pShrMgr.share_id];
+    shareStr = [shareStr stringByAppendingString:@":"];
     
+    [self itemsArrayToShareStr:shareStr itemsArray:items];
+    shareStr = [shareStr stringByAppendingString:@":;]:;"];
+    NSString* mListName = [listName stringByAppendingString:@":INV"];
+    items = [pDlg.dataSync getMasterList:mListName];
+    [self itemsArrayToShareStr:shareStr itemsArray:items];
+    shareStr = [shareStr stringByAppendingString:@":;]:;"];
+    mListName = [listName stringByAppendingString:@":SCRTCH"];
+    items = [pDlg.dataSync getMasterList:mListName];
+    [self itemsArrayToShareStr:shareStr itemsArray:items];
+    [pDlg.pShrMgr shareTemplItem:shareStr listName:listName];
+
+}
+
+-(void) itemsArrayToShareStr:(NSString *) shareStr itemsArray:(NSArray *) items
+{
+    NSUInteger nItems = [items count];
     for (NSUInteger i=0; i < nItems; ++i)
     {
         MasterList *item = [items objectAtIndex:i];
@@ -113,8 +130,7 @@
         shareStr = [shareStr stringByAppendingString:@"]:;"];
     }
 
-    [pDlg.pShrMgr shareTemplItem:shareStr listName:listName];
-
+    
 }
 
 -(NSURL *) getPicUrl:(long long ) shareId picName:(NSString *) name itemName:(NSString *) iName

@@ -70,11 +70,20 @@
             break;
         }
     }
+    
     NSString *list = [NSString stringWithCString:(buffer + 4*sizeof(int) + namelen) encoding:NSASCIIStringEncoding];
     NSArray *listcomps = [list componentsSeparatedByString:@":;]:;"];
     NSUInteger comps = [listcomps count];
+    NSString *shareIdStr = [[NSString alloc] init];
     for (NSUInteger j=0; j < comps; ++j)
     {
+        if (!j)
+        {
+            NSArray *itemrowarr = [[listcomps objectAtIndex:j] componentsSeparatedByString:@":"];
+            shareIdStr = [itemrowarr objectAtIndex:0];
+            continue;
+        }
+
         NSArray *listItems = [[listcomps objectAtIndex:j] componentsSeparatedByString:@"]:;"];
         NSMutableDictionary *itemMp;
         itemMp = [[NSMutableDictionary alloc] init];
@@ -83,6 +92,7 @@
         {
             NSString *itemrow = [listItems objectAtIndex:i];
             NSArray *itemrowarr = [itemrow componentsSeparatedByString:@":"];
+           
             NSUInteger cnt1 = [itemrowarr count];
             if (cnt1 != 5)
             {
@@ -103,12 +113,13 @@
             [itemMp setObject:mitem forKey:rowno];
         }
         NSString *adjstedname = name;
-        if (j == 1)
-            adjstedname= [name stringByAppendingString:@"INV"];
-        else if (j==2)
+        if (j == 2)
+            adjstedname= [name stringByAppendingString:@":INV"];
+        else if (j==3)
             adjstedname = [name stringByAppendingString:@":SCRTCH"];
             
-    
+        adjstedname = [adjstedname stringByAppendingString:@"::];::"];
+        adjstedname = [adjstedname stringByAppendingString:shareIdStr];
         if (bNewItem)
         {
             [pDlg.dataSync addTemplItem:adjstedname itemsDic:itemMp];
@@ -132,6 +143,7 @@
     NSMutableDictionary *itemMp;
     itemMp = [[NSMutableDictionary alloc] init];
     NSUInteger cnt = [listItems count];
+    NSString *nameshid = [name stringByAppendingString:@"::];::"];
     for (NSUInteger i=0; i < cnt; ++i)
     {
         
@@ -141,6 +153,11 @@
         if (cnt1 != 2)
             continue;
         NSString *rownoStr = [itemrowarr objectAtIndex:0];
+        if (!i)
+        {
+            nameshid = [nameshid stringByAppendingString:rownoStr];
+            continue;
+        }
         NSString *item = [itemrowarr objectAtIndex:1];
         long long rowno1 = [rownoStr longLongValue];
         NSNumber *rowno = [NSNumber numberWithLongLong:rowno1];
@@ -161,11 +178,11 @@
     }
     if (bNewItem)
     {
-        [pDlg.dataSync addItem:name itemsDic:itemMp];
+        [pDlg.dataSync addItem:nameshid itemsDic:itemMp];
     }
     else
     {
-        [pDlg.dataSync editItem:name itemsDic:itemMp];
+        [pDlg.dataSync editItem:nameshid itemsDic:itemMp];
     }
     return true;
 }

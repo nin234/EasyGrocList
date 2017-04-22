@@ -71,7 +71,7 @@
      shareStr =  [shareStr stringByAppendingFormat:@"%lld", pDlg.pShrMgr.share_id];
     shareStr = [shareStr stringByAppendingString:@":"];
     shareStr =  [shareStr stringByAppendingFormat:@"%lld", pDlg.pShrMgr.share_id];
-    
+     shareStr = [shareStr stringByAppendingString:@"]:;"];
     
     for (NSUInteger i=0; i < nItems; ++i)
     {
@@ -98,6 +98,7 @@
     shareStr = [shareStr stringByAppendingString:@":"];
     shareStr =  [shareStr stringByAppendingFormat:@"%lld", pDlg.pShrMgr.share_id];
     shareStr = [shareStr stringByAppendingString:@":"];
+    shareStr = [shareStr stringByAppendingString:@":;]:;"];
     
     [self itemsArrayToShareStr:shareStr itemsArray:items];
     shareStr = [shareStr stringByAppendingString:@":;]:;"];

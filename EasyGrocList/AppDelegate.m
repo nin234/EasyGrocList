@@ -148,6 +148,7 @@
     pPicsDir = [pHdir URLByAppendingPathComponent:@"/Documents/pictures/"];
     
     dataSync = [[DataOps alloc] init];
+    dataSync.appName = @"EasyGrocList";
     [dataSync start];
     
     AppCmnUtil *pAppCmnUtil = [AppCmnUtil sharedInstance];

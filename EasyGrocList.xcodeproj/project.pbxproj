@@ -985,6 +985,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 3JEQ693MKL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EasyGrocList/EasyGrocList-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = (
@@ -992,7 +993,7 @@
 					/Users/ninanthomas/projects/common,
 				);
 				INFOPLIST_FILE = "EasyGrocList/EasyGrocList-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = NO;
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-ObjC",
@@ -1014,6 +1015,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 3JEQ693MKL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EasyGrocList/EasyGrocList-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = (
@@ -1021,7 +1023,7 @@
 					/Users/ninanthomas/projects/common,
 				);
 				INFOPLIST_FILE = "EasyGrocList/EasyGrocList-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = NO;
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rekhaninan.${PRODUCT_NAME:rfc1034identifier}";

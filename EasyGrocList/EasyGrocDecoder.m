@@ -122,7 +122,7 @@
         adjstedname = [adjstedname stringByAppendingString:shareIdStr];
         if (bNewItem)
         {
-            [pDlg.dataSync addTemplItem:adjstedname itemsDic:itemMp];
+            [pDlg.dataSync addShareTemplItem:adjstedname itemsDic:itemMp];
         }
         else
         {

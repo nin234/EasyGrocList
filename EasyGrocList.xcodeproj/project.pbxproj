@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B9CF8B81EF1F56E004F009D /* AlbumContentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CF8B71EF1F56E004F009D /* AlbumContentsTableViewCell.xib */; };
 		3BF7F7581E71870100419F8D /* libsharing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7F7531E71863F00419F8D /* libsharing.a */; };
 		3BF7F75B1E71870600419F8D /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7F74C1E71863500419F8D /* libcommon.a */; };
 		DB0C53801AE65AD00089968D /* Grocery_list_icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0C537F1AE65AD00089968D /* Grocery_list_icon_120.png */; };
@@ -128,6 +129,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B9CF8B71EF1F56E004F009D /* AlbumContentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlbumContentsTableViewCell.xib; path = EasyGrocList/AlbumContentsTableViewCell.xib; sourceTree = "<group>"; };
 		3BF7F7461E71863500419F8D /* common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = common.xcodeproj; path = ../common/common.xcodeproj; sourceTree = "<group>"; };
 		3BF7F74D1E71863F00419F8D /* sharing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sharing.xcodeproj; path = ../sharing/sharing.xcodeproj; sourceTree = "<group>"; };
 		DB0C537F1AE65AD00089968D /* Grocery_list_icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grocery_list_icon_120.png; path = Images/Grocery_list_icon_120.png; sourceTree = SOURCE_ROOT; };
@@ -312,6 +314,7 @@
 		DBE8525A16E0168600F709E7 = {
 			isa = PBXGroup;
 			children = (
+				3B9CF8B71EF1F56E004F009D /* AlbumContentsTableViewCell.xib */,
 				3BF7F74D1E71863F00419F8D /* sharing.xcodeproj */,
 				3BF7F7461E71863500419F8D /* common.xcodeproj */,
 				DBFCDAC91AE740B400E7D683 /* Grocery_list_icon_180.png */,
@@ -527,6 +530,9 @@
 							com.apple.Keychain = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 							com.apple.iCloud = {
 								enabled = 0;
 							};
@@ -610,6 +616,7 @@
 				DBA254061BF3C4C900E04844 /* SharingDelegate.xib in Resources */,
 				DBFCDACA1AE740B400E7D683 /* Grocery_list_icon_180.png in Resources */,
 				DBDCDB1B1BF05505001A277A /* 802-dog-house@2x.png in Resources */,
+				3B9CF8B81EF1F56E004F009D /* AlbumContentsTableViewCell.xib in Resources */,
 				DBE8527616E0168600F709E7 /* InfoPlist.strings in Resources */,
 				DBE8527E16E0168600F709E7 /* Default.png in Resources */,
 				DBE8528016E0168600F709E7 /* Default@2x.png in Resources */,

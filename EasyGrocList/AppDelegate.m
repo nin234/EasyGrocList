@@ -82,12 +82,32 @@
 
 -(void) shareMgrStartAndShow
 {
+    NSLog(@"Showing share view %s %d", __FILE__, __LINE__);
+    NSArray *subViews = [easyShareVw subviews];
+    bool bFound = false;
+    for (UIView *vw in subViews)
+    {
+        if (vw == aViewController1.pAllItms.tableView)
+        {
+            NSLog(@"Found tableview subview of aViewController1 %s %d", __FILE__, __LINE__);
+            bFound = true;
+        }
+    }
+    if (!bFound)
+    {
+        NSLog(@"Failed to find tableView as subview of easyShareVw");
+        return;
+    }
+
     if (!bShrMgrStarted)
     {
+        NSLog(@"Starting shareMgr");
         [pShrMgr start];
         bShrMgrStarted = true;
     }
-    [appUtl showShareView];
+    
+        [appUtl showShareView];
+    [aViewController1.pAllItms refreshList];
     
 
 }
@@ -161,9 +181,11 @@
 
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    EasyViewController *aViewController = [[EasyViewController alloc]
-                                           initWithNibName:nil bundle:nil];
+    EasyViewController *aViewController = [EasyViewController alloc];
     
+    aViewController.bShareView = false;
+    aViewController.delegate = self;
+    aViewController = [aViewController initWithNibName:nil bundle:nil];
     UINavigationController *navCntrl = [[UINavigationController alloc] initWithRootViewController:aViewController];
     self.navViewController = navCntrl;
     dataSync.navViewController = navCntrl;
@@ -172,11 +194,11 @@
     
         
    
-    aViewController1 = [[EasyViewController alloc]
-                                           initWithNibName:nil bundle:nil];
+    aViewController1 = [EasyViewController alloc];
+    
     aViewController1.bShareView = true;
     aViewController1.delegate = self;
-    
+    aViewController1 = [aViewController1 initWithNibName:nil bundle:nil];
     
     UIImage *image = [UIImage imageNamed:@"895-user-group@2x.png"];
     UIImage *imageSel = [UIImage imageNamed:@"895-user-group-selected@2x.png"];
@@ -186,6 +208,9 @@
    
 
     pAppCmnUtil.aViewController1 = aViewController1;
+    
+    //The assignement to easyShareVw is just a dummy one to invoke loadView of aViewController1
+     easyShareVw = aViewController1.view;
     self.window.backgroundColor = [UIColor whiteColor];
     //[self.window addSubview:self.navViewController.view];
     [self.window setRootViewController:self.navViewController];

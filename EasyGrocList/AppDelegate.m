@@ -146,7 +146,7 @@
 {
     pShrMgr = [[EasyGrocShareMgr alloc] init];
     pShrMgr.pNtwIntf.connectAddr = @"easygroclist.ddns.net";
-    pShrMgr.pNtwIntf.connectPort = @"16972";
+    pShrMgr.pNtwIntf.connectPort = @"16791";
     appUtl = [[AppShrUtil alloc] init];
     appUtl.pShrMgr = pShrMgr;
     bSystemAbrt = false;
@@ -222,6 +222,9 @@
     [appUtl initializeTabBarCntrl:mainVwNavCntrl ContactsDelegate:shrDelegate];
     
     [appUtl registerForRemoteNotifications];
+    [pShrMgr start];
+    bShrMgrStarted = true;
+
     return YES;
 }
 

@@ -88,6 +88,7 @@
         shareStr = [shareStr stringByAppendingString:item.item];
         shareStr = [shareStr stringByAppendingString:@"]:;"];
     }
+    NSLog(@"Sharing item=%@ name=%@", shareStr, listName);
     [pDlg.pShrMgr shareItem:shareStr listName:listName];
     
     

@@ -33,6 +33,13 @@
     return self;
 }
 
+-(void) refreshShareMainLst
+{
+    AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [pDlg.aViewController1.pAllItms refreshList];
+    
+}
+
 -(void) shareNow:(NSString *) shareStr
 {
     if (templList)

@@ -24,6 +24,7 @@
 
 
 
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate, EasyViewControllerDelegate, TemplListViewControllerDelegate>
 {
     EasyAddViewController *aVw;
@@ -67,7 +68,7 @@
 -(void) shareMgrStartAndShow;
 - (NSURL *)applicationDocumentsDirectory;
 
-
+-(void) setShareId : (long long) shareId;
 
 
 - (void) popView;

@@ -141,6 +141,11 @@
     NSLog(@"Failed to register for remote notification %@\n", error);
 }
 
+-(void) setShareId : (long long) shareId
+{
+    AppCmnUtil *pAppCmnUtil = [AppCmnUtil sharedInstance];
+    pAppCmnUtil.share_id = shareId  ;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -192,6 +197,8 @@
     pAppCmnUtil.navViewController = navCntrl;
     pAppCmnUtil.bEasyGroc = true;
     
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
         
    
     aViewController1 = [EasyViewController alloc];
@@ -224,13 +231,41 @@
     [appUtl registerForRemoteNotifications];
     [pShrMgr start];
     bShrMgrStarted = true;
+     [pShrMgr getItems];
+    pAppCmnUtil.share_id = pShrMgr.share_id;
+    NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];
+    BOOL download = [kvlocal boolForKey:@"ToDownload"];
+    if (download == YES)
+    {
+        NSLog(@"Downloading items %s %d", __FILE__ , __LINE__);
+        [kvlocal setBool:NO forKey:@"ToDownload"];
+    }
+
 
     return YES;
 }
 
+-(NSUInteger) getShareId
+{
+    return pShrMgr.share_id;
+}
+
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-    [pShrMgr getItems];
+   
+    UIApplicationState state = [[UIApplication sharedApplication] applicationState];
+    if (state == UIApplicationStateBackground || state == UIApplicationStateInactive)
+    {
+        //Do checking here.
+        NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];
+        [kvlocal setBool:YES forKey:@"ToDownload"];
+    }
+    else
+    {
+        NSLog(@"Downloading items %s %d", __FILE__, __LINE__);
+        [pShrMgr getItems];
+    }
+    completionHandler(UIBackgroundFetchResultNewData);
     return;
 }
 
@@ -255,6 +290,17 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];
+    BOOL download = [kvlocal boolForKey:@"ToDownload"];
+    if (download == YES)
+    {
+        [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
+        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+        
+      [pShrMgr getItems];
+         [kvlocal setBool:NO forKey:@"ToDownload"];
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

@@ -74,11 +74,7 @@
     }
     NSArray *items = [pDlg.dataSync getList:listName];
     NSUInteger nItems = [items count];
-    shareStr = [shareStr stringByAppendingString:@":::"];
-     shareStr =  [shareStr stringByAppendingFormat:@"%lld", pDlg.pShrMgr.share_id];
-    shareStr = [shareStr stringByAppendingString:@":"];
-    shareStr =  [shareStr stringByAppendingFormat:@"%lld", pDlg.pShrMgr.share_id];
-     shareStr = [shareStr stringByAppendingString:@"]:;"];
+     shareStr = [shareStr stringByAppendingString:@":::"];
     
     for (NSUInteger i=0; i < nItems; ++i)
     {
@@ -95,18 +91,20 @@
     return;
 }
 
+-(void) setShareId : (long long) shareId
+{
+     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [pDlg setShareId:shareId];
+    
+}
 -(void) shareTemplList:(NSString *) shareStr
 {
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSString *listName = [pDlg.templViewCntrl getSelectedItem];
     NSArray *items = [pDlg.dataSync getMasterList:listName];
     
+
     shareStr = [shareStr stringByAppendingString:@":::"];
-    shareStr =  [shareStr stringByAppendingFormat:@"%lld", pDlg.pShrMgr.share_id];
-    shareStr = [shareStr stringByAppendingString:@":"];
-    shareStr =  [shareStr stringByAppendingFormat:@"%lld", pDlg.pShrMgr.share_id];
-    shareStr = [shareStr stringByAppendingString:@":"];
-    shareStr = [shareStr stringByAppendingString:@":;]:;"];
     
     [self itemsArrayToShareStr:shareStr itemsArray:items];
     shareStr = [shareStr stringByAppendingString:@":;]:;"];

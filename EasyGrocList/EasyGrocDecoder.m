@@ -9,6 +9,7 @@
 #import "EasyGrocDecoder.h"
 #import "AppDelegate.h"
 #import "common/MasterList.h"
+#import "common/ItemKey.h"
 
 @implementation EasyGrocDecoder
 
@@ -21,11 +22,8 @@
 
 -(bool) decodeMessage:(char*)buffer msglen:(ssize_t)mlen
 {
-    if ([super decodeMessage:buffer msglen:mlen])
-    {
-        return true;
-    }
-        
+    [super decodeMessage:buffer msglen:mlen];
+   
     bool bRet = true;
     int msgTyp;
     memcpy(&msgTyp, buffer+sizeof(int), sizeof(int));
@@ -135,15 +133,26 @@
 
 -(bool) processShareItemMessage:(char *)buffer msglen:(ssize_t)mlen
 {
-    NSString *name = [NSString stringWithCString:(buffer + 4*sizeof(int)) encoding:NSASCIIStringEncoding];
+    int namelenoffset = 2*sizeof(int) + sizeof(long long);
+    NSLog(@"namelenoffset %d  %s %d", namelenoffset, __FILE__, __LINE__);
+    NSString *name = [NSString stringWithCString:(buffer + 4*sizeof(int) +sizeof(long long)) encoding:NSASCIIStringEncoding];
+    
     int namelen = 0;
-    memcpy(buffer + 2*sizeof(int), &namelen, sizeof(int));
-    NSString *list = [NSString stringWithCString:(buffer + 4*sizeof(int) + namelen) encoding:NSASCIIStringEncoding];
+    memcpy(buffer + namelenoffset, &namelen, sizeof(int));
+    long long share_id = 0;
+    memcpy(buffer+2*sizeof(int), &share_id, sizeof(long long));
+    
+    ItemKey *itk  = [[ItemKey alloc] init];
+    itk.name = name;
+    itk.share_id = share_id;
+    
+    int listoffset = 4*sizeof(int) + namelen +sizeof(long long);
+    NSString *list = [NSString stringWithCString:(buffer + listoffset) encoding:NSASCIIStringEncoding];
     NSArray *listItems = [list componentsSeparatedByString:@"]:;"];
     NSMutableDictionary *itemMp;
     itemMp = [[NSMutableDictionary alloc] init];
     NSUInteger cnt = [listItems count];
-    NSString *nameshid = [name stringByAppendingString:@"::];::"];
+    
     for (NSUInteger i=0; i < cnt; ++i)
     {
         
@@ -153,11 +162,6 @@
         if (cnt1 != 2)
             continue;
         NSString *rownoStr = [itemrowarr objectAtIndex:0];
-        if (!i)
-        {
-            nameshid = [nameshid stringByAppendingString:rownoStr];
-            continue;
-        }
         NSString *item = [itemrowarr objectAtIndex:1];
         long long rowno1 = [rownoStr longLongValue];
         NSNumber *rowno = [NSNumber numberWithLongLong:rowno1];
@@ -170,7 +174,8 @@
     bool bNewItem = true;
     for (NSUInteger i=0; i < cnt ; ++i)
     {
-        if ([name isEqualToString:[pListNames objectAtIndex:i]])
+        ItemKey *key = [pListNames objectAtIndex:i];
+        if ([name isEqualToString:key.name] && share_id == key.share_id)
         {
             bNewItem = false;
             break;
@@ -178,11 +183,11 @@
     }
     if (bNewItem)
     {
-        [pDlg.dataSync addItem:nameshid itemsDic:itemMp];
+        [pDlg.dataSync addItem:itk itemsDic:itemMp];
     }
     else
     {
-        [pDlg.dataSync editItem:nameshid itemsDic:itemMp];
+        [pDlg.dataSync editItem:itk itemsDic:itemMp];
     }
     return true;
 }

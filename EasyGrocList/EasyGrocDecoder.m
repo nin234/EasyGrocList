@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "common/MasterList.h"
 #import "common/ItemKey.h"
+#import "common/LocalList.h"
 
 @implementation EasyGrocDecoder
 
@@ -138,9 +139,9 @@
     NSString *name = [NSString stringWithCString:(buffer + 4*sizeof(int) +sizeof(long long)) encoding:NSASCIIStringEncoding];
     
     int namelen = 0;
-    memcpy(buffer + namelenoffset, &namelen, sizeof(int));
+    memcpy(&namelen, buffer + namelenoffset, sizeof(int));
     long long share_id = 0;
-    memcpy(buffer+2*sizeof(int), &share_id, sizeof(long long));
+    memcpy(&share_id, buffer+2*sizeof(int), sizeof(long long));
     
     ItemKey *itk  = [[ItemKey alloc] init];
     itk.name = name;
@@ -148,6 +149,7 @@
     
     int listoffset = 4*sizeof(int) + namelen +sizeof(long long);
     NSString *list = [NSString stringWithCString:(buffer + listoffset) encoding:NSASCIIStringEncoding];
+   
     NSArray *listItems = [list componentsSeparatedByString:@"]:;"];
     NSMutableDictionary *itemMp;
     itemMp = [[NSMutableDictionary alloc] init];
@@ -165,13 +167,19 @@
         NSString *item = [itemrowarr objectAtIndex:1];
         long long rowno1 = [rownoStr longLongValue];
         NSNumber *rowno = [NSNumber numberWithLongLong:rowno1];
-        [itemMp setObject:item forKey:rowno];
+        LocalList *litem = [[LocalList alloc] init];
+        litem.name = name;
+        litem.item = item;
+        litem.share_id = share_id;
+        litem.rowno = rowno1;
+        [itemMp setObject:litem forKey:rowno];
     }
     
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSArray *pListNames = [pDlg.dataSync getListNames];
     cnt = [pListNames count];
     bool bNewItem = true;
+     NSLog (@"Received from shareId=%lld name=%@ item=%@ bNewItem=%d", share_id , name, list, bNewItem);
     for (NSUInteger i=0; i < cnt ; ++i)
     {
         ItemKey *key = [pListNames objectAtIndex:i];

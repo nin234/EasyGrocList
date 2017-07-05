@@ -120,12 +120,10 @@
         bShrMgrStarted = true;
     }
    
-    pShrDelegate.templList = true;
-    templViewCntrl = [[TemplListViewController alloc]
-                                                initWithNibName:nil bundle:nil];
-    templViewCntrl.bShareTemplView = true;
-    [mainVwNavCntrl pushViewController:templViewCntrl animated:YES];
+    
+    
     [appUtl showTemplShareView];
+   
 }
 
 
@@ -145,6 +143,11 @@
 {
     AppCmnUtil *pAppCmnUtil = [AppCmnUtil sharedInstance];
     pAppCmnUtil.share_id = shareId  ;
+}
+
+-(id) getTemplListVwCntrlDelegate
+{
+    return self;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -226,12 +229,17 @@
     appUtl.navViewController = navViewController;
     pShrDelegate = [[SharingDelegate alloc] init];
     id shrDelegate = pShrDelegate;
-    [appUtl initializeTabBarCntrl:mainVwNavCntrl ContactsDelegate:shrDelegate];
+    templViewCntrl = [[TemplListViewController alloc]
+                      initWithNibName:nil bundle:nil];
+    templViewCntrl.bShareTemplView = true;
+    templViewCntrl.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Share" image:image selectedImage:imageSel];
+    mainTemplVwNavCntrl = [[UINavigationController alloc] initWithRootViewController:templViewCntrl];
+    [appUtl initializeTabBarCntrl:mainVwNavCntrl templNavCntrl:mainTemplVwNavCntrl ContactsDelegate:shrDelegate];
     
     [appUtl registerForRemoteNotifications];
     [pShrMgr start];
     bShrMgrStarted = true;
-     [pShrMgr getItems];
+    
     pAppCmnUtil.share_id = pShrMgr.share_id;
     NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];
     BOOL download = [kvlocal boolForKey:@"ToDownload"];
@@ -239,6 +247,11 @@
     {
         NSLog(@"Downloading items %s %d", __FILE__ , __LINE__);
         [kvlocal setBool:NO forKey:@"ToDownload"];
+        [pShrMgr getItems];
+    }
+    else
+    {
+        [pShrMgr getItems:true];
     }
 
 

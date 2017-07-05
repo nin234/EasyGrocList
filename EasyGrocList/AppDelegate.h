@@ -33,6 +33,7 @@
     bool bSystemAbrt;
     bool bShrMgrStarted;
     UINavigationController *mainVwNavCntrl;
+    UINavigationController *mainTemplVwNavCntrl;
     UIView *easyShareVw;
     
 }
@@ -64,13 +65,15 @@
 @property (nonatomic, retain) EasyViewController*  aViewController1;
 @property (nonatomic, retain) AppShrUtil *appUtl;
 @property (nonatomic, retain) SharingDelegate *pShrDelegate;
+
 @property (nonatomic, retain) TemplListViewController *templViewCntrl;
+
 -(void) shareMgrStartAndShow;
 - (NSURL *)applicationDocumentsDirectory;
 
 -(void) setShareId : (long long) shareId;
 
-
+-(id) getTemplListVwCntrlDelegate;
 - (void) popView;
 
 

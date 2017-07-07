@@ -49,7 +49,7 @@
     }
     
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSString *listName = [pDlg.aViewController1.pAllItms getSelectedItem];
+    ItemKey *listName = [pDlg.aViewController1.pAllItms getSelectedItem];
     NSDictionary *picDic = [pDlg.dataSync getPics];
     NSString *picName = [picDic objectForKey:listName];
     if (picName != nil)
@@ -67,7 +67,7 @@
         {
             if (listName == nil)
                 return;
-            shareStr = [shareStr stringByAppendingString:listName];
+            shareStr = [shareStr stringByAppendingString:listName.name];
             [pDlg.pShrMgr sharePicture:imgUrl metaStr:shareStr];
         }
         return;
@@ -85,7 +85,7 @@
         shareStr = [shareStr stringByAppendingString:@"]:;"];
     }
     NSLog(@"Sharing item=%@ name=%@", shareStr, listName);
-    [pDlg.pShrMgr shareItem:shareStr listName:listName];
+    [pDlg.pShrMgr shareItem:shareStr listName:listName.name shrId:listName.share_id];
     
     
     return;
@@ -100,7 +100,7 @@
 -(void) shareTemplList:(NSString *) shareStr
 {
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSString *listName = [pDlg.templViewCntrl getSelectedItem];
+    ItemKey *listName = [pDlg.templViewCntrl getSelectedItem];
     NSArray *items = [pDlg.dataSync getMasterList:listName];
     
 
@@ -108,14 +108,16 @@
     
     [self itemsArrayToShareStr:shareStr itemsArray:items];
     shareStr = [shareStr stringByAppendingString:@":;]:;"];
-    NSString* mListName = [listName stringByAppendingString:@":INV"];
-    items = [pDlg.dataSync getMasterList:mListName];
+    ItemKey *itk = [[ItemKey alloc] init];
+    itk.name = [listName.name stringByAppendingString:@":INV"];
+    itk.share_id = listName.share_id;
+    items = [pDlg.dataSync getMasterList:itk];
     [self itemsArrayToShareStr:shareStr itemsArray:items];
     shareStr = [shareStr stringByAppendingString:@":;]:;"];
-    mListName = [listName stringByAppendingString:@":SCRTCH"];
-    items = [pDlg.dataSync getMasterList:mListName];
+    itk.name = [listName.name stringByAppendingString:@":SCRTCH"];
+    items = [pDlg.dataSync getMasterList:itk];
     [self itemsArrayToShareStr:shareStr itemsArray:items];
-    [pDlg.pShrMgr shareTemplItem:shareStr listName:listName];
+    [pDlg.pShrMgr shareTemplItem:shareStr listName:listName.name shrId:listName.share_id];
 
 }
 

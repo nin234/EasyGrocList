@@ -123,6 +123,7 @@
     
     
     [appUtl showTemplShareView];
+   [templViewCntrl refreshMasterList];
    
 }
 
@@ -231,6 +232,7 @@
     id shrDelegate = pShrDelegate;
     templViewCntrl = [[TemplListViewController alloc]
                       initWithNibName:nil bundle:nil];
+    templViewCntrl.delegate = self;
     templViewCntrl.bShareTemplView = true;
     templViewCntrl.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Share" image:image selectedImage:imageSel];
     mainTemplVwNavCntrl = [[UINavigationController alloc] initWithRootViewController:templViewCntrl];

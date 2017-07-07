@@ -54,23 +54,26 @@
 
 -(bool) processShareTemplItemMessage:(char *)buffer msglen:(ssize_t)mlen
 {
-    NSString *name = [NSString stringWithCString:(buffer + 4*sizeof(int)) encoding:NSASCIIStringEncoding];
+    NSString *name = [NSString stringWithCString:(buffer + 4*sizeof(int) + sizeof (long long)) encoding:NSASCIIStringEncoding];
     int namelen = 0;
-    memcpy(buffer + 2*sizeof(int), &namelen, sizeof(int));
+    memcpy(&namelen, buffer + 2*sizeof(int) + sizeof (long long),  sizeof(int));
+    long long share_id = 0;
+    memcpy(&share_id, buffer+2*sizeof(int), sizeof(long long));
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSArray *pMasterListNames = [pDlg.dataSync getMasterListNames];
     NSUInteger cnt = [pMasterListNames count];
     bool bNewItem = true;
     for (NSUInteger i=0; i < cnt ; ++i)
     {
-        if ([name isEqualToString:[pMasterListNames objectAtIndex:i]])
+        ItemKey *itk = [pMasterListNames objectAtIndex:i];
+        if ([name isEqualToString:itk.name] && share_id == itk.share_id)
         {
             bNewItem = false;
             break;
         }
     }
     
-    NSString *list = [NSString stringWithCString:(buffer + 4*sizeof(int) + namelen) encoding:NSASCIIStringEncoding];
+    NSString *list = [NSString stringWithCString:(buffer + 4*sizeof(int) + namelen + sizeof(long long)) encoding:NSASCIIStringEncoding];
     NSArray *listcomps = [list componentsSeparatedByString:@":;]:;"];
     NSUInteger comps = [listcomps count];
     NSString *shareIdStr = [[NSString alloc] init];
@@ -107,6 +110,8 @@
             mitem.startMonth = [startMonthStr intValue];
             mitem.endMonth = [[itemrowarr objectAtIndex:2] intValue];
             mitem.inventory = [[itemrowarr objectAtIndex:3] intValue];
+            mitem.name = name;
+            mitem.share_id = share_id;
             mitem.item = [itemrowarr objectAtIndex:4];
         
             [itemMp setObject:mitem forKey:rowno];
@@ -119,13 +124,16 @@
             
         adjstedname = [adjstedname stringByAppendingString:@"::];::"];
         adjstedname = [adjstedname stringByAppendingString:shareIdStr];
+        ItemKey *itk = [[ItemKey alloc] init];
+        itk.name   = adjstedname;
+        itk.share_id = share_id;
         if (bNewItem)
         {
-            [pDlg.dataSync addShareTemplItem:adjstedname itemsDic:itemMp];
+            [pDlg.dataSync addShareTemplItem:itk itemsDic:itemMp];
         }
         else
         {
-            [pDlg.dataSync editedTemplItem:adjstedname itemsDic:itemMp];
+            [pDlg.dataSync editedTemplItem:itk itemsDic:itemMp];
         }
     }
     

@@ -23,7 +23,7 @@
 -(NSURL *) getPicUrl:(long long ) shareId picName:(NSString *) name itemName:(NSString *) iName;
 -(void) storeThumbNailImage:(NSURL *)picUrl;
 -(void) setShareId : (long long) shareId;
-
-@property bool templList;
+-(void) shareTemplList:(NSString *) shareStr;
+-(void) refreshTemplShareMainLst;
 
 @end

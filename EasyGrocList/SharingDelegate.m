@@ -21,16 +21,19 @@
 
 @implementation SharingDelegate
 
-@synthesize templList;
+
 
 - (instancetype)init
 {
     self = [super init];
-    if (self)
-    {
-        templList = false;
-    }
     return self;
+}
+
+-(void) refreshTemplShareMainLst
+{
+     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [pDlg.templViewCntrl refreshMasterList];
+    [pDlg.templViewCntrl.tableView reloadData];
 }
 
 -(void) refreshShareMainLst
@@ -42,11 +45,6 @@
 
 -(void) shareNow:(NSString *) shareStr
 {
-    if (templList)
-    {
-        [self shareTemplList:shareStr];
-        return;
-    }
     
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     ItemKey *listName = [pDlg.aViewController1.pAllItms getSelectedItem];

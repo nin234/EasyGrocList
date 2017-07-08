@@ -30,7 +30,7 @@
         storeLst = [storeLst stringByAppendingString:[rowno stringValue]];
         storeLst = [storeLst stringByAppendingString:@":"];
         storeLst = [storeLst stringByAppendingString:item];
-        storeLst = [storeLst stringByAppendingString:@":;"];
+        storeLst = [storeLst stringByAppendingString:@"]:;"];
         
     }
     return storeLst;

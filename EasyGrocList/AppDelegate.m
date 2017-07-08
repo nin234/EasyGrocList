@@ -230,6 +230,7 @@
     appUtl.navViewController = navViewController;
     pShrDelegate = [[SharingDelegate alloc] init];
     id shrDelegate = pShrDelegate;
+    pShrMgr.shrMgrDelegate = pShrDelegate;
     templViewCntrl = [[TemplListViewController alloc]
                       initWithNibName:nil bundle:nil];
     templViewCntrl.delegate = self;
@@ -241,6 +242,7 @@
     [appUtl registerForRemoteNotifications];
     [pShrMgr start];
     bShrMgrStarted = true;
+    
     
     pAppCmnUtil.share_id = pShrMgr.share_id;
     NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];

@@ -8,7 +8,7 @@
 
 #import "EasyGrocDecoder.h"
 #import "AppDelegate.h"
-#import "common/MasterList.h"
+#import "common/LocalMasterList.h"
 #import "common/ItemKey.h"
 #import "common/LocalList.h"
 
@@ -74,22 +74,28 @@
     }
     
     NSString *list = [NSString stringWithCString:(buffer + 4*sizeof(int) + namelen + sizeof(long long)) encoding:NSASCIIStringEncoding];
+    NSLog(@"Received from server list=%@ share_id=%lld name=%@ %s %d", list, share_id, name, __FILE__, __LINE__ );
+    
     NSArray *listcomps = [list componentsSeparatedByString:@":;]:;"];
     NSUInteger comps = [listcomps count];
-    NSString *shareIdStr = [[NSString alloc] init];
+    bool bAddName = false;
     for (NSUInteger j=0; j < comps; ++j)
     {
-        if (!j)
-        {
-            NSArray *itemrowarr = [[listcomps objectAtIndex:j] componentsSeparatedByString:@":"];
-            shareIdStr = [itemrowarr objectAtIndex:0];
-            continue;
-        }
+       
 
         NSArray *listItems = [[listcomps objectAtIndex:j] componentsSeparatedByString:@"]:;"];
         NSMutableDictionary *itemMp;
         itemMp = [[NSMutableDictionary alloc] init];
         cnt = [listItems count];
+        NSString *adjstedname = name;
+        if (j == 1)
+            adjstedname= [name stringByAppendingString:@":INV"];
+        else if (j==2)
+            adjstedname = [name stringByAppendingString:@":SCRTCH"];
+        
+
+        if (!cnt)
+            continue;
         for (NSUInteger i=0; i < cnt; ++i)
         {
             NSString *itemrow = [listItems objectAtIndex:i];
@@ -101,7 +107,7 @@
                 NSLog(@"Invalid cnt1 %lu %lu", (unsigned long)cnt1, (unsigned long)i);
                 continue;
             }
-            MasterList *mitem = [[MasterList alloc] init];
+            LocalMasterList *mitem = [[LocalMasterList alloc] init];
             NSString *rownoStr = [itemrowarr objectAtIndex:0];
             long long rowno1 = [rownoStr longLongValue];
             NSNumber *rowno = [NSNumber numberWithLongLong:rowno1];
@@ -110,26 +116,25 @@
             mitem.startMonth = [startMonthStr intValue];
             mitem.endMonth = [[itemrowarr objectAtIndex:2] intValue];
             mitem.inventory = [[itemrowarr objectAtIndex:3] intValue];
-            mitem.name = name;
+            mitem.name = adjstedname;
             mitem.share_id = share_id;
             mitem.item = [itemrowarr objectAtIndex:4];
         
             [itemMp setObject:mitem forKey:rowno];
         }
-        NSString *adjstedname = name;
-        if (j == 2)
-            adjstedname= [name stringByAppendingString:@":INV"];
-        else if (j==3)
-            adjstedname = [name stringByAppendingString:@":SCRTCH"];
-            
-        adjstedname = [adjstedname stringByAppendingString:@"::];::"];
-        adjstedname = [adjstedname stringByAppendingString:shareIdStr];
+        
         ItemKey *itk = [[ItemKey alloc] init];
         itk.name   = adjstedname;
         itk.share_id = share_id;
+        
         if (bNewItem)
         {
-            [pDlg.dataSync addShareTemplItem:itk itemsDic:itemMp];
+            if (!bAddName)
+            {
+                [pDlg.dataSync addTemplName:itk];
+                bAddName = true;
+            }
+            [pDlg.dataSync addTemplItem:itk itemsDic:itemMp];
         }
         else
         {
@@ -158,6 +163,7 @@
     int listoffset = 4*sizeof(int) + namelen +sizeof(long long);
     NSString *list = [NSString stringWithCString:(buffer + listoffset) encoding:NSASCIIStringEncoding];
    
+    
     NSArray *listItems = [list componentsSeparatedByString:@"]:;"];
     NSMutableDictionary *itemMp;
     itemMp = [[NSMutableDictionary alloc] init];

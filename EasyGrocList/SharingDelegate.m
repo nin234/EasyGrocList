@@ -104,22 +104,24 @@
 
     shareStr = [shareStr stringByAppendingString:@":::"];
     
-    [self itemsArrayToShareStr:shareStr itemsArray:items];
+   shareStr =  [self itemsArrayToShareStr:shareStr itemsArray:items];
+     NSLog(@"ShareString now %@", shareStr);
     shareStr = [shareStr stringByAppendingString:@":;]:;"];
     ItemKey *itk = [[ItemKey alloc] init];
     itk.name = [listName.name stringByAppendingString:@":INV"];
     itk.share_id = listName.share_id;
     items = [pDlg.dataSync getMasterList:itk];
-    [self itemsArrayToShareStr:shareStr itemsArray:items];
+     shareStr =  [self itemsArrayToShareStr:shareStr itemsArray:items];
     shareStr = [shareStr stringByAppendingString:@":;]:;"];
     itk.name = [listName.name stringByAppendingString:@":SCRTCH"];
     items = [pDlg.dataSync getMasterList:itk];
-    [self itemsArrayToShareStr:shareStr itemsArray:items];
+    shareStr =  [self itemsArrayToShareStr:shareStr itemsArray:items];
+    NSLog(@"Sharing templItem %@ %@ %lld %s %d", shareStr, listName.name, listName.share_id, __FILE__, __LINE__);
     [pDlg.pShrMgr shareTemplItem:shareStr listName:listName.name shrId:listName.share_id];
 
 }
 
--(void) itemsArrayToShareStr:(NSString *) shareStr itemsArray:(NSArray *) items
+-(NSString *) itemsArrayToShareStr:(NSString *) shareStr itemsArray:(NSArray *) items
 {
     NSUInteger nItems = [items count];
     for (NSUInteger i=0; i < nItems; ++i)
@@ -136,7 +138,7 @@
         shareStr = [shareStr stringByAppendingString:item.item];
         shareStr = [shareStr stringByAppendingString:@"]:;"];
     }
-
+    return shareStr;
     
 }
 

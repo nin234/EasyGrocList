@@ -66,7 +66,7 @@
             if (listName == nil)
                 return;
             shareStr = [shareStr stringByAppendingString:listName.name];
-            [pDlg.pShrMgr sharePicture:imgUrl metaStr:shareStr];
+            [pDlg.pShrMgr sharePicture:imgUrl metaStr:shareStr shrId:listName.share_id];
         }
         return;
     }

@@ -146,10 +146,10 @@
 {
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    struct timeval tv;
-    gettimeofday(&tv, 0);
-    long filno = tv.tv_sec/2;
-    NSString *pFlName = [[NSNumber numberWithInt:(int)filno] stringValue];
+    
+    NSString *pFlName = [[NSNumber numberWithLongLong:shareId] stringValue];
+    pFlName = [pFlName stringByAppendingString:@"_"];
+    pFlName = [pFlName stringByAppendingString:name];
     pFlName = [pFlName stringByAppendingString:@".jpg"];
     
     
@@ -166,19 +166,17 @@
         return nil;
     }
     
-    
-    
-    NSString *picname = @"List";
-    NSDate *today = [NSDate date];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
-    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-    NSString *formattedDateString = [dateFormatter stringFromDate:today];
-    picname = [picname stringByAppendingString:@" "];
-    picname = [picname stringByAppendingString:formattedDateString];
-    
-    [pDlg.dataSync addPicItem:picname picItem:pFlName];
+    ItemKey *itk = [[ItemKey alloc] init];
+    itk.name = iName;
+    itk.share_id = shareId;
+    [pDlg.dataSync addPicItem:itk picItem:pFlName];
     return pFlUrl;
+}
+
+-(void) updateEasyMainLstVwCntrl
+{
+    AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [pDlg.dataSync updateEasyMainLstVwCntrl];
 }
 
 -(void) storeThumbNailImage:(NSURL *)picUrl

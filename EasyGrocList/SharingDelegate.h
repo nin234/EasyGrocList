@@ -25,5 +25,6 @@
 -(void) setShareId : (long long) shareId;
 -(void) shareTemplList:(NSString *) shareStr;
 -(void) refreshTemplShareMainLst;
+-(void) updateEasyMainLstVwCntrl;
 
 @end

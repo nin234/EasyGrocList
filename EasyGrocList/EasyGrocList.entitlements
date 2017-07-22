@@ -11,7 +11,7 @@
 	<key>keychain-access-groups</key>
 	<array>
 		<string>$(AppIdentifierPrefix)com.rekhaninan.EasyGrocList</string>
-		<string>$(AppIdentifierPrefix)com.rekhaninan.sharing</string>
+		<string>$(AppIdentifierPrefix)com.rekhaninan.frndlst</string>
 	</array>
 </dict>
 </plist>

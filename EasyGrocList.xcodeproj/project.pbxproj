@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B3D29051F1BE29000AC3D5D /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 3B3D29041F1BE29000AC3D5D /* Images */; };
 		3B9CF8B81EF1F56E004F009D /* AlbumContentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CF8B71EF1F56E004F009D /* AlbumContentsTableViewCell.xib */; };
 		3BF7F7581E71870100419F8D /* libsharing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7F7531E71863F00419F8D /* libsharing.a */; };
 		3BF7F75B1E71870600419F8D /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7F74C1E71863500419F8D /* libcommon.a */; };
@@ -129,6 +130,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B3D29041F1BE29000AC3D5D /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = SOURCE_ROOT; };
 		3B9CF8B71EF1F56E004F009D /* AlbumContentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlbumContentsTableViewCell.xib; path = EasyGrocList/AlbumContentsTableViewCell.xib; sourceTree = "<group>"; };
 		3BF7F7461E71863500419F8D /* common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = common.xcodeproj; path = ../common/common.xcodeproj; sourceTree = "<group>"; };
 		3BF7F74D1E71863F00419F8D /* sharing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sharing.xcodeproj; path = ../sharing/sharing.xcodeproj; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 				DB7BFAF91C1D936900D68CEE /* NotSelected.png */,
 				DBDCDB121BF04432001A277A /* 895-user-group@2x.png */,
 				DBDCDB161BF04473001A277A /* 895-user-group-selected@2x.png */,
+				3B3D29041F1BE29000AC3D5D /* Images */,
 				DBDCDB171BF04473001A277A /* 895-user-group-selected@3x.png */,
 				DBDCDB131BF04432001A277A /* 895-user-group@3x.png */,
 				DBBF2BD61737CE300083912F /* delete_button.png */,
@@ -617,6 +620,7 @@
 				DBFCDACA1AE740B400E7D683 /* Grocery_list_icon_180.png in Resources */,
 				DBDCDB1B1BF05505001A277A /* 802-dog-house@2x.png in Resources */,
 				3B9CF8B81EF1F56E004F009D /* AlbumContentsTableViewCell.xib in Resources */,
+				3B3D29051F1BE29000AC3D5D /* Images in Resources */,
 				DBE8527616E0168600F709E7 /* InfoPlist.strings in Resources */,
 				DBE8527E16E0168600F709E7 /* Default.png in Resources */,
 				DBE8528016E0168600F709E7 /* Default@2x.png in Resources */,

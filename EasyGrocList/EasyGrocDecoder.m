@@ -11,6 +11,7 @@
 #import "common/LocalMasterList.h"
 #import "common/ItemKey.h"
 #import "common/LocalList.h"
+#import "common/common.h"
 
 @implementation EasyGrocDecoder
 
@@ -83,7 +84,7 @@
     {
        
 
-        NSArray *listItems = [[listcomps objectAtIndex:j] componentsSeparatedByString:@"]:;"];
+        NSArray *listItems = [[listcomps objectAtIndex:j] componentsSeparatedByString:itemSeparator];
         NSMutableDictionary *itemMp;
         itemMp = [[NSMutableDictionary alloc] init];
         cnt = [listItems count];
@@ -164,7 +165,7 @@
     NSString *list = [NSString stringWithCString:(buffer + listoffset) encoding:NSASCIIStringEncoding];
    
     
-    NSArray *listItems = [list componentsSeparatedByString:@"]:;"];
+    NSArray *listItems = [list componentsSeparatedByString:itemSeparator];
     NSMutableDictionary *itemMp;
     itemMp = [[NSMutableDictionary alloc] init];
     NSUInteger cnt = [listItems count];
@@ -173,12 +174,17 @@
     {
         
         NSString *itemrow = [listItems objectAtIndex:i];
-        NSArray *itemrowarr = [itemrow componentsSeparatedByString:@":"];
+        NSArray *itemrowarr = [itemrow componentsSeparatedByString:keyValSeparator];
         NSUInteger cnt1 = [itemrowarr count];
         if (cnt1 != 2)
             continue;
         NSString *rownoStr = [itemrowarr objectAtIndex:0];
         NSString *item = [itemrowarr objectAtIndex:1];
+        if (!i)
+        {
+            itk.share_id =[rownoStr longLongValue];
+            continue;
+        }
         long long rowno1 = [rownoStr longLongValue];
         NSNumber *rowno = [NSNumber numberWithLongLong:rowno1];
         LocalList *litem = [[LocalList alloc] init];

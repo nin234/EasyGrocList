@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import <common/List.h>
 #import <common/MasterList.h>
+#import <common/common.h>
 #include "sys/time.h"
 
 //const NSInteger SELECTION_INDICATOR_TAG = 53322;
@@ -72,15 +73,21 @@
     }
     NSArray *items = [pDlg.dataSync getList:listName];
     NSUInteger nItems = [items count];
-     shareStr = [shareStr stringByAppendingString:@":::"];
-    
+    if (!nItems)
+        return;
+    List *item = [items objectAtIndex:0];
+    shareStr = [shareStr stringByAppendingString:contactItemSeperator];
+    shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithLongLong:item.share_id] stringValue]];
+    shareStr = [shareStr stringByAppendingString:keyValSeparator];
+    shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithLongLong:item.share_id] stringValue]];
+    shareStr = [shareStr stringByAppendingString:itemSeparator];
     for (NSUInteger i=0; i < nItems; ++i)
     {
         List *item = [items objectAtIndex:i];
         shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithLongLong:item.rowno] stringValue]];
-        shareStr = [shareStr stringByAppendingString:@":"];
+        shareStr = [shareStr stringByAppendingString:keyValSeparator];
         shareStr = [shareStr stringByAppendingString:item.item];
-        shareStr = [shareStr stringByAppendingString:@"]:;"];
+        shareStr = [shareStr stringByAppendingString:itemSeparator];
     }
     NSLog(@"Sharing item=%@ name=%@", shareStr, listName);
     [pDlg.pShrMgr shareItem:shareStr listName:listName.name shrId:listName.share_id];

@@ -53,31 +53,28 @@
     return bRet;
 }
 
+/*
+ NSString *const keyValSeparator = @":|:";
+ 
+ NSString *const contactItemSeperator = @":::";
+ 
+ NSString *const itemSeparator = @"]:;";
+ 
+ NSString *const templListSeperator = @":;]:;";
+ */
+
 -(bool) processShareTemplItemMessage:(char *)buffer msglen:(ssize_t)mlen
 {
     NSString *name = [NSString stringWithCString:(buffer + 4*sizeof(int) + sizeof (long long)) encoding:NSASCIIStringEncoding];
     int namelen = 0;
     memcpy(&namelen, buffer + 2*sizeof(int) + sizeof (long long),  sizeof(int));
     long long share_id = 0;
-    memcpy(&share_id, buffer+2*sizeof(int), sizeof(long long));
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSArray *pMasterListNames = [pDlg.dataSync getMasterListNames];
-    NSUInteger cnt = [pMasterListNames count];
-    bool bNewItem = true;
-    for (NSUInteger i=0; i < cnt ; ++i)
-    {
-        ItemKey *itk = [pMasterListNames objectAtIndex:i];
-        if ([name isEqualToString:itk.name] && share_id == itk.share_id)
-        {
-            bNewItem = false;
-            break;
-        }
-    }
     
     NSString *list = [NSString stringWithCString:(buffer + 4*sizeof(int) + namelen + sizeof(long long)) encoding:NSASCIIStringEncoding];
     NSLog(@"Received from server list=%@ share_id=%lld name=%@ %s %d", list, share_id, name, __FILE__, __LINE__ );
     
-    NSArray *listcomps = [list componentsSeparatedByString:@":;]:;"];
+    NSArray *listcomps = [list componentsSeparatedByString:templListSeperator];
     NSUInteger comps = [listcomps count];
     bool bAddName = false;
     for (NSUInteger j=0; j < comps; ++j)
@@ -87,11 +84,11 @@
         NSArray *listItems = [[listcomps objectAtIndex:j] componentsSeparatedByString:itemSeparator];
         NSMutableDictionary *itemMp;
         itemMp = [[NSMutableDictionary alloc] init];
-        cnt = [listItems count];
+        NSUInteger cnt = [listItems count];
         NSString *adjstedname = name;
-        if (j == 1)
+        if (j == 2)
             adjstedname= [name stringByAppendingString:@":INV"];
-        else if (j==2)
+        else if (j==3)
             adjstedname = [name stringByAppendingString:@":SCRTCH"];
         
 
@@ -100,30 +97,23 @@
         for (NSUInteger i=0; i < cnt; ++i)
         {
             NSString *itemrow = [listItems objectAtIndex:i];
-            NSArray *itemrowarr = [itemrow componentsSeparatedByString:@":"];
-           
+            NSArray *itemrowarr = [itemrow componentsSeparatedByString:keyValSeparator];
+           if (!j)
+           {
+               NSString *shIdStr = [itemrowarr objectAtIndex:0];
+                share_id =[shIdStr longLongValue];
+                   continue;
+           }
             NSUInteger cnt1 = [itemrowarr count];
             if (cnt1 != 5)
             {
                 NSLog(@"Invalid cnt1 %lu %lu", (unsigned long)cnt1, (unsigned long)i);
                 continue;
             }
-            LocalMasterList *mitem = [[LocalMasterList alloc] init];
-            NSString *rownoStr = [itemrowarr objectAtIndex:0];
-            long long rowno1 = [rownoStr longLongValue];
-            NSNumber *rowno = [NSNumber numberWithLongLong:rowno1];
-            mitem.rowno = rowno1;
-            NSString *startMonthStr = [itemrowarr objectAtIndex:1];
-            mitem.startMonth = [startMonthStr intValue];
-            mitem.endMonth = [[itemrowarr objectAtIndex:2] intValue];
-            mitem.inventory = [[itemrowarr objectAtIndex:3] intValue];
-            mitem.name = adjstedname;
-            mitem.share_id = share_id;
-            mitem.item = [itemrowarr objectAtIndex:4];
-        
-            [itemMp setObject:mitem forKey:rowno];
+            [self populateMasterListItem:itemrowarr adjName:adjstedname shId:share_id items:itemMp];
         }
         
+        bool bNewItem = [self isNewItem:name shid:share_id];
         ItemKey *itk = [[ItemKey alloc] init];
         itk.name   = adjstedname;
         itk.share_id = share_id;
@@ -146,6 +136,45 @@
     return true;
 }
 
+-(bool) isNewItem:(NSString*) name shid:(long long )share_id
+{
+    
+    AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSArray *pMasterListNames = [pDlg.dataSync getMasterListNames];
+    NSUInteger cnt = [pMasterListNames count];
+    bool bNewItem = true;
+    for (NSUInteger i=0; i < cnt ; ++i)
+    {
+        ItemKey *itk = [pMasterListNames objectAtIndex:i];
+        if ([name isEqualToString:itk.name] && share_id == itk.share_id)
+        {
+            bNewItem = false;
+            break;
+        }
+    }
+    return bNewItem;
+}
+
+
+-(void) populateMasterListItem:(NSArray *)itemrowarr adjName:(NSString *)adjstedname shId:(long long) share_id items:(NSMutableDictionary *)itemMp
+{
+    LocalMasterList *mitem = [[LocalMasterList alloc] init];
+    NSString *rownoStr = [itemrowarr objectAtIndex:0];
+    long long rowno1 = [rownoStr longLongValue];
+    NSNumber *rowno = [NSNumber numberWithLongLong:rowno1];
+    mitem.rowno = rowno1;
+    NSString *startMonthStr = [itemrowarr objectAtIndex:1];
+    mitem.startMonth = [startMonthStr intValue];
+    mitem.endMonth = [[itemrowarr objectAtIndex:2] intValue];
+    mitem.inventory = [[itemrowarr objectAtIndex:3] intValue];
+    mitem.name = adjstedname;
+    mitem.share_id = share_id;
+    mitem.item = [itemrowarr objectAtIndex:4];
+    
+    [itemMp setObject:mitem forKey:rowno];
+
+}
+
 -(bool) processShareItemMessage:(char *)buffer msglen:(ssize_t)mlen
 {
     int namelenoffset = 2*sizeof(int) + sizeof(long long);
@@ -159,7 +188,6 @@
     
     ItemKey *itk  = [[ItemKey alloc] init];
     itk.name = name;
-    itk.share_id = share_id;
     
     int listoffset = 4*sizeof(int) + namelen +sizeof(long long);
     NSString *list = [NSString stringWithCString:(buffer + listoffset) encoding:NSASCIIStringEncoding];

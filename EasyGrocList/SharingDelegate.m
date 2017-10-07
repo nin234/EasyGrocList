@@ -102,24 +102,30 @@
     [pDlg setShareId:shareId];
     
 }
+
+
 -(void) shareTemplList:(NSString *) shareStr
 {
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     ItemKey *listName = [pDlg.templViewCntrl getSelectedItem];
     NSArray *items = [pDlg.dataSync getMasterList:listName];
-    
 
-    shareStr = [shareStr stringByAppendingString:@":::"];
+    shareStr = [shareStr stringByAppendingString:contactItemSeperator];
+    shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithLongLong:listName.share_id] stringValue]];
+    shareStr = [shareStr stringByAppendingString:keyValSeparator];
+    shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithLongLong:listName.share_id] stringValue]];
+    shareStr = [shareStr stringByAppendingString:templListSeperator];
     
    shareStr =  [self itemsArrayToShareStr:shareStr itemsArray:items];
      NSLog(@"ShareString now %@", shareStr);
-    shareStr = [shareStr stringByAppendingString:@":;]:;"];
+    shareStr = [shareStr stringByAppendingString:templListSeperator];
     ItemKey *itk = [[ItemKey alloc] init];
     itk.name = [listName.name stringByAppendingString:@":INV"];
     itk.share_id = listName.share_id;
+    
     items = [pDlg.dataSync getMasterList:itk];
      shareStr =  [self itemsArrayToShareStr:shareStr itemsArray:items];
-    shareStr = [shareStr stringByAppendingString:@":;]:;"];
+    shareStr = [shareStr stringByAppendingString:templListSeperator];
     itk.name = [listName.name stringByAppendingString:@":SCRTCH"];
     items = [pDlg.dataSync getMasterList:itk];
     shareStr =  [self itemsArrayToShareStr:shareStr itemsArray:items];
@@ -135,15 +141,15 @@
     {
         MasterList *item = [items objectAtIndex:i];
         shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithLongLong:item.rowno] stringValue]];
-        shareStr = [shareStr stringByAppendingString:@":"];
+        shareStr = [shareStr stringByAppendingString:keyValSeparator];
         shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithInt:item.startMonth] stringValue]];
-        shareStr = [shareStr stringByAppendingString:@":"];
+        shareStr = [shareStr stringByAppendingString:keyValSeparator];
         shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithInt:item.endMonth] stringValue]];
-        shareStr = [shareStr stringByAppendingString:@":"];
+        shareStr = [shareStr stringByAppendingString:keyValSeparator];
         shareStr = [shareStr stringByAppendingString:[[NSNumber numberWithInt:item.inventory] stringValue]];
-        shareStr = [shareStr stringByAppendingString:@":"];
+        shareStr = [shareStr stringByAppendingString:keyValSeparator];
         shareStr = [shareStr stringByAppendingString:item.item];
-        shareStr = [shareStr stringByAppendingString:@"]:;"];
+        shareStr = [shareStr stringByAppendingString:itemSeparator];
     }
     return shareStr;
     

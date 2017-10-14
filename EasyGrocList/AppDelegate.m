@@ -271,17 +271,20 @@
 {
    
     UIApplicationState state = [[UIApplication sharedApplication] applicationState];
+    NSLog(@"didReceiveRemoteNotification: Downloading items %s %d", __FILE__, __LINE__);
+     [pShrMgr getItems];
     if (state == UIApplicationStateBackground || state == UIApplicationStateInactive)
     {
         //Do checking here.
         NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];
         [kvlocal setBool:YES forKey:@"ToDownload"];
+        
+        [pShrMgr processItems];
     }
-    else
-    {
-        NSLog(@"Downloading items %s %d", __FILE__, __LINE__);
-        [pShrMgr getItems];
-    }
+    
+    
+   
+
     completionHandler(UIBackgroundFetchResultNewData);
     return;
 }
@@ -307,6 +310,8 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    NSLog(@"Application did become active %s %d", __FILE__, __LINE__);
     
     NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];
     BOOL download = [kvlocal boolForKey:@"ToDownload"];

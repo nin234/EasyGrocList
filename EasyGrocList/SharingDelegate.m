@@ -160,29 +160,28 @@
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     
-    NSString *pFlName = [[NSNumber numberWithLongLong:shareId] stringValue];
-    pFlName = [pFlName stringByAppendingString:@"_"];
-    pFlName = [pFlName stringByAppendingString:name];
-    pFlName = [pFlName stringByAppendingString:@".jpg"];
+    NSString *pShareIdDir = [[NSNumber numberWithLongLong:shareId] stringValue];
     
-    
+   
     NSURL *pFlUrl;
     NSError *err;
     NSURL *albumurl = pDlg.pPicsDir;
+    albumurl = [albumurl URLByAppendingPathComponent:pShareIdDir isDirectory:YES];
     if (albumurl != nil && [albumurl checkResourceIsReachableAndReturnError:&err])
     {
         
-        pFlUrl = [albumurl URLByAppendingPathComponent:pFlName isDirectory:NO];
+        pFlUrl = [albumurl URLByAppendingPathComponent:name isDirectory:NO];
     }
     else
     {
-        return nil;
+        [pDlg.pFlMgr createDirectoryAtURL:albumurl withIntermediateDirectories:YES attributes:nil error:nil];
+        pFlUrl = [albumurl URLByAppendingPathComponent:name isDirectory:NO];
     }
     
     ItemKey *itk = [[ItemKey alloc] init];
     itk.name = iName;
     itk.share_id = shareId;
-    [pDlg.dataSync addPicItem:itk picItem:pFlName];
+    [pDlg.dataSync addPicItem:itk picItem:name];
     return pFlUrl;
 }
 

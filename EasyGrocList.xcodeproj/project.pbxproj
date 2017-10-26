@@ -11,6 +11,7 @@
 		3B9CF8B81EF1F56E004F009D /* AlbumContentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CF8B71EF1F56E004F009D /* AlbumContentsTableViewCell.xib */; };
 		3BF7F7581E71870100419F8D /* libsharing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7F7531E71863F00419F8D /* libsharing.a */; };
 		3BF7F75B1E71870600419F8D /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7F74C1E71863500419F8D /* libcommon.a */; };
+		3BFE75D41FA0898F005A4B56 /* sharing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3BFE75D21FA0898F005A4B56 /* sharing.xcdatamodeld */; };
 		DB0C53801AE65AD00089968D /* Grocery_list_icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0C537F1AE65AD00089968D /* Grocery_list_icon_120.png */; };
 		DB0C53821AE65BA70089968D /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0C53811AE65BA70089968D /* Icon-60@2x.png */; };
 		DB3940E11BB4B12F004D601E /* EasyGrocTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3940E01BB4B12F004D601E /* EasyGrocTranslator.m */; };
@@ -134,6 +135,7 @@
 		3B9CF8B71EF1F56E004F009D /* AlbumContentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlbumContentsTableViewCell.xib; path = EasyGrocList/AlbumContentsTableViewCell.xib; sourceTree = "<group>"; };
 		3BF7F7461E71863500419F8D /* common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = common.xcodeproj; path = ../common/common.xcodeproj; sourceTree = "<group>"; };
 		3BF7F74D1E71863F00419F8D /* sharing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sharing.xcodeproj; path = ../sharing/sharing.xcodeproj; sourceTree = "<group>"; };
+		3BFE75D31FA0898F005A4B56 /* sharing.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sharing.xcdatamodel; sourceTree = "<group>"; };
 		DB0C537F1AE65AD00089968D /* Grocery_list_icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grocery_list_icon_120.png; path = Images/Grocery_list_icon_120.png; sourceTree = SOURCE_ROOT; };
 		DB0C53811AE65BA70089968D /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "Images/Icon-60@2x.png"; sourceTree = SOURCE_ROOT; };
 		DB3940DF1BB4B12F004D601E /* EasyGrocTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyGrocTranslator.h; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 				DBF61DA11BB175780093B83A /* EasyGrocShareMgr.h */,
 				DBF61DA21BB175780093B83A /* EasyGrocShareMgr.m */,
 				DB3940DF1BB4B12F004D601E /* EasyGrocTranslator.h */,
+				3BFE75D21FA0898F005A4B56 /* sharing.xcdatamodeld */,
 				DB3940E01BB4B12F004D601E /* EasyGrocTranslator.m */,
 				DB3940E21BB84796004D601E /* EasyGrocDecoder.h */,
 				DB3940E31BB84796004D601E /* EasyGrocDecoder.m */,
@@ -685,6 +688,7 @@
 			files = (
 				DBE8527816E0168600F709E7 /* main.m in Sources */,
 				DBE8527C16E0168600F709E7 /* AppDelegate.m in Sources */,
+				3BFE75D41FA0898F005A4B56 /* sharing.xcdatamodeld in Sources */,
 				DB3940E11BB4B12F004D601E /* EasyGrocTranslator.m in Sources */,
 				DBE8528516E0168600F709E7 /* EasyGrocList.xcdatamodeld in Sources */,
 				DB5079D11B25B72E0094838A /* EasyKchainItemWrapper.m in Sources */,
@@ -1135,6 +1139,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		3BFE75D21FA0898F005A4B56 /* sharing.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3BFE75D31FA0898F005A4B56 /* sharing.xcdatamodel */,
+			);
+			currentVersion = 3BFE75D31FA0898F005A4B56 /* sharing.xcdatamodel */;
+			path = sharing.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		DBE8528316E0168600F709E7 /* EasyGrocList.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

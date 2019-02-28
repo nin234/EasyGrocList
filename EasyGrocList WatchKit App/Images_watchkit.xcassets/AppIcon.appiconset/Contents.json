@@ -33,7 +33,7 @@
     {
       "size" : "40x40",
       "idiom" : "watch",
-      "filename" : "Grocery_list_icon_80_no_alpha.png",
+      "filename" : "Grocery_list_icon_120-1.png",
       "scale" : "2x",
       "role" : "appLauncher",
       "subtype" : "38mm"
@@ -41,10 +41,18 @@
     {
       "size" : "44x44",
       "idiom" : "watch",
-      "filename" : "Grocery_list_icon_88_no_alpha.png",
+      "filename" : "Grocery_list_icon_120-2.png",
       "scale" : "2x",
-      "role" : "longLook",
-      "subtype" : "42mm"
+      "role" : "appLauncher",
+      "subtype" : "40mm"
+    },
+    {
+      "size" : "50x50",
+      "idiom" : "watch",
+      "filename" : "Grocery_list_icon_120.png",
+      "scale" : "2x",
+      "role" : "appLauncher",
+      "subtype" : "44mm"
     },
     {
       "size" : "86x86",
@@ -63,9 +71,26 @@
       "subtype" : "42mm"
     },
     {
-      "idiom" : "watch-marketing",
+      "size" : "108x108",
+      "idiom" : "watch",
+      "filename" : "Icon-60@2x-1.png",
+      "scale" : "2x",
+      "role" : "quickLook",
+      "subtype" : "44mm"
+    },
+    {
       "size" : "1024x1024",
+      "idiom" : "watch-marketing",
+      "filename" : "Icon-60@2x.png",
       "scale" : "1x"
+    },
+    {
+      "size" : "44x44",
+      "idiom" : "watch",
+      "filename" : "Grocery_list_icon_88_no_alpha.png",
+      "scale" : "2x",
+      "role" : "longLook",
+      "subtype" : "42mm"
     }
   ],
   "info" : {

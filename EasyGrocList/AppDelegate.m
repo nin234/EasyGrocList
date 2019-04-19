@@ -38,6 +38,7 @@
 @synthesize pShrMgr;
 @synthesize pShrDelegate;
 @synthesize templViewCntrl;
+@synthesize tabBarController;
 
 
 @synthesize appUtl;
@@ -153,6 +154,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+     tabBarController = [[UITabBarController alloc] init];
+    tabBarController.delegate = self;
     pShrMgr = [[EasyGrocShareMgr alloc] init];
     pShrMgr.pNtwIntf.connectAddr = @"easygroclist.ddns.net";
     pShrMgr.pNtwIntf.connectPort = @"16791";
@@ -178,7 +181,7 @@
     
     dataSync = [[DataOps alloc] init];
     dataSync.appName = @"EasyGrocList";
-    [dataSync start];
+    
     
     AppCmnUtil *pAppCmnUtil = [AppCmnUtil sharedInstance];
     
@@ -196,6 +199,10 @@
     aViewController.delegate = self;
     aViewController = [aViewController initWithNibName:nil bundle:nil];
     UINavigationController *navCntrl = [[UINavigationController alloc] initWithRootViewController:aViewController];
+    UIImage *imageHome = [UIImage imageNamed:@"802-dog-house@2x.png"];
+    UIImage *imageHomeSel = [UIImage imageNamed:@"895-dog-house-selected@2x.png"];
+    aViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:imageHome selectedImage:imageHomeSel];
+    
     self.navViewController = navCntrl;
     dataSync.navViewController = navCntrl;
     pAppCmnUtil.navViewController = navCntrl;
@@ -220,25 +227,36 @@
 
     pAppCmnUtil.aViewController1 = aViewController1;
     
+      UIImage *imagePlanner = [UIImage imageNamed:@"ic_event_note_white_36pt"];
+     UIImage *imagePlannerSel = [UIImage imageNamed:@"ic_event_note_36pt"];
+    
     //The assignement to easyShareVw is just a dummy one to invoke loadView of aViewController1
      easyShareVw = aViewController1.view;
     self.window.backgroundColor = [UIColor whiteColor];
     //[self.window addSubview:self.navViewController.view];
-    [self.window setRootViewController:self.navViewController];
+    
     [self.window makeKeyAndVisible];
     appUtl.window = self.window;
     appUtl.navViewController = navViewController;
     pShrDelegate = [[SharingDelegate alloc] init];
     id shrDelegate = pShrDelegate;
     pShrMgr.shrMgrDelegate = pShrDelegate;
+   
+    
     templViewCntrl = [[TemplListViewController alloc]
                       initWithNibName:nil bundle:nil];
     templViewCntrl.delegate = self;
-    templViewCntrl.bShareTemplView = true;
-    templViewCntrl.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Share" image:image selectedImage:imageSel];
+    templViewCntrl.bShareTemplView = false;
+    templViewCntrl.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Planner" image:imagePlanner selectedImage:imagePlannerSel];
     mainTemplVwNavCntrl = [[UINavigationController alloc] initWithRootViewController:templViewCntrl];
-    [appUtl initializeTabBarCntrl:mainVwNavCntrl templNavCntrl:mainTemplVwNavCntrl ContactsDelegate:shrDelegate];
-    
+    pAppCmnUtil.templNavViewController = mainTemplVwNavCntrl;
+    tabBarController.viewControllers = [NSArray arrayWithObjects:mainVwNavCntrl, mainTemplVwNavCntrl, navCntrl, nil];
+    dataSync.templListViewController = templViewCntrl;
+    dataSync.templNavViewController = mainTemplVwNavCntrl;
+    [self.window setRootViewController:self.tabBarController];
+    self.tabBarController.selectedIndex = 2;
+  //  [appUtl initializeTabBarCntrl:mainVwNavCntrl templNavCntrl:mainTemplVwNavCntrl ContactsDelegate:shrDelegate];
+    [dataSync start];
     [appUtl registerForRemoteNotifications];
     [pShrMgr start];
     bShrMgrStarted = true;

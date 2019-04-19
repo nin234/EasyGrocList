@@ -25,7 +25,7 @@
 
 
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate, EasyViewControllerDelegate, TemplListViewControllerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate, EasyViewControllerDelegate, TemplListViewControllerDelegate, UITabBarControllerDelegate>
 {
     EasyAddViewController *aVw;
      bool bKvInit;
@@ -44,6 +44,7 @@
 
 
 
+@property (nonatomic, retain)  UITabBarController  *tabBarController;
 
 @property dispatch_queue_t fetchQueue;
 

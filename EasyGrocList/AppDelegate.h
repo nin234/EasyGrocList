@@ -46,6 +46,8 @@
 
 @property (nonatomic, retain)  UITabBarController  *tabBarController;
 
+@property (nonatomic, retain)  ContactsViewController *selFrndCntrl;
+
 @property dispatch_queue_t fetchQueue;
 
 @property (nonatomic, retain) DataOps *dataSync;

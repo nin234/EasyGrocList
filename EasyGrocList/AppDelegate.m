@@ -42,6 +42,7 @@
 
 
 @synthesize appUtl;
+@synthesize selFrndCntrl;
 
 
 
@@ -75,8 +76,8 @@
 -(void) shareContactsSetSelected
 {
     
-    self.appUtl.selFrndCntrl.eViewCntrlMode = eModeShareToSelected;
-    self.appUtl.tabBarController.selectedIndex = 1;
+    self.selFrndCntrl.eViewCntrlMode = eModeShareToSelected;
+    self.tabBarController.selectedIndex = 1;
     
 
 }
@@ -250,11 +251,19 @@
     templViewCntrl.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Planner" image:imagePlanner selectedImage:imagePlannerSel];
     mainTemplVwNavCntrl = [[UINavigationController alloc] initWithRootViewController:templViewCntrl];
     pAppCmnUtil.templNavViewController = mainTemplVwNavCntrl;
-    tabBarController.viewControllers = [NSArray arrayWithObjects:mainVwNavCntrl, mainTemplVwNavCntrl, navCntrl, nil];
+    
+    selFrndCntrl = [[ContactsViewController alloc] initWithNibName:nil bundle:nil];
+    selFrndCntrl.pShrMgr = pShrMgr;
+    selFrndCntrl.delegate = shrDelegate;
+    
+    selFrndCntrl.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:0];
+    UINavigationController *selFrndNavCntrl = [[UINavigationController alloc] initWithRootViewController:selFrndCntrl];
+    
+    tabBarController.viewControllers = [NSArray arrayWithObjects:mainVwNavCntrl, selFrndNavCntrl, mainTemplVwNavCntrl, navCntrl, nil];
     dataSync.templListViewController = templViewCntrl;
     dataSync.templNavViewController = mainTemplVwNavCntrl;
     [self.window setRootViewController:self.tabBarController];
-    self.tabBarController.selectedIndex = 2;
+    self.tabBarController.selectedIndex = 3;
   //  [appUtl initializeTabBarCntrl:mainVwNavCntrl templNavCntrl:mainTemplVwNavCntrl ContactsDelegate:shrDelegate];
     [dataSync start];
     [appUtl registerForRemoteNotifications];

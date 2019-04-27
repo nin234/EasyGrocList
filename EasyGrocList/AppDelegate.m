@@ -153,6 +153,12 @@
     return self;
 }
 
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    selFrndCntrl.eViewCntrlMode = eModeContactsMgmt;
+    return;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
      tabBarController = [[UITabBarController alloc] init];
@@ -254,11 +260,11 @@
     
     selFrndCntrl = [[ContactsViewController alloc] initWithNibName:nil bundle:nil];
     selFrndCntrl.pShrMgr = pShrMgr;
-    selFrndCntrl.delegate = shrDelegate;
+    selFrndCntrl.delegate = pShrDelegate;
     
     selFrndCntrl.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:0];
     UINavigationController *selFrndNavCntrl = [[UINavigationController alloc] initWithRootViewController:selFrndCntrl];
-    
+    tabBarController.delegate = self;
     tabBarController.viewControllers = [NSArray arrayWithObjects:mainVwNavCntrl, selFrndNavCntrl, mainTemplVwNavCntrl, navCntrl, nil];
     dataSync.templListViewController = templViewCntrl;
     dataSync.templNavViewController = mainTemplVwNavCntrl;

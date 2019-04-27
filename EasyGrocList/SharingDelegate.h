@@ -26,5 +26,6 @@
 -(void) shareTemplList:(NSString *) shareStr;
 -(void) refreshTemplShareMainLst;
 -(void) updateEasyMainLstVwCntrl;
-
+-(void) cancelShare;
+-(void) shareDone;
 @end

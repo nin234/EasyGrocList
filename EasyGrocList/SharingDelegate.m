@@ -30,6 +30,20 @@
     return self;
 }
 
+
+- (void)cancelShare {
+    AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    pDlg.selFrndCntrl.eViewCntrlMode = eModeContactsMgmt;
+    pDlg.tabBarController.selectedIndex = 0;
+}
+
+-(void) shareDone
+{
+    AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    pDlg.selFrndCntrl.eViewCntrlMode = eModeContactsMgmt;
+    pDlg.tabBarController.selectedIndex = 0;
+}
+
 -(void) refreshTemplShareMainLst
 {
      AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -133,6 +147,8 @@
     [pDlg.pShrMgr shareTemplItem:shareStr listName:listName.name shrId:listName.share_id];
 
 }
+
+
 
 -(NSString *) itemsArrayToShareStr:(NSString *) shareStr itemsArray:(NSArray *) items
 {

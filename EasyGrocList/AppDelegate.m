@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Ninan Thomas. All rights reserved.
 //
 
+
+
 #import "AppDelegate.h"
 #import "common/EasyAddViewController.h"
 #import "common/ListViewController.h"
@@ -14,6 +16,9 @@
 #import "common/EasyDisplayViewController.h"
 #import "sharing/HomeViewController.h"
 #import "common/AppCmnUtil.h"
+#import <common/common-Swift.h>
+#import <common/EasyListViewController.h>
+
 
 @implementation AppDelegate
 
@@ -82,37 +87,6 @@
 
 }
 
--(void) shareMgrStartAndShow
-{
-    NSLog(@"Showing share view %s %d", __FILE__, __LINE__);
-    NSArray *subViews = [easyShareVw subviews];
-    bool bFound = false;
-    for (UIView *vw in subViews)
-    {
-        if (vw == aViewController1.pAllItms.tableView)
-        {
-            NSLog(@"Found tableview subview of aViewController1 %s %d", __FILE__, __LINE__);
-            bFound = true;
-        }
-    }
-    if (!bFound)
-    {
-        NSLog(@"Failed to find tableView as subview of easyShareVw");
-        return;
-    }
-
-    if (!bShrMgrStarted)
-    {
-        NSLog(@"Starting shareMgr");
-        [pShrMgr start];
-        bShrMgrStarted = true;
-    }
-    
-        [appUtl showShareView];
-    [aViewController1.pAllItms refreshList];
-    
-
-}
 
 -(void) templShareMgrStartAndShow
 {
@@ -148,10 +122,7 @@
     pAppCmnUtil.share_id = shareId  ;
 }
 
--(id) getTemplListVwCntrlDelegate
-{
-    return self;
-}
+
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {

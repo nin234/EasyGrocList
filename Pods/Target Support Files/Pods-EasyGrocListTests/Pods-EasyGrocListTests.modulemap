@@ -1,0 +1,6 @@
+framework module Pods_EasyGrocListTests {
+  umbrella header "Pods-EasyGrocListTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

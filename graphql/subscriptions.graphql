@@ -1,0 +1,31 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateEasyGrocListItems {
+  onCreateEasyGrocListItems {
+    id
+    name
+    date
+    masterList
+    userID
+    add
+  }
+}
+subscription OnUpdateEasyGrocListItems {
+  onUpdateEasyGrocListItems {
+    id
+    name
+    date
+    masterList
+    userID
+    add
+  }
+}
+subscription OnDeleteEasyGrocListItems {
+  onDeleteEasyGrocListItems {
+    id
+    name
+    date
+    masterList
+    userID
+    add
+  }
+}

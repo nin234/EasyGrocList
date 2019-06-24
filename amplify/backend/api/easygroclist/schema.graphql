@@ -1,0 +1,8 @@
+type EasyGrocListItems @model {
+  id: ID!
+  name: String!
+  date: Int!
+  masterList: String
+  userID: String!  
+  add:	Boolean!
+}

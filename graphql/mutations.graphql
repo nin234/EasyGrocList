@@ -1,7 +1,6 @@
 # this is an auto generated file. This will be overwritten
 mutation CreateEasyGrocListItems($input: CreateEasyGrocListItemsInput!) {
   createEasyGrocListItems(input: $input) {
-    id
     name
     date
     masterList
@@ -11,7 +10,6 @@ mutation CreateEasyGrocListItems($input: CreateEasyGrocListItemsInput!) {
 }
 mutation UpdateEasyGrocListItems($input: UpdateEasyGrocListItemsInput!) {
   updateEasyGrocListItems(input: $input) {
-    id
     name
     date
     masterList
@@ -21,7 +19,6 @@ mutation UpdateEasyGrocListItems($input: UpdateEasyGrocListItemsInput!) {
 }
 mutation DeleteEasyGrocListItems($input: DeleteEasyGrocListItemsInput!) {
   deleteEasyGrocListItems(input: $input) {
-    id
     name
     date
     masterList

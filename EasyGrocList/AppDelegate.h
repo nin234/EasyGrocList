@@ -16,16 +16,17 @@
 #import "EasyKchainItemWrapper.h"
 #import "sharing/NtwIntf.h"
 #import "EasyGrocShareMgr.h"
-#import "common/EasyViewController.h"
+
 #import "SharingDelegate.h"
 #import "sharing/HomeViewController.h"
 #import "sharing/AppShrUtil.h"
 #import "SharingDelegate.h"
 
 
+@class EasyViewController;
 
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate, EasyViewControllerDelegate, TemplListViewControllerDelegate, UITabBarControllerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate, TemplListViewControllerDelegate, UITabBarControllerDelegate>
 {
     EasyAddViewController *aVw;
      bool bKvInit;
@@ -71,12 +72,10 @@
 
 @property (nonatomic, retain) TemplListViewController *templViewCntrl;
 
--(void) shareMgrStartAndShow;
 - (NSURL *)applicationDocumentsDirectory;
 
 -(void) setShareId : (long long) shareId;
 
--(id) getTemplListVwCntrlDelegate;
 - (void) popView;
 
 

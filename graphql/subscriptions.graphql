@@ -1,7 +1,6 @@
 # this is an auto generated file. This will be overwritten
 subscription OnCreateEasyGrocListItems {
   onCreateEasyGrocListItems {
-    id
     name
     date
     masterList
@@ -11,7 +10,6 @@ subscription OnCreateEasyGrocListItems {
 }
 subscription OnUpdateEasyGrocListItems {
   onUpdateEasyGrocListItems {
-    id
     name
     date
     masterList
@@ -21,7 +19,6 @@ subscription OnUpdateEasyGrocListItems {
 }
 subscription OnDeleteEasyGrocListItems {
   onDeleteEasyGrocListItems {
-    id
     name
     date
     masterList

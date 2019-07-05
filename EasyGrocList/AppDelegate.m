@@ -14,6 +14,9 @@
 #import "common/EasyDisplayViewController.h"
 #import "sharing/HomeViewController.h"
 #import "common/AppCmnUtil.h"
+#import <common/common-Swift.h>
+#import "EasyGrocList-Swift.h"
+#import <common/EasyListViewController.h>
 
 @implementation AppDelegate
 
@@ -45,7 +48,7 @@
 @synthesize selFrndCntrl;
 
 
-
+@class AppSyncInterface;
 
 -(void) popView
 {
@@ -78,38 +81,6 @@
     
     self.selFrndCntrl.eViewCntrlMode = eModeShareToSelected;
     self.tabBarController.selectedIndex = 1;
-    
-
-}
-
--(void) shareMgrStartAndShow
-{
-    NSLog(@"Showing share view %s %d", __FILE__, __LINE__);
-    NSArray *subViews = [easyShareVw subviews];
-    bool bFound = false;
-    for (UIView *vw in subViews)
-    {
-        if (vw == aViewController1.pAllItms.tableView)
-        {
-            NSLog(@"Found tableview subview of aViewController1 %s %d", __FILE__, __LINE__);
-            bFound = true;
-        }
-    }
-    if (!bFound)
-    {
-        NSLog(@"Failed to find tableView as subview of easyShareVw");
-        return;
-    }
-
-    if (!bShrMgrStarted)
-    {
-        NSLog(@"Starting shareMgr");
-        [pShrMgr start];
-        bShrMgrStarted = true;
-    }
-    
-        [appUtl showShareView];
-    [aViewController1.pAllItms refreshList];
     
 
 }
@@ -148,11 +119,6 @@
     pAppCmnUtil.share_id = shareId  ;
 }
 
--(id) getTemplListVwCntrlDelegate
-{
-    return self;
-}
-
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
     selFrndCntrl.eViewCntrlMode = eModeContactsMgmt;
@@ -161,6 +127,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];
      tabBarController = [[UITabBarController alloc] init];
     tabBarController.delegate = self;
     pShrMgr = [[EasyGrocShareMgr alloc] init];
@@ -246,7 +213,7 @@
     appUtl.window = self.window;
     appUtl.navViewController = navViewController;
     pShrDelegate = [[SharingDelegate alloc] init];
-    id shrDelegate = pShrDelegate;
+    
     pShrMgr.shrMgrDelegate = pShrDelegate;
    
     
@@ -275,10 +242,17 @@
     [appUtl registerForRemoteNotifications];
     [pShrMgr start];
     bShrMgrStarted = true;
+   
+    NSString *userID = [kvlocal objectForKey:@"UserID"];
     
+    if (userID != nil)
+    {
+        AppSyncInterface *alexaSync = [[AppSyncInterface alloc] init];
+        [alexaSync runQuery:userID];
+    }
     
     pAppCmnUtil.share_id = pShrMgr.share_id;
-    NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];
+    
     BOOL download = [kvlocal boolForKey:@"ToDownload"];
     if (download == YES)
     {

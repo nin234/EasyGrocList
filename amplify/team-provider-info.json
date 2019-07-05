@@ -1,14 +1,14 @@
 {
     "easylist": {
         "awscloudformation": {
-            "AuthRoleName": "easygroclist-easylist-20190623130407-authRole",
-            "UnauthRoleArn": "arn:aws:iam::572062675351:role/easygroclist-easylist-20190623130407-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::572062675351:role/easygroclist-easylist-20190623130407-authRole",
+            "AuthRoleName": "easygroclist-easylist-20190629103417-authRole",
+            "UnauthRoleArn": "arn:aws:iam::572062675351:role/easygroclist-easylist-20190629103417-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::572062675351:role/easygroclist-easylist-20190629103417-authRole",
             "Region": "us-east-1",
-            "DeploymentBucketName": "easygroclist-easylist-20190623130407-deployment",
-            "UnauthRoleName": "easygroclist-easylist-20190623130407-unauthRole",
-            "StackName": "easygroclist-easylist-20190623130407",
-            "StackId": "arn:aws:cloudformation:us-east-1:572062675351:stack/easygroclist-easylist-20190623130407/e9fe6a30-95d8-11e9-8da9-12545315cab6"
+            "DeploymentBucketName": "easygroclist-easylist-20190629103417-deployment",
+            "UnauthRoleName": "easygroclist-easylist-20190629103417-unauthRole",
+            "StackName": "easygroclist-easylist-20190629103417",
+            "StackId": "arn:aws:cloudformation:us-east-1:572062675351:stack/easygroclist-easylist-20190629103417/fa174f30-9a7a-11e9-943a-12557b211f7c"
         }
     }
 }

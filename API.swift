@@ -5,17 +5,8 @@ import AWSAppSync
 public struct CreateEasyGrocListItemsInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(id: GraphQLID? = nil, name: String, date: Int, masterList: String? = nil, userId: String, add: Bool) {
-    graphQLMap = ["id": id, "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add]
-  }
-
-  public var id: GraphQLID? {
-    get {
-      return graphQLMap["id"] as! GraphQLID?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "id")
-    }
+  public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+    graphQLMap = ["name": name, "date": date, "masterList": masterList, "userID": userId, "add": add]
   }
 
   public var name: String {
@@ -36,9 +27,9 @@ public struct CreateEasyGrocListItemsInput: GraphQLMapConvertible {
     }
   }
 
-  public var masterList: String? {
+  public var masterList: String {
     get {
-      return graphQLMap["masterList"] as! String?
+      return graphQLMap["masterList"] as! String
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "masterList")
@@ -67,22 +58,13 @@ public struct CreateEasyGrocListItemsInput: GraphQLMapConvertible {
 public struct UpdateEasyGrocListItemsInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(id: GraphQLID, name: String? = nil, date: Int? = nil, masterList: String? = nil, userId: String? = nil, add: Bool? = nil) {
-    graphQLMap = ["id": id, "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add]
+  public init(name: String, date: Int? = nil, masterList: String, userId: String, add: Bool? = nil) {
+    graphQLMap = ["name": name, "date": date, "masterList": masterList, "userID": userId, "add": add]
   }
 
-  public var id: GraphQLID {
+  public var name: String {
     get {
-      return graphQLMap["id"] as! GraphQLID
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "id")
-    }
-  }
-
-  public var name: String? {
-    get {
-      return graphQLMap["name"] as! String?
+      return graphQLMap["name"] as! String
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "name")
@@ -98,18 +80,18 @@ public struct UpdateEasyGrocListItemsInput: GraphQLMapConvertible {
     }
   }
 
-  public var masterList: String? {
+  public var masterList: String {
     get {
-      return graphQLMap["masterList"] as! String?
+      return graphQLMap["masterList"] as! String
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "masterList")
     }
   }
 
-  public var userId: String? {
+  public var userId: String {
     get {
-      return graphQLMap["userID"] as! String?
+      return graphQLMap["userID"] as! String
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "userID")
@@ -129,16 +111,131 @@ public struct UpdateEasyGrocListItemsInput: GraphQLMapConvertible {
 public struct DeleteEasyGrocListItemsInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(id: GraphQLID? = nil) {
-    graphQLMap = ["id": id]
+  public init(userId: String, name: String, masterList: String) {
+    graphQLMap = ["userID": userId, "name": name, "masterList": masterList]
   }
 
-  public var id: GraphQLID? {
+  public var userId: String {
     get {
-      return graphQLMap["id"] as! GraphQLID?
+      return graphQLMap["userID"] as! String
     }
     set {
-      graphQLMap.updateValue(newValue, forKey: "id")
+      graphQLMap.updateValue(newValue, forKey: "userID")
+    }
+  }
+
+  public var name: String {
+    get {
+      return graphQLMap["name"] as! String
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "name")
+    }
+  }
+
+  public var masterList: String {
+    get {
+      return graphQLMap["masterList"] as! String
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "masterList")
+    }
+  }
+}
+
+public struct ModelEasyGrocListItemsPrimaryCompositeKeyConditionInput: GraphQLMapConvertible {
+  public var graphQLMap: GraphQLMap
+
+  public init(eq: ModelEasyGrocListItemsPrimaryCompositeKeyInput? = nil, le: ModelEasyGrocListItemsPrimaryCompositeKeyInput? = nil, lt: ModelEasyGrocListItemsPrimaryCompositeKeyInput? = nil, ge: ModelEasyGrocListItemsPrimaryCompositeKeyInput? = nil, gt: ModelEasyGrocListItemsPrimaryCompositeKeyInput? = nil, between: [ModelEasyGrocListItemsPrimaryCompositeKeyInput?]? = nil, beginsWith: ModelEasyGrocListItemsPrimaryCompositeKeyInput? = nil) {
+    graphQLMap = ["eq": eq, "le": le, "lt": lt, "ge": ge, "gt": gt, "between": between, "beginsWith": beginsWith]
+  }
+
+  public var eq: ModelEasyGrocListItemsPrimaryCompositeKeyInput? {
+    get {
+      return graphQLMap["eq"] as! ModelEasyGrocListItemsPrimaryCompositeKeyInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "eq")
+    }
+  }
+
+  public var le: ModelEasyGrocListItemsPrimaryCompositeKeyInput? {
+    get {
+      return graphQLMap["le"] as! ModelEasyGrocListItemsPrimaryCompositeKeyInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "le")
+    }
+  }
+
+  public var lt: ModelEasyGrocListItemsPrimaryCompositeKeyInput? {
+    get {
+      return graphQLMap["lt"] as! ModelEasyGrocListItemsPrimaryCompositeKeyInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "lt")
+    }
+  }
+
+  public var ge: ModelEasyGrocListItemsPrimaryCompositeKeyInput? {
+    get {
+      return graphQLMap["ge"] as! ModelEasyGrocListItemsPrimaryCompositeKeyInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "ge")
+    }
+  }
+
+  public var gt: ModelEasyGrocListItemsPrimaryCompositeKeyInput? {
+    get {
+      return graphQLMap["gt"] as! ModelEasyGrocListItemsPrimaryCompositeKeyInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "gt")
+    }
+  }
+
+  public var between: [ModelEasyGrocListItemsPrimaryCompositeKeyInput?]? {
+    get {
+      return graphQLMap["between"] as! [ModelEasyGrocListItemsPrimaryCompositeKeyInput?]?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "between")
+    }
+  }
+
+  public var beginsWith: ModelEasyGrocListItemsPrimaryCompositeKeyInput? {
+    get {
+      return graphQLMap["beginsWith"] as! ModelEasyGrocListItemsPrimaryCompositeKeyInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "beginsWith")
+    }
+  }
+}
+
+public struct ModelEasyGrocListItemsPrimaryCompositeKeyInput: GraphQLMapConvertible {
+  public var graphQLMap: GraphQLMap
+
+  public init(name: String? = nil, masterList: String? = nil) {
+    graphQLMap = ["name": name, "masterList": masterList]
+  }
+
+  public var name: String? {
+    get {
+      return graphQLMap["name"] as! String?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "name")
+    }
+  }
+
+  public var masterList: String? {
+    get {
+      return graphQLMap["masterList"] as! String?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "masterList")
     }
   }
 }
@@ -146,17 +243,8 @@ public struct DeleteEasyGrocListItemsInput: GraphQLMapConvertible {
 public struct ModelEasyGrocListItemsFilterInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(id: ModelIDFilterInput? = nil, name: ModelStringFilterInput? = nil, date: ModelIntFilterInput? = nil, masterList: ModelStringFilterInput? = nil, userId: ModelStringFilterInput? = nil, add: ModelBooleanFilterInput? = nil, and: [ModelEasyGrocListItemsFilterInput?]? = nil, or: [ModelEasyGrocListItemsFilterInput?]? = nil, not: ModelEasyGrocListItemsFilterInput? = nil) {
-    graphQLMap = ["id": id, "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add, "and": and, "or": or, "not": not]
-  }
-
-  public var id: ModelIDFilterInput? {
-    get {
-      return graphQLMap["id"] as! ModelIDFilterInput?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "id")
-    }
+  public init(name: ModelStringFilterInput? = nil, date: ModelIntFilterInput? = nil, masterList: ModelStringFilterInput? = nil, userId: ModelStringFilterInput? = nil, add: ModelBooleanFilterInput? = nil, and: [ModelEasyGrocListItemsFilterInput?]? = nil, or: [ModelEasyGrocListItemsFilterInput?]? = nil, not: ModelEasyGrocListItemsFilterInput? = nil) {
+    graphQLMap = ["name": name, "date": date, "masterList": masterList, "userID": userId, "add": add, "and": and, "or": or, "not": not]
   }
 
   public var name: ModelStringFilterInput? {
@@ -228,104 +316,6 @@ public struct ModelEasyGrocListItemsFilterInput: GraphQLMapConvertible {
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "not")
-    }
-  }
-}
-
-public struct ModelIDFilterInput: GraphQLMapConvertible {
-  public var graphQLMap: GraphQLMap
-
-  public init(ne: GraphQLID? = nil, eq: GraphQLID? = nil, le: GraphQLID? = nil, lt: GraphQLID? = nil, ge: GraphQLID? = nil, gt: GraphQLID? = nil, contains: GraphQLID? = nil, notContains: GraphQLID? = nil, between: [GraphQLID?]? = nil, beginsWith: GraphQLID? = nil) {
-    graphQLMap = ["ne": ne, "eq": eq, "le": le, "lt": lt, "ge": ge, "gt": gt, "contains": contains, "notContains": notContains, "between": between, "beginsWith": beginsWith]
-  }
-
-  public var ne: GraphQLID? {
-    get {
-      return graphQLMap["ne"] as! GraphQLID?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "ne")
-    }
-  }
-
-  public var eq: GraphQLID? {
-    get {
-      return graphQLMap["eq"] as! GraphQLID?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "eq")
-    }
-  }
-
-  public var le: GraphQLID? {
-    get {
-      return graphQLMap["le"] as! GraphQLID?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "le")
-    }
-  }
-
-  public var lt: GraphQLID? {
-    get {
-      return graphQLMap["lt"] as! GraphQLID?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "lt")
-    }
-  }
-
-  public var ge: GraphQLID? {
-    get {
-      return graphQLMap["ge"] as! GraphQLID?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "ge")
-    }
-  }
-
-  public var gt: GraphQLID? {
-    get {
-      return graphQLMap["gt"] as! GraphQLID?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "gt")
-    }
-  }
-
-  public var contains: GraphQLID? {
-    get {
-      return graphQLMap["contains"] as! GraphQLID?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "contains")
-    }
-  }
-
-  public var notContains: GraphQLID? {
-    get {
-      return graphQLMap["notContains"] as! GraphQLID?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "notContains")
-    }
-  }
-
-  public var between: [GraphQLID?]? {
-    get {
-      return graphQLMap["between"] as! [GraphQLID?]?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "between")
-    }
-  }
-
-  public var beginsWith: GraphQLID? {
-    get {
-      return graphQLMap["beginsWith"] as! GraphQLID?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "beginsWith")
     }
   }
 }
@@ -545,7 +535,7 @@ public struct ModelBooleanFilterInput: GraphQLMapConvertible {
 
 public final class CreateEasyGrocListItemsMutation: GraphQLMutation {
   public static let operationString =
-    "mutation CreateEasyGrocListItems($input: CreateEasyGrocListItemsInput!) {\n  createEasyGrocListItems(input: $input) {\n    __typename\n    id\n    name\n    date\n    masterList\n    userID\n    add\n  }\n}"
+    "mutation CreateEasyGrocListItems($input: CreateEasyGrocListItemsInput!) {\n  createEasyGrocListItems(input: $input) {\n    __typename\n    name\n    date\n    masterList\n    userID\n    add\n  }\n}"
 
   public var input: CreateEasyGrocListItemsInput
 
@@ -588,10 +578,9 @@ public final class CreateEasyGrocListItemsMutation: GraphQLMutation {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
         GraphQLField("date", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("masterList", type: .scalar(String.self)),
+        GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
       ]
@@ -602,8 +591,8 @@ public final class CreateEasyGrocListItemsMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(id: GraphQLID, name: String, date: Int, masterList: String? = nil, userId: String, add: Bool) {
-        self.init(snapshot: ["__typename": "EasyGrocListItems", "id": id, "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
+      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+        self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
       }
 
       public var __typename: String {
@@ -612,15 +601,6 @@ public final class CreateEasyGrocListItemsMutation: GraphQLMutation {
         }
         set {
           snapshot.updateValue(newValue, forKey: "__typename")
-        }
-      }
-
-      public var id: GraphQLID {
-        get {
-          return snapshot["id"]! as! GraphQLID
-        }
-        set {
-          snapshot.updateValue(newValue, forKey: "id")
         }
       }
 
@@ -642,9 +622,9 @@ public final class CreateEasyGrocListItemsMutation: GraphQLMutation {
         }
       }
 
-      public var masterList: String? {
+      public var masterList: String {
         get {
-          return snapshot["masterList"] as? String
+          return snapshot["masterList"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "masterList")
@@ -674,7 +654,7 @@ public final class CreateEasyGrocListItemsMutation: GraphQLMutation {
 
 public final class UpdateEasyGrocListItemsMutation: GraphQLMutation {
   public static let operationString =
-    "mutation UpdateEasyGrocListItems($input: UpdateEasyGrocListItemsInput!) {\n  updateEasyGrocListItems(input: $input) {\n    __typename\n    id\n    name\n    date\n    masterList\n    userID\n    add\n  }\n}"
+    "mutation UpdateEasyGrocListItems($input: UpdateEasyGrocListItemsInput!) {\n  updateEasyGrocListItems(input: $input) {\n    __typename\n    name\n    date\n    masterList\n    userID\n    add\n  }\n}"
 
   public var input: UpdateEasyGrocListItemsInput
 
@@ -717,10 +697,9 @@ public final class UpdateEasyGrocListItemsMutation: GraphQLMutation {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
         GraphQLField("date", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("masterList", type: .scalar(String.self)),
+        GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
       ]
@@ -731,8 +710,8 @@ public final class UpdateEasyGrocListItemsMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(id: GraphQLID, name: String, date: Int, masterList: String? = nil, userId: String, add: Bool) {
-        self.init(snapshot: ["__typename": "EasyGrocListItems", "id": id, "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
+      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+        self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
       }
 
       public var __typename: String {
@@ -741,15 +720,6 @@ public final class UpdateEasyGrocListItemsMutation: GraphQLMutation {
         }
         set {
           snapshot.updateValue(newValue, forKey: "__typename")
-        }
-      }
-
-      public var id: GraphQLID {
-        get {
-          return snapshot["id"]! as! GraphQLID
-        }
-        set {
-          snapshot.updateValue(newValue, forKey: "id")
         }
       }
 
@@ -771,9 +741,9 @@ public final class UpdateEasyGrocListItemsMutation: GraphQLMutation {
         }
       }
 
-      public var masterList: String? {
+      public var masterList: String {
         get {
-          return snapshot["masterList"] as? String
+          return snapshot["masterList"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "masterList")
@@ -803,7 +773,7 @@ public final class UpdateEasyGrocListItemsMutation: GraphQLMutation {
 
 public final class DeleteEasyGrocListItemsMutation: GraphQLMutation {
   public static let operationString =
-    "mutation DeleteEasyGrocListItems($input: DeleteEasyGrocListItemsInput!) {\n  deleteEasyGrocListItems(input: $input) {\n    __typename\n    id\n    name\n    date\n    masterList\n    userID\n    add\n  }\n}"
+    "mutation DeleteEasyGrocListItems($input: DeleteEasyGrocListItemsInput!) {\n  deleteEasyGrocListItems(input: $input) {\n    __typename\n    name\n    date\n    masterList\n    userID\n    add\n  }\n}"
 
   public var input: DeleteEasyGrocListItemsInput
 
@@ -846,10 +816,9 @@ public final class DeleteEasyGrocListItemsMutation: GraphQLMutation {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
         GraphQLField("date", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("masterList", type: .scalar(String.self)),
+        GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
       ]
@@ -860,8 +829,8 @@ public final class DeleteEasyGrocListItemsMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(id: GraphQLID, name: String, date: Int, masterList: String? = nil, userId: String, add: Bool) {
-        self.init(snapshot: ["__typename": "EasyGrocListItems", "id": id, "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
+      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+        self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
       }
 
       public var __typename: String {
@@ -870,15 +839,6 @@ public final class DeleteEasyGrocListItemsMutation: GraphQLMutation {
         }
         set {
           snapshot.updateValue(newValue, forKey: "__typename")
-        }
-      }
-
-      public var id: GraphQLID {
-        get {
-          return snapshot["id"]! as! GraphQLID
-        }
-        set {
-          snapshot.updateValue(newValue, forKey: "id")
         }
       }
 
@@ -900,9 +860,128 @@ public final class DeleteEasyGrocListItemsMutation: GraphQLMutation {
         }
       }
 
-      public var masterList: String? {
+      public var masterList: String {
         get {
-          return snapshot["masterList"] as? String
+          return snapshot["masterList"]! as! String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "masterList")
+        }
+      }
+
+      public var userId: String {
+        get {
+          return snapshot["userID"]! as! String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "userID")
+        }
+      }
+
+      public var add: Bool {
+        get {
+          return snapshot["add"]! as! Bool
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "add")
+        }
+      }
+    }
+  }
+}
+
+public final class ItemsByUserIdQuery: GraphQLQuery {
+  public static let operationString =
+    "query ItemsByUserId($userID: String!) {\n  itemsByUserID(userID: $userID) {\n    __typename\n    name\n    date\n    masterList\n    userID\n    add\n  }\n}"
+
+  public var userID: String
+
+  public init(userID: String) {
+    self.userID = userID
+  }
+
+  public var variables: GraphQLMap? {
+    return ["userID": userID]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes = ["Query"]
+
+    public static let selections: [GraphQLSelection] = [
+      GraphQLField("itemsByUserID", arguments: ["userID": GraphQLVariable("userID")], type: .list(.object(ItemsByUserId.selections))),
+    ]
+
+    public var snapshot: Snapshot
+
+    public init(snapshot: Snapshot) {
+      self.snapshot = snapshot
+    }
+
+    public init(itemsByUserId: [ItemsByUserId?]? = nil) {
+      self.init(snapshot: ["__typename": "Query", "itemsByUserID": itemsByUserId.flatMap { $0.map { $0.flatMap { $0.snapshot } } }])
+    }
+
+    public var itemsByUserId: [ItemsByUserId?]? {
+      get {
+        return (snapshot["itemsByUserID"] as? [Snapshot?]).flatMap { $0.map { $0.flatMap { ItemsByUserId(snapshot: $0) } } }
+      }
+      set {
+        snapshot.updateValue(newValue.flatMap { $0.map { $0.flatMap { $0.snapshot } } }, forKey: "itemsByUserID")
+      }
+    }
+
+    public struct ItemsByUserId: GraphQLSelectionSet {
+      public static let possibleTypes = ["EasyGrocListItems"]
+
+      public static let selections: [GraphQLSelection] = [
+        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("name", type: .nonNull(.scalar(String.self))),
+        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
+        GraphQLField("userID", type: .nonNull(.scalar(String.self))),
+        GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
+      ]
+
+      public var snapshot: Snapshot
+
+      public init(snapshot: Snapshot) {
+        self.snapshot = snapshot
+      }
+
+      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+        self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
+      }
+
+      public var __typename: String {
+        get {
+          return snapshot["__typename"]! as! String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var name: String {
+        get {
+          return snapshot["name"]! as! String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "name")
+        }
+      }
+
+      public var date: Int {
+        get {
+          return snapshot["date"]! as! Int
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "date")
+        }
+      }
+
+      public var masterList: String {
+        get {
+          return snapshot["masterList"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "masterList")
@@ -932,23 +1011,27 @@ public final class DeleteEasyGrocListItemsMutation: GraphQLMutation {
 
 public final class GetEasyGrocListItemsQuery: GraphQLQuery {
   public static let operationString =
-    "query GetEasyGrocListItems($id: ID!) {\n  getEasyGrocListItems(id: $id) {\n    __typename\n    id\n    name\n    date\n    masterList\n    userID\n    add\n  }\n}"
+    "query GetEasyGrocListItems($userID: String!, $name: String!, $masterList: String!) {\n  getEasyGrocListItems(userID: $userID, name: $name, masterList: $masterList) {\n    __typename\n    name\n    date\n    masterList\n    userID\n    add\n  }\n}"
 
-  public var id: GraphQLID
+  public var userID: String
+  public var name: String
+  public var masterList: String
 
-  public init(id: GraphQLID) {
-    self.id = id
+  public init(userID: String, name: String, masterList: String) {
+    self.userID = userID
+    self.name = name
+    self.masterList = masterList
   }
 
   public var variables: GraphQLMap? {
-    return ["id": id]
+    return ["userID": userID, "name": name, "masterList": masterList]
   }
 
   public struct Data: GraphQLSelectionSet {
     public static let possibleTypes = ["Query"]
 
     public static let selections: [GraphQLSelection] = [
-      GraphQLField("getEasyGrocListItems", arguments: ["id": GraphQLVariable("id")], type: .object(GetEasyGrocListItem.selections)),
+      GraphQLField("getEasyGrocListItems", arguments: ["userID": GraphQLVariable("userID"), "name": GraphQLVariable("name"), "masterList": GraphQLVariable("masterList")], type: .object(GetEasyGrocListItem.selections)),
     ]
 
     public var snapshot: Snapshot
@@ -975,10 +1058,9 @@ public final class GetEasyGrocListItemsQuery: GraphQLQuery {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
         GraphQLField("date", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("masterList", type: .scalar(String.self)),
+        GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
       ]
@@ -989,8 +1071,8 @@ public final class GetEasyGrocListItemsQuery: GraphQLQuery {
         self.snapshot = snapshot
       }
 
-      public init(id: GraphQLID, name: String, date: Int, masterList: String? = nil, userId: String, add: Bool) {
-        self.init(snapshot: ["__typename": "EasyGrocListItems", "id": id, "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
+      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+        self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
       }
 
       public var __typename: String {
@@ -999,15 +1081,6 @@ public final class GetEasyGrocListItemsQuery: GraphQLQuery {
         }
         set {
           snapshot.updateValue(newValue, forKey: "__typename")
-        }
-      }
-
-      public var id: GraphQLID {
-        get {
-          return snapshot["id"]! as! GraphQLID
-        }
-        set {
-          snapshot.updateValue(newValue, forKey: "id")
         }
       }
 
@@ -1029,9 +1102,9 @@ public final class GetEasyGrocListItemsQuery: GraphQLQuery {
         }
       }
 
-      public var masterList: String? {
+      public var masterList: String {
         get {
-          return snapshot["masterList"] as? String
+          return snapshot["masterList"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "masterList")
@@ -1061,27 +1134,31 @@ public final class GetEasyGrocListItemsQuery: GraphQLQuery {
 
 public final class ListEasyGrocListItemssQuery: GraphQLQuery {
   public static let operationString =
-    "query ListEasyGrocListItemss($filter: ModelEasyGrocListItemsFilterInput, $limit: Int, $nextToken: String) {\n  listEasyGrocListItemss(filter: $filter, limit: $limit, nextToken: $nextToken) {\n    __typename\n    items {\n      __typename\n      id\n      name\n      date\n      masterList\n      userID\n      add\n    }\n    nextToken\n  }\n}"
+    "query ListEasyGrocListItemss($userID: String, $nameMasterList: ModelEasyGrocListItemsPrimaryCompositeKeyConditionInput, $filter: ModelEasyGrocListItemsFilterInput, $limit: Int, $nextToken: String) {\n  listEasyGrocListItemss(userID: $userID, nameMasterList: $nameMasterList, filter: $filter, limit: $limit, nextToken: $nextToken) {\n    __typename\n    items {\n      __typename\n      name\n      date\n      masterList\n      userID\n      add\n    }\n    nextToken\n  }\n}"
 
+  public var userID: String?
+  public var nameMasterList: ModelEasyGrocListItemsPrimaryCompositeKeyConditionInput?
   public var filter: ModelEasyGrocListItemsFilterInput?
   public var limit: Int?
   public var nextToken: String?
 
-  public init(filter: ModelEasyGrocListItemsFilterInput? = nil, limit: Int? = nil, nextToken: String? = nil) {
+  public init(userID: String? = nil, nameMasterList: ModelEasyGrocListItemsPrimaryCompositeKeyConditionInput? = nil, filter: ModelEasyGrocListItemsFilterInput? = nil, limit: Int? = nil, nextToken: String? = nil) {
+    self.userID = userID
+    self.nameMasterList = nameMasterList
     self.filter = filter
     self.limit = limit
     self.nextToken = nextToken
   }
 
   public var variables: GraphQLMap? {
-    return ["filter": filter, "limit": limit, "nextToken": nextToken]
+    return ["userID": userID, "nameMasterList": nameMasterList, "filter": filter, "limit": limit, "nextToken": nextToken]
   }
 
   public struct Data: GraphQLSelectionSet {
     public static let possibleTypes = ["Query"]
 
     public static let selections: [GraphQLSelection] = [
-      GraphQLField("listEasyGrocListItemss", arguments: ["filter": GraphQLVariable("filter"), "limit": GraphQLVariable("limit"), "nextToken": GraphQLVariable("nextToken")], type: .object(ListEasyGrocListItemss.selections)),
+      GraphQLField("listEasyGrocListItemss", arguments: ["userID": GraphQLVariable("userID"), "nameMasterList": GraphQLVariable("nameMasterList"), "filter": GraphQLVariable("filter"), "limit": GraphQLVariable("limit"), "nextToken": GraphQLVariable("nextToken")], type: .object(ListEasyGrocListItemss.selections)),
     ]
 
     public var snapshot: Snapshot
@@ -1154,10 +1231,9 @@ public final class ListEasyGrocListItemssQuery: GraphQLQuery {
 
         public static let selections: [GraphQLSelection] = [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-          GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
           GraphQLField("name", type: .nonNull(.scalar(String.self))),
           GraphQLField("date", type: .nonNull(.scalar(Int.self))),
-          GraphQLField("masterList", type: .scalar(String.self)),
+          GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
           GraphQLField("userID", type: .nonNull(.scalar(String.self))),
           GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
         ]
@@ -1168,8 +1244,8 @@ public final class ListEasyGrocListItemssQuery: GraphQLQuery {
           self.snapshot = snapshot
         }
 
-        public init(id: GraphQLID, name: String, date: Int, masterList: String? = nil, userId: String, add: Bool) {
-          self.init(snapshot: ["__typename": "EasyGrocListItems", "id": id, "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
+        public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+          self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
         }
 
         public var __typename: String {
@@ -1178,15 +1254,6 @@ public final class ListEasyGrocListItemssQuery: GraphQLQuery {
           }
           set {
             snapshot.updateValue(newValue, forKey: "__typename")
-          }
-        }
-
-        public var id: GraphQLID {
-          get {
-            return snapshot["id"]! as! GraphQLID
-          }
-          set {
-            snapshot.updateValue(newValue, forKey: "id")
           }
         }
 
@@ -1208,9 +1275,9 @@ public final class ListEasyGrocListItemssQuery: GraphQLQuery {
           }
         }
 
-        public var masterList: String? {
+        public var masterList: String {
           get {
-            return snapshot["masterList"] as? String
+            return snapshot["masterList"]! as! String
           }
           set {
             snapshot.updateValue(newValue, forKey: "masterList")
@@ -1241,7 +1308,7 @@ public final class ListEasyGrocListItemssQuery: GraphQLQuery {
 
 public final class OnCreateEasyGrocListItemsSubscription: GraphQLSubscription {
   public static let operationString =
-    "subscription OnCreateEasyGrocListItems {\n  onCreateEasyGrocListItems {\n    __typename\n    id\n    name\n    date\n    masterList\n    userID\n    add\n  }\n}"
+    "subscription OnCreateEasyGrocListItems {\n  onCreateEasyGrocListItems {\n    __typename\n    name\n    date\n    masterList\n    userID\n    add\n  }\n}"
 
   public init() {
   }
@@ -1277,10 +1344,9 @@ public final class OnCreateEasyGrocListItemsSubscription: GraphQLSubscription {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
         GraphQLField("date", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("masterList", type: .scalar(String.self)),
+        GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
       ]
@@ -1291,8 +1357,8 @@ public final class OnCreateEasyGrocListItemsSubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(id: GraphQLID, name: String, date: Int, masterList: String? = nil, userId: String, add: Bool) {
-        self.init(snapshot: ["__typename": "EasyGrocListItems", "id": id, "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
+      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+        self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
       }
 
       public var __typename: String {
@@ -1301,15 +1367,6 @@ public final class OnCreateEasyGrocListItemsSubscription: GraphQLSubscription {
         }
         set {
           snapshot.updateValue(newValue, forKey: "__typename")
-        }
-      }
-
-      public var id: GraphQLID {
-        get {
-          return snapshot["id"]! as! GraphQLID
-        }
-        set {
-          snapshot.updateValue(newValue, forKey: "id")
         }
       }
 
@@ -1331,9 +1388,9 @@ public final class OnCreateEasyGrocListItemsSubscription: GraphQLSubscription {
         }
       }
 
-      public var masterList: String? {
+      public var masterList: String {
         get {
-          return snapshot["masterList"] as? String
+          return snapshot["masterList"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "masterList")
@@ -1363,7 +1420,7 @@ public final class OnCreateEasyGrocListItemsSubscription: GraphQLSubscription {
 
 public final class OnUpdateEasyGrocListItemsSubscription: GraphQLSubscription {
   public static let operationString =
-    "subscription OnUpdateEasyGrocListItems {\n  onUpdateEasyGrocListItems {\n    __typename\n    id\n    name\n    date\n    masterList\n    userID\n    add\n  }\n}"
+    "subscription OnUpdateEasyGrocListItems {\n  onUpdateEasyGrocListItems {\n    __typename\n    name\n    date\n    masterList\n    userID\n    add\n  }\n}"
 
   public init() {
   }
@@ -1399,10 +1456,9 @@ public final class OnUpdateEasyGrocListItemsSubscription: GraphQLSubscription {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
         GraphQLField("date", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("masterList", type: .scalar(String.self)),
+        GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
       ]
@@ -1413,8 +1469,8 @@ public final class OnUpdateEasyGrocListItemsSubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(id: GraphQLID, name: String, date: Int, masterList: String? = nil, userId: String, add: Bool) {
-        self.init(snapshot: ["__typename": "EasyGrocListItems", "id": id, "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
+      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+        self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
       }
 
       public var __typename: String {
@@ -1423,15 +1479,6 @@ public final class OnUpdateEasyGrocListItemsSubscription: GraphQLSubscription {
         }
         set {
           snapshot.updateValue(newValue, forKey: "__typename")
-        }
-      }
-
-      public var id: GraphQLID {
-        get {
-          return snapshot["id"]! as! GraphQLID
-        }
-        set {
-          snapshot.updateValue(newValue, forKey: "id")
         }
       }
 
@@ -1453,9 +1500,9 @@ public final class OnUpdateEasyGrocListItemsSubscription: GraphQLSubscription {
         }
       }
 
-      public var masterList: String? {
+      public var masterList: String {
         get {
-          return snapshot["masterList"] as? String
+          return snapshot["masterList"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "masterList")
@@ -1485,7 +1532,7 @@ public final class OnUpdateEasyGrocListItemsSubscription: GraphQLSubscription {
 
 public final class OnDeleteEasyGrocListItemsSubscription: GraphQLSubscription {
   public static let operationString =
-    "subscription OnDeleteEasyGrocListItems {\n  onDeleteEasyGrocListItems {\n    __typename\n    id\n    name\n    date\n    masterList\n    userID\n    add\n  }\n}"
+    "subscription OnDeleteEasyGrocListItems {\n  onDeleteEasyGrocListItems {\n    __typename\n    name\n    date\n    masterList\n    userID\n    add\n  }\n}"
 
   public init() {
   }
@@ -1521,10 +1568,9 @@ public final class OnDeleteEasyGrocListItemsSubscription: GraphQLSubscription {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
         GraphQLField("date", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("masterList", type: .scalar(String.self)),
+        GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
       ]
@@ -1535,8 +1581,8 @@ public final class OnDeleteEasyGrocListItemsSubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(id: GraphQLID, name: String, date: Int, masterList: String? = nil, userId: String, add: Bool) {
-        self.init(snapshot: ["__typename": "EasyGrocListItems", "id": id, "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
+      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+        self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
       }
 
       public var __typename: String {
@@ -1545,15 +1591,6 @@ public final class OnDeleteEasyGrocListItemsSubscription: GraphQLSubscription {
         }
         set {
           snapshot.updateValue(newValue, forKey: "__typename")
-        }
-      }
-
-      public var id: GraphQLID {
-        get {
-          return snapshot["id"]! as! GraphQLID
-        }
-        set {
-          snapshot.updateValue(newValue, forKey: "id")
         }
       }
 
@@ -1575,9 +1612,9 @@ public final class OnDeleteEasyGrocListItemsSubscription: GraphQLSubscription {
         }
       }
 
-      public var masterList: String? {
+      public var masterList: String {
         get {
-          return snapshot["masterList"] as? String
+          return snapshot["masterList"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "masterList")

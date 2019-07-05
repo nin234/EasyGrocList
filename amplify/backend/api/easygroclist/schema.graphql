@@ -1,8 +1,15 @@
-type EasyGrocListItems @model {
-  id: ID!
+type EasyGrocListItems @model 
+@key(fields: ["userID", "name", "masterList"])
+{
   name: String!
   date: Int!
-  masterList: String
+  masterList: String!
   userID: String!  
   add:	Boolean!
 }
+
+type Query
+{
+  itemsByUserID(userID: String!):[EasyGrocListItems]
+}
+

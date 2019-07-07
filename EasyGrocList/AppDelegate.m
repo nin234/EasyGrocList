@@ -128,6 +128,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];
+    
+    [kvlocal setObject:@"ninan" forKey:@"UserID"];
      tabBarController = [[UITabBarController alloc] init];
     tabBarController.delegate = self;
     pShrMgr = [[EasyGrocShareMgr alloc] init];

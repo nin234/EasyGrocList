@@ -8,16 +8,9 @@
 
 import Foundation
 import AWSAppSync
+import common
 
 
-@objc public class AlexaItem : NSObject
-{
-    var add = true
-    var name: String?
-    var masterList: String?
-    var date = 0
-    
-}
 
 @objc public class AppSyncInterface : NSObject
 {
@@ -41,7 +34,7 @@ import AWSAppSync
         
     }
     
-    @objc public func runQuery(_ userID : String) -> [AlexaItem]{
+    @objc public func runQuery(_ userID : String){
        // let userID = "ninan"
         var items : [AlexaItem] = []
         appSyncClient?.fetch(query: ListEasyGrocListItemssQuery(userID: userID), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
@@ -68,8 +61,10 @@ import AWSAppSync
                 item += " name=" + ($0?.name)! + " userID=" + ($0?.userId)!
                 print(item)
             }
+             let pAppCmnUtil = AppCmnUtil.sharedInstance()
+             pAppCmnUtil?.dataSync?.putAlexaItems(items)
         }
-        return items
+        
     }
     
 }

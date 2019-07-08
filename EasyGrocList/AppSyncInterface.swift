@@ -63,6 +63,7 @@ import common
             }
              let pAppCmnUtil = AppCmnUtil.sharedInstance()
              pAppCmnUtil?.dataSync?.putAlexaItems(items)
+            
         }
         
     }

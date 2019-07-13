@@ -21,12 +21,12 @@
 #import "sharing/HomeViewController.h"
 #import "sharing/AppShrUtil.h"
 #import "SharingDelegate.h"
-
+#import <common/common-Swift.h>
 
 @class EasyViewController;
 
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate, TemplListViewControllerDelegate, UITabBarControllerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate, TemplListViewControllerDelegate, UITabBarControllerDelegate, EasyViewControllerDelegate>
 {
     EasyAddViewController *aVw;
      bool bKvInit;

@@ -10,5 +10,17 @@
             "StackName": "easygroclist-easylist-20190629103417",
             "StackId": "arn:aws:cloudformation:us-east-1:572062675351:stack/easygroclist-easylist-20190629103417/fa174f30-9a7a-11e9-943a-12557b211f7c"
         }
+    },
+    "esylst": {
+        "awscloudformation": {
+            "AuthRoleName": "easygroclist-esylst-20190710220647-authRole",
+            "UnauthRoleArn": "arn:aws:iam::572062675351:role/easygroclist-esylst-20190710220647-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::572062675351:role/easygroclist-esylst-20190710220647-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "easygroclist-esylst-20190710220647-deployment",
+            "UnauthRoleName": "easygroclist-esylst-20190710220647-unauthRole",
+            "StackName": "easygroclist-esylst-20190710220647",
+            "StackId": "arn:aws:cloudformation:us-east-1:572062675351:stack/easygroclist-esylst-20190710220647/89db1ad0-a380-11e9-98a7-0ed7a3d4fec0"
+        }
     }
 }

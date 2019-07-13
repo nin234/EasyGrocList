@@ -34,6 +34,11 @@ import common
         
     }
     
+    @objc public func getUserID(alexaCode code: Int)
+    {
+        
+    }
+    
     @objc public func runQuery(_ userID : String){
        // let userID = "ninan"
         var items : [AlexaItem] = []
@@ -63,7 +68,21 @@ import common
             }
              let pAppCmnUtil = AppCmnUtil.sharedInstance()
              pAppCmnUtil?.dataSync?.putAlexaItems(items)
-            
+            //deleting items nows
+            for item in items
+            {
+                let deleteItem = DeleteEasyGrocListItemsInput(userId: userID, name: item.name!, masterList: item.masterList!)
+                self.appSyncClient?.perform(mutation: DeleteEasyGrocListItemsMutation(input: deleteItem)) { (result, error) in
+                    if let error = error as? AWSAppSyncClientError {
+                        print("Error occurred: \(error.localizedDescription )")
+                    }
+                    if let resultError = result?.errors {
+                        print("Error saving the item on server: \(resultError)")
+                        return
+                    }
+                }
+                
+            }
         }
         
     }

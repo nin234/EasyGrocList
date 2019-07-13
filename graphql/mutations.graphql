@@ -26,3 +26,57 @@ mutation DeleteEasyGrocListItems($input: DeleteEasyGrocListItemsInput!) {
     add
   }
 }
+mutation CreateUserInfo($input: CreateUserInfoInput!) {
+  createUserInfo(input: $input) {
+    share_id
+    date
+    userID
+    verified
+    placeholder1
+    placeholder2
+    placeholder3
+  }
+}
+mutation UpdateUserInfo($input: UpdateUserInfoInput!) {
+  updateUserInfo(input: $input) {
+    share_id
+    date
+    userID
+    verified
+    placeholder1
+    placeholder2
+    placeholder3
+  }
+}
+mutation DeleteUserInfo($input: DeleteUserInfoInput!) {
+  deleteUserInfo(input: $input) {
+    share_id
+    date
+    userID
+    verified
+    placeholder1
+    placeholder2
+    placeholder3
+  }
+}
+mutation CreateAccountLink($input: CreateAccountLinkInput!) {
+  createAccountLink(input: $input) {
+    code
+    date
+    userID
+  }
+}
+mutation UpdateAccountLink($input: UpdateAccountLinkInput!) {
+  updateAccountLink(input: $input) {
+    code
+    date
+    userID
+  }
+}
+mutation DeleteAccountLink($input: DeleteAccountLinkInput!) {
+  deleteAccountLink(input: $input) {
+    code
+    date
+    userID
+  }
+}

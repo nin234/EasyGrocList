@@ -26,3 +26,57 @@ subscription OnDeleteEasyGrocListItems {
     add
   }
 }
+subscription OnCreateUserInfo {
+  onCreateUserInfo {
+    share_id
+    date
+    userID
+    verified
+    placeholder1
+    placeholder2
+    placeholder3
+  }
+}
+subscription OnUpdateUserInfo {
+  onUpdateUserInfo {
+    share_id
+    date
+    userID
+    verified
+    placeholder1
+    placeholder2
+    placeholder3
+  }
+}
+subscription OnDeleteUserInfo {
+  onDeleteUserInfo {
+    share_id
+    date
+    userID
+    verified
+    placeholder1
+    placeholder2
+    placeholder3
+  }
+}
+subscription OnCreateAccountLink {
+  onCreateAccountLink {
+    code
+    date
+    userID
+  }
+}
+subscription OnUpdateAccountLink {
+  onUpdateAccountLink {
+    code
+    date
+    userID
+  }
+}
+subscription OnDeleteAccountLink {
+  onDeleteAccountLink {
+    code
+    date
+    userID
+  }
+}

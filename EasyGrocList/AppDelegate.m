@@ -14,7 +14,7 @@
 #import "common/EasyDisplayViewController.h"
 #import "sharing/HomeViewController.h"
 #import "common/AppCmnUtil.h"
-#import <common/common-Swift.h>
+
 #import "EasyGrocList-Swift.h"
 #import <common/EasyListViewController.h>
 
@@ -84,6 +84,15 @@
     
 
 }
+
+- (void)getAlexaUserIdWithAlexaCode:(NSString * _Nonnull)code {
+    if ([code isEqualToString:@"no code"])
+    {
+        NSLog(@"No AlexaCode in the input returning");
+        return;
+    }
+}
+
 
 -(void) templShareMgrStartAndShow
 {

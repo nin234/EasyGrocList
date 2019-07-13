@@ -45,3 +45,65 @@ query ListEasyGrocListItemss(
     nextToken
   }
 }
+query GetUserInfo($userID: String!) {
+  getUserInfo(userID: $userID) {
+    share_id
+    date
+    userID
+    verified
+    placeholder1
+    placeholder2
+    placeholder3
+  }
+}
+query ListUserInfos(
+  $userID: String
+  $filter: ModelUserInfoFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUserInfos(
+    userID: $userID
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      share_id
+      date
+      userID
+      verified
+      placeholder1
+      placeholder2
+      placeholder3
+    }
+    nextToken
+  }
+}
+query GetAccountLink($code: Int!) {
+  getAccountLink(code: $code) {
+    code
+    date
+    userID
+  }
+}
+query ListAccountLinks(
+  $code: Int
+  $filter: ModelAccountLinkFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listAccountLinks(
+    code: $code
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      code
+      date
+      userID
+    }
+    nextToken
+  }
+}

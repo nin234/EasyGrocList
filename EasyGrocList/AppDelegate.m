@@ -15,7 +15,6 @@
 #import "sharing/HomeViewController.h"
 #import "common/AppCmnUtil.h"
 
-#import "EasyGrocList-Swift.h"
 #import <common/EasyListViewController.h>
 
 @implementation AppDelegate
@@ -46,6 +45,7 @@
 
 @synthesize appUtl;
 @synthesize selFrndCntrl;
+@synthesize alexaSync;
 
 
 @class AppSyncInterface;
@@ -85,12 +85,21 @@
 
 }
 
-- (void)getAlexaUserIdWithAlexaCode:(NSString * _Nonnull)code {
+- (void)getAlexaUserId:(NSString * _Nonnull)code {
     if ([code isEqualToString:@"no code"])
     {
         NSLog(@"No AlexaCode in the input returning");
         return;
     }
+    
+    NSInteger codeInt = [code integerValue];
+    if (!codeInt)
+    {
+         NSLog(@"Invalid AlexaCode in the input returning");
+        return;
+    }
+    NSLog(@"Getting Alexa UserID with code=%@", code);
+    [alexaSync getUserID:codeInt];
 }
 
 
@@ -148,6 +157,7 @@
     appUtl.pShrMgr = pShrMgr;
     bSystemAbrt = false;
     bShrMgrStarted = false;
+    alexaSync = [[AppSyncInterface alloc] init];
     pFlMgr = [[NSFileManager alloc] init];
     NSURL *pHdir =[pFlMgr containerURLForSecurityApplicationGroupIdentifier:@"group.grocshared"];
     pThumbNailsDir = [pHdir URLByAppendingPathComponent:@"/Documents/pictures/thumbnails"];
@@ -179,10 +189,9 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     EasyViewController *aViewController = [EasyViewController alloc];
-    
+    aViewController = [aViewController initWithNibName:nil bundle:nil];
     aViewController.bShareView = false;
     aViewController.delegate = self;
-    aViewController = [aViewController initWithNibName:nil bundle:nil];
     UINavigationController *navCntrl = [[UINavigationController alloc] initWithRootViewController:aViewController];
     UIImage *imageHome = [UIImage imageNamed:@"802-dog-house@2x.png"];
     UIImage *imageHomeSel = [UIImage imageNamed:@"895-dog-house-selected@2x.png"];
@@ -198,10 +207,9 @@
         
    
     aViewController1 = [EasyViewController alloc];
-    
+    aViewController1 = [aViewController1 initWithNibName:nil bundle:nil];
     aViewController1.bShareView = true;
     aViewController1.delegate = self;
-    aViewController1 = [aViewController1 initWithNibName:nil bundle:nil];
     
     UIImage *image = [UIImage imageNamed:@"895-user-group@2x.png"];
     UIImage *imageSel = [UIImage imageNamed:@"895-user-group-selected@2x.png"];
@@ -258,7 +266,7 @@
     
     if (userID != nil)
     {
-        AppSyncInterface *alexaSync = [[AppSyncInterface alloc] init];
+        
         [alexaSync runQuery:userID];
     }
     

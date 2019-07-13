@@ -34,9 +34,79 @@ import common
         
     }
     
-    @objc public func getUserID(alexaCode code: Int)
+    func tryUpdatingUserID(input updateUserId: UpdateUserInfoInput)
+    {
+        self.appSyncClient?.perform(mutation: UpdateUserInfoMutation(input: updateUserId)) { (result, error) in
+            if let error = error as? AWSAppSyncClientError {
+                print("Error occurred: \(error.localizedDescription )")
+            }
+            if let resultError = result?.errors {
+                print("Error updating the item on server: \(resultError)")
+                return
+            }
+        }
+        
+    }
+    
+    func updateUserDefaultsAndShowAlert(userID uid: String)
+    {
+        UserDefaults.standard.set(uid, forKey: "UserID")
+    }
+    
+    func showFailedToLinkAlert(err error : String)
     {
         
+    }
+    
+    @objc public func getUserID(_ acode: Int)
+    {
+        print("Querying for userID with code=", acode)
+        appSyncClient?.fetch(query: GetAccountLinkQuery(code:acode), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+            if error != nil {
+                print(error?.localizedDescription ?? "")
+                self.showFailedToLinkAlert(err: error?.localizedDescription ?? "Unknown error")
+                return
+            }
+            if (result?.data?.getAccountLink == nil)
+            {
+                print("no items found")
+                self.showFailedToLinkAlert(err: "No items found")
+                return
+            }
+            
+            let deleteCode = DeleteAccountLinkInput(code:acode)
+            
+            self.appSyncClient?.perform(mutation: DeleteAccountLinkMutation(input: deleteCode)) { (result, error) in
+                if let error = error as? AWSAppSyncClientError {
+                    print("Error occurred: \(error.localizedDescription )")
+                }
+                if let resultError = result?.errors {
+                    print("Error deleting the item on server: \(resultError)")
+                    
+                }
+            }
+            
+             let pAppCmnUtil = AppCmnUtil.sharedInstance()
+            let addUserId = CreateUserInfoInput( shareId:NSNumber(value:pAppCmnUtil?.share_id ?? 0).intValue, date:Int(NSDate().timeIntervalSince1970), userId: (result?.data?.getAccountLink!.userId)!, verified: true)
+            let updateUserId = UpdateUserInfoInput( shareId:NSNumber(value:pAppCmnUtil?.share_id ?? 0).intValue, date:Int(NSDate().timeIntervalSince1970), userId: (result?.data?.getAccountLink!.userId)!, verified: true)
+            
+            self.appSyncClient?.perform(mutation: CreateUserInfoMutation(input: addUserId)) { (result, error) in
+                if let error = error as? AWSAppSyncClientError {
+                    print("Error occurred: \(error.localizedDescription )")
+                    self.tryUpdatingUserID(input: updateUserId)
+                    return
+                }
+                if let resultError = result?.errors {
+                    print("Error creating the item on server: \(resultError)")
+                   self.tryUpdatingUserID(input: updateUserId)
+                    return
+                }
+                
+            }
+            
+            
+            
+        }
     }
     
     @objc public func runQuery(_ userID : String){
@@ -77,7 +147,7 @@ import common
                         print("Error occurred: \(error.localizedDescription )")
                     }
                     if let resultError = result?.errors {
-                        print("Error saving the item on server: \(resultError)")
+                        print("Error deleting the item on server: \(resultError)")
                         return
                     }
                 }

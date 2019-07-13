@@ -22,6 +22,7 @@
 #import "sharing/AppShrUtil.h"
 #import "SharingDelegate.h"
 #import <common/common-Swift.h>
+#import "EasyGrocList-Swift.h"
 
 @class EasyViewController;
 
@@ -65,7 +66,7 @@
 @property long long no_of_edits;
 @property long long no_of_template_edits;
 @property (nonatomic, retain) EasyKchainItemWrapper *kchain;
-
+@property (nonatomic, retain) AppSyncInterface *alexaSync;
 @property (nonatomic, retain) EasyViewController*  aViewController1;
 @property (nonatomic, retain) AppShrUtil *appUtl;
 @property (nonatomic, retain) SharingDelegate *pShrDelegate;

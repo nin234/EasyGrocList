@@ -68,6 +68,7 @@
 @property (nonatomic, retain) EasyKchainItemWrapper *kchain;
 @property (nonatomic, retain) AppSyncInterface *alexaSync;
 @property (nonatomic, retain) EasyViewController*  aViewController1;
+@property (nonatomic, retain) EasyViewController*  aViewController;
 @property (nonatomic, retain) AppShrUtil *appUtl;
 @property (nonatomic, retain) SharingDelegate *pShrDelegate;
 

@@ -39,23 +39,48 @@ import common
         self.appSyncClient?.perform(mutation: UpdateUserInfoMutation(input: updateUserId)) { (result, error) in
             if let error = error as? AWSAppSyncClientError {
                 print("Error occurred: \(error.localizedDescription )")
+                self.showFailedToLinkAlert(err: error.localizedDescription)
+                return
             }
             if let resultError = result?.errors {
                 print("Error updating the item on server: \(resultError)")
+                self.showFailedToLinkAlert(err: "Error linking alexa code")
                 return
             }
+            self.updateUserDefaultsAndShowAlert(userID: updateUserId.userId)
         }
         
     }
     
     func updateUserDefaultsAndShowAlert(userID uid: String)
     {
-        UserDefaults.standard.set(uid, forKey: "UserID")
+        UserDefaults.standard.set(uid, forKey: "syncUserID")
+        
+        DispatchQueue.main.async {
+        let alertController = UIAlertController(title: "Alexa linked", message:"EasyGrocList iPhone App and Alexa skill are linked. You can start adding items to lists from Alexa compatible devices via voice interface", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+            
+        }
+        alertController.addAction(ok)
+         let appDelegate =   UIApplication.shared.delegate as! AppDelegate
+        appDelegate.aViewController.present(alertController, animated: true)
+        }
     }
     
     func showFailedToLinkAlert(err error : String)
     {
-        
+        DispatchQueue.main.async {
+            var msg = "Failed to link EasyGrocList iPhone App and Alexa skill "
+            msg += error
+            msg += " try again later"
+        let alertController = UIAlertController(title: "Alexa linked", message:msg, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+            
+        }
+        alertController.addAction(ok)
+        let appDelegate =   UIApplication.shared.delegate as! AppDelegate
+        appDelegate.aViewController.present(alertController, animated: true)
+    }
     }
     
     @objc public func getUserID(_ acode: Int)
@@ -101,10 +126,8 @@ import common
                    self.tryUpdatingUserID(input: updateUserId)
                     return
                 }
-                
+               self.updateUserDefaultsAndShowAlert(userID: addUserId.userId)
             }
-            
-            
             
         }
     }

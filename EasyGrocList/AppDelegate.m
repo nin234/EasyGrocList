@@ -16,6 +16,7 @@
 #import "common/AppCmnUtil.h"
 
 #import <common/EasyListViewController.h>
+#import "MKiCloudSync.h"
 
 @implementation AppDelegate
 
@@ -46,6 +47,8 @@
 @synthesize appUtl;
 @synthesize selFrndCntrl;
 @synthesize alexaSync;
+@synthesize aViewController;
+
 
 
 @class AppSyncInterface;
@@ -146,7 +149,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];
-    
+    [MKiCloudSync startWithPrefix:@"sync"];
     [kvlocal setObject:@"ninan" forKey:@"UserID"];
      tabBarController = [[UITabBarController alloc] init];
     tabBarController.delegate = self;
@@ -188,7 +191,7 @@
 
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    EasyViewController *aViewController = [EasyViewController alloc];
+    aViewController = [EasyViewController alloc];
     aViewController = [aViewController initWithNibName:nil bundle:nil];
     aViewController.bShareView = false;
     aViewController.delegate = self;
@@ -262,7 +265,7 @@
     [pShrMgr start];
     bShrMgrStarted = true;
    
-    NSString *userID = [kvlocal objectForKey:@"UserID"];
+    NSString *userID = [kvlocal objectForKey:@"syncUserID"];
     
     if (userID != nil)
     {

@@ -18,6 +18,7 @@
 		3BD6EABE22C039A20086B502 /* AWSAppSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD6EABD22C039A20086B502 /* AWSAppSync.framework */; };
 		3BD6EACE22C22E7C0086B502 /* AppSyncInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6EACD22C22E7C0086B502 /* AppSyncInterface.swift */; };
 		3BD6EAD422CB021E0086B502 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BD6EAD322CB021E0086B502 /* awsconfiguration.json */; };
+		3BD6EAD922DAC2420086B502 /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6EAD822DAC2420086B502 /* MKiCloudSync.m */; };
 		3BF7F7581E71870100419F8D /* libsharing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7F7531E71863F00419F8D /* libsharing.a */; };
 		3BF7F75B1E71870600419F8D /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7F74C1E71863500419F8D /* libcommon.a */; };
 		3BFE75D41FA0898F005A4B56 /* sharing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3BFE75D21FA0898F005A4B56 /* sharing.xcdatamodeld */; };
@@ -160,6 +161,8 @@
 		3BD6EABD22C039A20086B502 /* AWSAppSync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSAppSync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD6EACD22C22E7C0086B502 /* AppSyncInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSyncInterface.swift; sourceTree = "<group>"; };
 		3BD6EAD322CB021E0086B502 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		3BD6EAD722DAC2310086B502 /* MKiCloudSync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKiCloudSync.h; sourceTree = "<group>"; };
+		3BD6EAD822DAC2420086B502 /* MKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKiCloudSync.m; sourceTree = "<group>"; };
 		3BF7F7461E71863500419F8D /* common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = common.xcodeproj; path = ../common/common.xcodeproj; sourceTree = "<group>"; };
 		3BF7F74D1E71863F00419F8D /* sharing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sharing.xcodeproj; path = ../sharing/sharing.xcodeproj; sourceTree = "<group>"; };
 		3BFE75D31FA0898F005A4B56 /* sharing.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sharing.xcdatamodel; sourceTree = "<group>"; };
@@ -436,6 +439,8 @@
 				DB3940E21BB84796004D601E /* EasyGrocDecoder.h */,
 				DB3940E31BB84796004D601E /* EasyGrocDecoder.m */,
 				DBE8527A16E0168600F709E7 /* AppDelegate.h */,
+				3BD6EAD722DAC2310086B502 /* MKiCloudSync.h */,
+				3BD6EAD822DAC2420086B502 /* MKiCloudSync.m */,
 				DBE8527B16E0168600F709E7 /* AppDelegate.m */,
 				3BD6EACD22C22E7C0086B502 /* AppSyncInterface.swift */,
 				DBA254031BF3C4C900E04844 /* SharingDelegate.m */,
@@ -831,6 +836,7 @@
 				DB5079D11B25B72E0094838A /* EasyKchainItemWrapper.m in Sources */,
 				DB3940E41BB84796004D601E /* EasyGrocDecoder.m in Sources */,
 				DBA254051BF3C4C900E04844 /* SharingDelegate.m in Sources */,
+				3BD6EAD922DAC2420086B502 /* MKiCloudSync.m in Sources */,
 				DBF61DA31BB175780093B83A /* EasyGrocShareMgr.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

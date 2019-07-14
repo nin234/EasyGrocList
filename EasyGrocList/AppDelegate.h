@@ -22,10 +22,10 @@
 #import "sharing/AppShrUtil.h"
 #import "SharingDelegate.h"
 #import <common/common-Swift.h>
-#import "EasyGrocList-Swift.h"
 
 @class EasyViewController;
-
+@class AppSyncInterface;
+//@protocol EasyViewControllerDelegate;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate, UIAlertViewDelegate, TemplListViewControllerDelegate, UITabBarControllerDelegate, EasyViewControllerDelegate>
 {

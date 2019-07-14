@@ -18,6 +18,8 @@
 #import <common/EasyListViewController.h>
 #import "MKiCloudSync.h"
 
+#import "EasyGrocList-Swift.h"
+
 @implementation AppDelegate
 
 
@@ -51,7 +53,7 @@
 
 
 
-@class AppSyncInterface;
+
 
 -(void) popView
 {
@@ -86,6 +88,18 @@
     self.tabBarController.selectedIndex = 1;
     
 
+}
+
+-(void) runAlexaQuery
+{
+    NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];
+    NSString *userID = [kvlocal objectForKey:@"syncUserID"];
+    
+    if (userID != nil)
+    {
+        
+        [alexaSync runQuery:userID];
+    }
 }
 
 - (void)getAlexaUserId:(NSString * _Nonnull)code {
@@ -265,13 +279,7 @@
     [pShrMgr start];
     bShrMgrStarted = true;
    
-    NSString *userID = [kvlocal objectForKey:@"syncUserID"];
-    
-    if (userID != nil)
-    {
-        
-        [alexaSync runQuery:userID];
-    }
+   
     
     pAppCmnUtil.share_id = pShrMgr.share_id;
     

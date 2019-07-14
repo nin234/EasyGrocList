@@ -73,7 +73,7 @@ import common
             var msg = "Failed to link EasyGrocList iPhone App and Alexa skill "
             msg += error
             msg += " try again later"
-        let alertController = UIAlertController(title: "Alexa linked", message:msg, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Alexa Link Failed", message:msg, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
             
         }
@@ -85,6 +85,27 @@ import common
     
     @objc public func getUserID(_ acode: Int)
     {
+        /*
+        appSyncClient?.fetch(query: ListAccountLinksQuery(code:acode), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+            if error != nil {
+                print(error?.localizedDescription ?? "")
+                self.showFailedToLinkAlert(err: error?.localizedDescription ?? "Unknown error")
+                return
+            }
+            if (result?.data?.listAccountLinks == nil)
+            {
+                print("no items found")
+                self.showFailedToLinkAlert(err: "Invalid code entered")
+                return
+            }
+            result?.data?.listAccountLinks?.items!.forEach
+            {
+                print($0?.code ?? 0, $0?.userId ?? "noId")
+            }
+            
+        }
+        return;
+ */
         print("Querying for userID with code=", acode)
         appSyncClient?.fetch(query: GetAccountLinkQuery(code:acode), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
             if error != nil {
@@ -95,7 +116,7 @@ import common
             if (result?.data?.getAccountLink == nil)
             {
                 print("no items found")
-                self.showFailedToLinkAlert(err: "No items found")
+                self.showFailedToLinkAlert(err: "Invalid code entered")
                 return
             }
             
@@ -112,8 +133,8 @@ import common
             }
             
              let pAppCmnUtil = AppCmnUtil.sharedInstance()
-            let addUserId = CreateUserInfoInput( shareId:NSNumber(value:pAppCmnUtil?.share_id ?? 0).intValue, date:Int(NSDate().timeIntervalSince1970), userId: (result?.data?.getAccountLink!.userId)!, verified: true)
-            let updateUserId = UpdateUserInfoInput( shareId:NSNumber(value:pAppCmnUtil?.share_id ?? 0).intValue, date:Int(NSDate().timeIntervalSince1970), userId: (result?.data?.getAccountLink!.userId)!, verified: true)
+            let addUserId = CreateUserInfoInput( shareId:NSNumber(value:pAppCmnUtil?.share_id ?? 0).intValue, date:"\(NSDate().timeIntervalSince1970)", userId: (result?.data?.getAccountLink!.userId)!, verified: true)
+            let updateUserId = UpdateUserInfoInput( shareId:NSNumber(value:pAppCmnUtil?.share_id ?? 0).intValue, date:"\(NSDate().timeIntervalSince1970)", userId: (result?.data?.getAccountLink!.userId)!, verified: true)
             
             self.appSyncClient?.perform(mutation: CreateUserInfoMutation(input: addUserId)) { (result, error) in
                 if let error = error as? AWSAppSyncClientError {
@@ -153,7 +174,7 @@ import common
                 itemEl.name = ($0?.name)!
                 itemEl.masterList = ($0?.masterList)!
                 itemEl.add  = ($0?.add)!
-                itemEl.date = ($0?.date)!
+                itemEl.date = Int64(($0?.date)!) ?? 0
                 items.append(itemEl)
                 var item = " MasterList=" + ($0?.masterList)!
                 item += " name=" + ($0?.name)! + " userID=" + ($0?.userId)!

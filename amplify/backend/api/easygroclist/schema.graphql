@@ -2,7 +2,7 @@ type EasyGrocListItems @model
 @key(fields: ["userID", "name", "masterList"])
 {
   name: String!
-  date: Int!
+  date: String!
   masterList: String!
   userID: String!  
   add:	Boolean!
@@ -17,7 +17,7 @@ type UserInfo @model
 @key(fields: ["userID"])
 {
   share_id: Int!
-  date: Int!
+  date: String!
   userID: String!  
   verified: Boolean!
   placeholder1: String
@@ -29,7 +29,7 @@ type AccountLink @model
 @key(fields: ["code"])
 {
   code: Int!
-  date: Int!
+  date: String!
   userID: String!  
 }
 

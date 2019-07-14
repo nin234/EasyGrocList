@@ -5,7 +5,7 @@ import AWSAppSync
 public struct CreateEasyGrocListItemsInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+  public init(name: String, date: String, masterList: String, userId: String, add: Bool) {
     graphQLMap = ["name": name, "date": date, "masterList": masterList, "userID": userId, "add": add]
   }
 
@@ -18,9 +18,9 @@ public struct CreateEasyGrocListItemsInput: GraphQLMapConvertible {
     }
   }
 
-  public var date: Int {
+  public var date: String {
     get {
-      return graphQLMap["date"] as! Int
+      return graphQLMap["date"] as! String
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "date")
@@ -58,7 +58,7 @@ public struct CreateEasyGrocListItemsInput: GraphQLMapConvertible {
 public struct UpdateEasyGrocListItemsInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(name: String, date: Int? = nil, masterList: String, userId: String, add: Bool? = nil) {
+  public init(name: String, date: String? = nil, masterList: String, userId: String, add: Bool? = nil) {
     graphQLMap = ["name": name, "date": date, "masterList": masterList, "userID": userId, "add": add]
   }
 
@@ -71,9 +71,9 @@ public struct UpdateEasyGrocListItemsInput: GraphQLMapConvertible {
     }
   }
 
-  public var date: Int? {
+  public var date: String? {
     get {
-      return graphQLMap["date"] as! Int?
+      return graphQLMap["date"] as! String?
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "date")
@@ -146,7 +146,7 @@ public struct DeleteEasyGrocListItemsInput: GraphQLMapConvertible {
 public struct CreateUserInfoInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(shareId: Int, date: Int, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
+  public init(shareId: Int, date: String, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
     graphQLMap = ["share_id": shareId, "date": date, "userID": userId, "verified": verified, "placeholder1": placeholder1, "placeholder2": placeholder2, "placeholder3": placeholder3]
   }
 
@@ -159,9 +159,9 @@ public struct CreateUserInfoInput: GraphQLMapConvertible {
     }
   }
 
-  public var date: Int {
+  public var date: String {
     get {
-      return graphQLMap["date"] as! Int
+      return graphQLMap["date"] as! String
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "date")
@@ -217,7 +217,7 @@ public struct CreateUserInfoInput: GraphQLMapConvertible {
 public struct UpdateUserInfoInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(shareId: Int? = nil, date: Int? = nil, userId: String, verified: Bool? = nil, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
+  public init(shareId: Int? = nil, date: String? = nil, userId: String, verified: Bool? = nil, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
     graphQLMap = ["share_id": shareId, "date": date, "userID": userId, "verified": verified, "placeholder1": placeholder1, "placeholder2": placeholder2, "placeholder3": placeholder3]
   }
 
@@ -230,9 +230,9 @@ public struct UpdateUserInfoInput: GraphQLMapConvertible {
     }
   }
 
-  public var date: Int? {
+  public var date: String? {
     get {
-      return graphQLMap["date"] as! Int?
+      return graphQLMap["date"] as! String?
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "date")
@@ -305,7 +305,7 @@ public struct DeleteUserInfoInput: GraphQLMapConvertible {
 public struct CreateAccountLinkInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(code: Int, date: Int, userId: String) {
+  public init(code: Int, date: String, userId: String) {
     graphQLMap = ["code": code, "date": date, "userID": userId]
   }
 
@@ -318,9 +318,9 @@ public struct CreateAccountLinkInput: GraphQLMapConvertible {
     }
   }
 
-  public var date: Int {
+  public var date: String {
     get {
-      return graphQLMap["date"] as! Int
+      return graphQLMap["date"] as! String
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "date")
@@ -340,7 +340,7 @@ public struct CreateAccountLinkInput: GraphQLMapConvertible {
 public struct UpdateAccountLinkInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(code: Int, date: Int? = nil, userId: String? = nil) {
+  public init(code: Int, date: String? = nil, userId: String? = nil) {
     graphQLMap = ["code": code, "date": date, "userID": userId]
   }
 
@@ -353,9 +353,9 @@ public struct UpdateAccountLinkInput: GraphQLMapConvertible {
     }
   }
 
-  public var date: Int? {
+  public var date: String? {
     get {
-      return graphQLMap["date"] as! Int?
+      return graphQLMap["date"] as! String?
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "date")
@@ -489,7 +489,7 @@ public struct ModelEasyGrocListItemsPrimaryCompositeKeyInput: GraphQLMapConverti
 public struct ModelEasyGrocListItemsFilterInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(name: ModelStringFilterInput? = nil, date: ModelIntFilterInput? = nil, masterList: ModelStringFilterInput? = nil, userId: ModelStringFilterInput? = nil, add: ModelBooleanFilterInput? = nil, and: [ModelEasyGrocListItemsFilterInput?]? = nil, or: [ModelEasyGrocListItemsFilterInput?]? = nil, not: ModelEasyGrocListItemsFilterInput? = nil) {
+  public init(name: ModelStringFilterInput? = nil, date: ModelStringFilterInput? = nil, masterList: ModelStringFilterInput? = nil, userId: ModelStringFilterInput? = nil, add: ModelBooleanFilterInput? = nil, and: [ModelEasyGrocListItemsFilterInput?]? = nil, or: [ModelEasyGrocListItemsFilterInput?]? = nil, not: ModelEasyGrocListItemsFilterInput? = nil) {
     graphQLMap = ["name": name, "date": date, "masterList": masterList, "userID": userId, "add": add, "and": and, "or": or, "not": not]
   }
 
@@ -502,9 +502,9 @@ public struct ModelEasyGrocListItemsFilterInput: GraphQLMapConvertible {
     }
   }
 
-  public var date: ModelIntFilterInput? {
+  public var date: ModelStringFilterInput? {
     get {
-      return graphQLMap["date"] as! ModelIntFilterInput?
+      return graphQLMap["date"] as! ModelStringFilterInput?
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "date")
@@ -664,6 +664,130 @@ public struct ModelStringFilterInput: GraphQLMapConvertible {
   }
 }
 
+public struct ModelBooleanFilterInput: GraphQLMapConvertible {
+  public var graphQLMap: GraphQLMap
+
+  public init(ne: Bool? = nil, eq: Bool? = nil) {
+    graphQLMap = ["ne": ne, "eq": eq]
+  }
+
+  public var ne: Bool? {
+    get {
+      return graphQLMap["ne"] as! Bool?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "ne")
+    }
+  }
+
+  public var eq: Bool? {
+    get {
+      return graphQLMap["eq"] as! Bool?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "eq")
+    }
+  }
+}
+
+public struct ModelUserInfoFilterInput: GraphQLMapConvertible {
+  public var graphQLMap: GraphQLMap
+
+  public init(shareId: ModelIntFilterInput? = nil, date: ModelStringFilterInput? = nil, userId: ModelStringFilterInput? = nil, verified: ModelBooleanFilterInput? = nil, placeholder1: ModelStringFilterInput? = nil, placeholder2: ModelStringFilterInput? = nil, placeholder3: ModelStringFilterInput? = nil, and: [ModelUserInfoFilterInput?]? = nil, or: [ModelUserInfoFilterInput?]? = nil, not: ModelUserInfoFilterInput? = nil) {
+    graphQLMap = ["share_id": shareId, "date": date, "userID": userId, "verified": verified, "placeholder1": placeholder1, "placeholder2": placeholder2, "placeholder3": placeholder3, "and": and, "or": or, "not": not]
+  }
+
+  public var shareId: ModelIntFilterInput? {
+    get {
+      return graphQLMap["share_id"] as! ModelIntFilterInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "share_id")
+    }
+  }
+
+  public var date: ModelStringFilterInput? {
+    get {
+      return graphQLMap["date"] as! ModelStringFilterInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "date")
+    }
+  }
+
+  public var userId: ModelStringFilterInput? {
+    get {
+      return graphQLMap["userID"] as! ModelStringFilterInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "userID")
+    }
+  }
+
+  public var verified: ModelBooleanFilterInput? {
+    get {
+      return graphQLMap["verified"] as! ModelBooleanFilterInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "verified")
+    }
+  }
+
+  public var placeholder1: ModelStringFilterInput? {
+    get {
+      return graphQLMap["placeholder1"] as! ModelStringFilterInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "placeholder1")
+    }
+  }
+
+  public var placeholder2: ModelStringFilterInput? {
+    get {
+      return graphQLMap["placeholder2"] as! ModelStringFilterInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "placeholder2")
+    }
+  }
+
+  public var placeholder3: ModelStringFilterInput? {
+    get {
+      return graphQLMap["placeholder3"] as! ModelStringFilterInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "placeholder3")
+    }
+  }
+
+  public var and: [ModelUserInfoFilterInput?]? {
+    get {
+      return graphQLMap["and"] as! [ModelUserInfoFilterInput?]?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "and")
+    }
+  }
+
+  public var or: [ModelUserInfoFilterInput?]? {
+    get {
+      return graphQLMap["or"] as! [ModelUserInfoFilterInput?]?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "or")
+    }
+  }
+
+  public var not: ModelUserInfoFilterInput? {
+    get {
+      return graphQLMap["not"] as! ModelUserInfoFilterInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "not")
+    }
+  }
+}
+
 public struct ModelIntFilterInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
@@ -753,134 +877,10 @@ public struct ModelIntFilterInput: GraphQLMapConvertible {
   }
 }
 
-public struct ModelBooleanFilterInput: GraphQLMapConvertible {
-  public var graphQLMap: GraphQLMap
-
-  public init(ne: Bool? = nil, eq: Bool? = nil) {
-    graphQLMap = ["ne": ne, "eq": eq]
-  }
-
-  public var ne: Bool? {
-    get {
-      return graphQLMap["ne"] as! Bool?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "ne")
-    }
-  }
-
-  public var eq: Bool? {
-    get {
-      return graphQLMap["eq"] as! Bool?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "eq")
-    }
-  }
-}
-
-public struct ModelUserInfoFilterInput: GraphQLMapConvertible {
-  public var graphQLMap: GraphQLMap
-
-  public init(shareId: ModelIntFilterInput? = nil, date: ModelIntFilterInput? = nil, userId: ModelStringFilterInput? = nil, verified: ModelBooleanFilterInput? = nil, placeholder1: ModelStringFilterInput? = nil, placeholder2: ModelStringFilterInput? = nil, placeholder3: ModelStringFilterInput? = nil, and: [ModelUserInfoFilterInput?]? = nil, or: [ModelUserInfoFilterInput?]? = nil, not: ModelUserInfoFilterInput? = nil) {
-    graphQLMap = ["share_id": shareId, "date": date, "userID": userId, "verified": verified, "placeholder1": placeholder1, "placeholder2": placeholder2, "placeholder3": placeholder3, "and": and, "or": or, "not": not]
-  }
-
-  public var shareId: ModelIntFilterInput? {
-    get {
-      return graphQLMap["share_id"] as! ModelIntFilterInput?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "share_id")
-    }
-  }
-
-  public var date: ModelIntFilterInput? {
-    get {
-      return graphQLMap["date"] as! ModelIntFilterInput?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "date")
-    }
-  }
-
-  public var userId: ModelStringFilterInput? {
-    get {
-      return graphQLMap["userID"] as! ModelStringFilterInput?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "userID")
-    }
-  }
-
-  public var verified: ModelBooleanFilterInput? {
-    get {
-      return graphQLMap["verified"] as! ModelBooleanFilterInput?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "verified")
-    }
-  }
-
-  public var placeholder1: ModelStringFilterInput? {
-    get {
-      return graphQLMap["placeholder1"] as! ModelStringFilterInput?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "placeholder1")
-    }
-  }
-
-  public var placeholder2: ModelStringFilterInput? {
-    get {
-      return graphQLMap["placeholder2"] as! ModelStringFilterInput?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "placeholder2")
-    }
-  }
-
-  public var placeholder3: ModelStringFilterInput? {
-    get {
-      return graphQLMap["placeholder3"] as! ModelStringFilterInput?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "placeholder3")
-    }
-  }
-
-  public var and: [ModelUserInfoFilterInput?]? {
-    get {
-      return graphQLMap["and"] as! [ModelUserInfoFilterInput?]?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "and")
-    }
-  }
-
-  public var or: [ModelUserInfoFilterInput?]? {
-    get {
-      return graphQLMap["or"] as! [ModelUserInfoFilterInput?]?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "or")
-    }
-  }
-
-  public var not: ModelUserInfoFilterInput? {
-    get {
-      return graphQLMap["not"] as! ModelUserInfoFilterInput?
-    }
-    set {
-      graphQLMap.updateValue(newValue, forKey: "not")
-    }
-  }
-}
-
 public struct ModelAccountLinkFilterInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(code: ModelIntFilterInput? = nil, date: ModelIntFilterInput? = nil, userId: ModelStringFilterInput? = nil, and: [ModelAccountLinkFilterInput?]? = nil, or: [ModelAccountLinkFilterInput?]? = nil, not: ModelAccountLinkFilterInput? = nil) {
+  public init(code: ModelIntFilterInput? = nil, date: ModelStringFilterInput? = nil, userId: ModelStringFilterInput? = nil, and: [ModelAccountLinkFilterInput?]? = nil, or: [ModelAccountLinkFilterInput?]? = nil, not: ModelAccountLinkFilterInput? = nil) {
     graphQLMap = ["code": code, "date": date, "userID": userId, "and": and, "or": or, "not": not]
   }
 
@@ -893,9 +893,9 @@ public struct ModelAccountLinkFilterInput: GraphQLMapConvertible {
     }
   }
 
-  public var date: ModelIntFilterInput? {
+  public var date: ModelStringFilterInput? {
     get {
-      return graphQLMap["date"] as! ModelIntFilterInput?
+      return graphQLMap["date"] as! ModelStringFilterInput?
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "date")
@@ -985,7 +985,7 @@ public final class CreateEasyGrocListItemsMutation: GraphQLMutation {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
@@ -997,7 +997,7 @@ public final class CreateEasyGrocListItemsMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+      public init(name: String, date: String, masterList: String, userId: String, add: Bool) {
         self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
       }
 
@@ -1019,9 +1019,9 @@ public final class CreateEasyGrocListItemsMutation: GraphQLMutation {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -1104,7 +1104,7 @@ public final class UpdateEasyGrocListItemsMutation: GraphQLMutation {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
@@ -1116,7 +1116,7 @@ public final class UpdateEasyGrocListItemsMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+      public init(name: String, date: String, masterList: String, userId: String, add: Bool) {
         self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
       }
 
@@ -1138,9 +1138,9 @@ public final class UpdateEasyGrocListItemsMutation: GraphQLMutation {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -1223,7 +1223,7 @@ public final class DeleteEasyGrocListItemsMutation: GraphQLMutation {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
@@ -1235,7 +1235,7 @@ public final class DeleteEasyGrocListItemsMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+      public init(name: String, date: String, masterList: String, userId: String, add: Bool) {
         self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
       }
 
@@ -1257,9 +1257,9 @@ public final class DeleteEasyGrocListItemsMutation: GraphQLMutation {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -1342,7 +1342,7 @@ public final class CreateUserInfoMutation: GraphQLMutation {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("share_id", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("verified", type: .nonNull(.scalar(Bool.self))),
         GraphQLField("placeholder1", type: .scalar(String.self)),
@@ -1356,7 +1356,7 @@ public final class CreateUserInfoMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(shareId: Int, date: Int, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
+      public init(shareId: Int, date: String, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
         self.init(snapshot: ["__typename": "UserInfo", "share_id": shareId, "date": date, "userID": userId, "verified": verified, "placeholder1": placeholder1, "placeholder2": placeholder2, "placeholder3": placeholder3])
       }
 
@@ -1378,9 +1378,9 @@ public final class CreateUserInfoMutation: GraphQLMutation {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -1481,7 +1481,7 @@ public final class UpdateUserInfoMutation: GraphQLMutation {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("share_id", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("verified", type: .nonNull(.scalar(Bool.self))),
         GraphQLField("placeholder1", type: .scalar(String.self)),
@@ -1495,7 +1495,7 @@ public final class UpdateUserInfoMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(shareId: Int, date: Int, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
+      public init(shareId: Int, date: String, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
         self.init(snapshot: ["__typename": "UserInfo", "share_id": shareId, "date": date, "userID": userId, "verified": verified, "placeholder1": placeholder1, "placeholder2": placeholder2, "placeholder3": placeholder3])
       }
 
@@ -1517,9 +1517,9 @@ public final class UpdateUserInfoMutation: GraphQLMutation {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -1620,7 +1620,7 @@ public final class DeleteUserInfoMutation: GraphQLMutation {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("share_id", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("verified", type: .nonNull(.scalar(Bool.self))),
         GraphQLField("placeholder1", type: .scalar(String.self)),
@@ -1634,7 +1634,7 @@ public final class DeleteUserInfoMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(shareId: Int, date: Int, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
+      public init(shareId: Int, date: String, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
         self.init(snapshot: ["__typename": "UserInfo", "share_id": shareId, "date": date, "userID": userId, "verified": verified, "placeholder1": placeholder1, "placeholder2": placeholder2, "placeholder3": placeholder3])
       }
 
@@ -1656,9 +1656,9 @@ public final class DeleteUserInfoMutation: GraphQLMutation {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -1759,7 +1759,7 @@ public final class CreateAccountLinkMutation: GraphQLMutation {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("code", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
       ]
 
@@ -1769,7 +1769,7 @@ public final class CreateAccountLinkMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(code: Int, date: Int, userId: String) {
+      public init(code: Int, date: String, userId: String) {
         self.init(snapshot: ["__typename": "AccountLink", "code": code, "date": date, "userID": userId])
       }
 
@@ -1791,9 +1791,9 @@ public final class CreateAccountLinkMutation: GraphQLMutation {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -1858,7 +1858,7 @@ public final class UpdateAccountLinkMutation: GraphQLMutation {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("code", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
       ]
 
@@ -1868,7 +1868,7 @@ public final class UpdateAccountLinkMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(code: Int, date: Int, userId: String) {
+      public init(code: Int, date: String, userId: String) {
         self.init(snapshot: ["__typename": "AccountLink", "code": code, "date": date, "userID": userId])
       }
 
@@ -1890,9 +1890,9 @@ public final class UpdateAccountLinkMutation: GraphQLMutation {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -1957,7 +1957,7 @@ public final class DeleteAccountLinkMutation: GraphQLMutation {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("code", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
       ]
 
@@ -1967,7 +1967,7 @@ public final class DeleteAccountLinkMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(code: Int, date: Int, userId: String) {
+      public init(code: Int, date: String, userId: String) {
         self.init(snapshot: ["__typename": "AccountLink", "code": code, "date": date, "userID": userId])
       }
 
@@ -1989,9 +1989,9 @@ public final class DeleteAccountLinkMutation: GraphQLMutation {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -2056,7 +2056,7 @@ public final class ItemsByUserIdQuery: GraphQLQuery {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
@@ -2068,7 +2068,7 @@ public final class ItemsByUserIdQuery: GraphQLQuery {
         self.snapshot = snapshot
       }
 
-      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+      public init(name: String, date: String, masterList: String, userId: String, add: Bool) {
         self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
       }
 
@@ -2090,9 +2090,9 @@ public final class ItemsByUserIdQuery: GraphQLQuery {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -2179,7 +2179,7 @@ public final class GetEasyGrocListItemsQuery: GraphQLQuery {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
@@ -2191,7 +2191,7 @@ public final class GetEasyGrocListItemsQuery: GraphQLQuery {
         self.snapshot = snapshot
       }
 
-      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+      public init(name: String, date: String, masterList: String, userId: String, add: Bool) {
         self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
       }
 
@@ -2213,9 +2213,9 @@ public final class GetEasyGrocListItemsQuery: GraphQLQuery {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -2352,7 +2352,7 @@ public final class ListEasyGrocListItemssQuery: GraphQLQuery {
         public static let selections: [GraphQLSelection] = [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
           GraphQLField("name", type: .nonNull(.scalar(String.self))),
-          GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+          GraphQLField("date", type: .nonNull(.scalar(String.self))),
           GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
           GraphQLField("userID", type: .nonNull(.scalar(String.self))),
           GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
@@ -2364,7 +2364,7 @@ public final class ListEasyGrocListItemssQuery: GraphQLQuery {
           self.snapshot = snapshot
         }
 
-        public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+        public init(name: String, date: String, masterList: String, userId: String, add: Bool) {
           self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
         }
 
@@ -2386,9 +2386,9 @@ public final class ListEasyGrocListItemssQuery: GraphQLQuery {
           }
         }
 
-        public var date: Int {
+        public var date: String {
           get {
-            return snapshot["date"]! as! Int
+            return snapshot["date"]! as! String
           }
           set {
             snapshot.updateValue(newValue, forKey: "date")
@@ -2472,7 +2472,7 @@ public final class GetUserInfoQuery: GraphQLQuery {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("share_id", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("verified", type: .nonNull(.scalar(Bool.self))),
         GraphQLField("placeholder1", type: .scalar(String.self)),
@@ -2486,7 +2486,7 @@ public final class GetUserInfoQuery: GraphQLQuery {
         self.snapshot = snapshot
       }
 
-      public init(shareId: Int, date: Int, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
+      public init(shareId: Int, date: String, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
         self.init(snapshot: ["__typename": "UserInfo", "share_id": shareId, "date": date, "userID": userId, "verified": verified, "placeholder1": placeholder1, "placeholder2": placeholder2, "placeholder3": placeholder3])
       }
 
@@ -2508,9 +2508,9 @@ public final class GetUserInfoQuery: GraphQLQuery {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -2663,7 +2663,7 @@ public final class ListUserInfosQuery: GraphQLQuery {
         public static let selections: [GraphQLSelection] = [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
           GraphQLField("share_id", type: .nonNull(.scalar(Int.self))),
-          GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+          GraphQLField("date", type: .nonNull(.scalar(String.self))),
           GraphQLField("userID", type: .nonNull(.scalar(String.self))),
           GraphQLField("verified", type: .nonNull(.scalar(Bool.self))),
           GraphQLField("placeholder1", type: .scalar(String.self)),
@@ -2677,7 +2677,7 @@ public final class ListUserInfosQuery: GraphQLQuery {
           self.snapshot = snapshot
         }
 
-        public init(shareId: Int, date: Int, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
+        public init(shareId: Int, date: String, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
           self.init(snapshot: ["__typename": "UserInfo", "share_id": shareId, "date": date, "userID": userId, "verified": verified, "placeholder1": placeholder1, "placeholder2": placeholder2, "placeholder3": placeholder3])
         }
 
@@ -2699,9 +2699,9 @@ public final class ListUserInfosQuery: GraphQLQuery {
           }
         }
 
-        public var date: Int {
+        public var date: String {
           get {
-            return snapshot["date"]! as! Int
+            return snapshot["date"]! as! String
           }
           set {
             snapshot.updateValue(newValue, forKey: "date")
@@ -2803,7 +2803,7 @@ public final class GetAccountLinkQuery: GraphQLQuery {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("code", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
       ]
 
@@ -2813,7 +2813,7 @@ public final class GetAccountLinkQuery: GraphQLQuery {
         self.snapshot = snapshot
       }
 
-      public init(code: Int, date: Int, userId: String) {
+      public init(code: Int, date: String, userId: String) {
         self.init(snapshot: ["__typename": "AccountLink", "code": code, "date": date, "userID": userId])
       }
 
@@ -2835,9 +2835,9 @@ public final class GetAccountLinkQuery: GraphQLQuery {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -2954,7 +2954,7 @@ public final class ListAccountLinksQuery: GraphQLQuery {
         public static let selections: [GraphQLSelection] = [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
           GraphQLField("code", type: .nonNull(.scalar(Int.self))),
-          GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+          GraphQLField("date", type: .nonNull(.scalar(String.self))),
           GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         ]
 
@@ -2964,7 +2964,7 @@ public final class ListAccountLinksQuery: GraphQLQuery {
           self.snapshot = snapshot
         }
 
-        public init(code: Int, date: Int, userId: String) {
+        public init(code: Int, date: String, userId: String) {
           self.init(snapshot: ["__typename": "AccountLink", "code": code, "date": date, "userID": userId])
         }
 
@@ -2986,9 +2986,9 @@ public final class ListAccountLinksQuery: GraphQLQuery {
           }
         }
 
-        public var date: Int {
+        public var date: String {
           get {
-            return snapshot["date"]! as! Int
+            return snapshot["date"]! as! String
           }
           set {
             snapshot.updateValue(newValue, forKey: "date")
@@ -3047,7 +3047,7 @@ public final class OnCreateEasyGrocListItemsSubscription: GraphQLSubscription {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
@@ -3059,7 +3059,7 @@ public final class OnCreateEasyGrocListItemsSubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+      public init(name: String, date: String, masterList: String, userId: String, add: Bool) {
         self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
       }
 
@@ -3081,9 +3081,9 @@ public final class OnCreateEasyGrocListItemsSubscription: GraphQLSubscription {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -3159,7 +3159,7 @@ public final class OnUpdateEasyGrocListItemsSubscription: GraphQLSubscription {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
@@ -3171,7 +3171,7 @@ public final class OnUpdateEasyGrocListItemsSubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+      public init(name: String, date: String, masterList: String, userId: String, add: Bool) {
         self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
       }
 
@@ -3193,9 +3193,9 @@ public final class OnUpdateEasyGrocListItemsSubscription: GraphQLSubscription {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -3271,7 +3271,7 @@ public final class OnDeleteEasyGrocListItemsSubscription: GraphQLSubscription {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("masterList", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("add", type: .nonNull(.scalar(Bool.self))),
@@ -3283,7 +3283,7 @@ public final class OnDeleteEasyGrocListItemsSubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(name: String, date: Int, masterList: String, userId: String, add: Bool) {
+      public init(name: String, date: String, masterList: String, userId: String, add: Bool) {
         self.init(snapshot: ["__typename": "EasyGrocListItems", "name": name, "date": date, "masterList": masterList, "userID": userId, "add": add])
       }
 
@@ -3305,9 +3305,9 @@ public final class OnDeleteEasyGrocListItemsSubscription: GraphQLSubscription {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -3383,7 +3383,7 @@ public final class OnCreateUserInfoSubscription: GraphQLSubscription {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("share_id", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("verified", type: .nonNull(.scalar(Bool.self))),
         GraphQLField("placeholder1", type: .scalar(String.self)),
@@ -3397,7 +3397,7 @@ public final class OnCreateUserInfoSubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(shareId: Int, date: Int, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
+      public init(shareId: Int, date: String, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
         self.init(snapshot: ["__typename": "UserInfo", "share_id": shareId, "date": date, "userID": userId, "verified": verified, "placeholder1": placeholder1, "placeholder2": placeholder2, "placeholder3": placeholder3])
       }
 
@@ -3419,9 +3419,9 @@ public final class OnCreateUserInfoSubscription: GraphQLSubscription {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -3515,7 +3515,7 @@ public final class OnUpdateUserInfoSubscription: GraphQLSubscription {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("share_id", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("verified", type: .nonNull(.scalar(Bool.self))),
         GraphQLField("placeholder1", type: .scalar(String.self)),
@@ -3529,7 +3529,7 @@ public final class OnUpdateUserInfoSubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(shareId: Int, date: Int, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
+      public init(shareId: Int, date: String, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
         self.init(snapshot: ["__typename": "UserInfo", "share_id": shareId, "date": date, "userID": userId, "verified": verified, "placeholder1": placeholder1, "placeholder2": placeholder2, "placeholder3": placeholder3])
       }
 
@@ -3551,9 +3551,9 @@ public final class OnUpdateUserInfoSubscription: GraphQLSubscription {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -3647,7 +3647,7 @@ public final class OnDeleteUserInfoSubscription: GraphQLSubscription {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("share_id", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
         GraphQLField("verified", type: .nonNull(.scalar(Bool.self))),
         GraphQLField("placeholder1", type: .scalar(String.self)),
@@ -3661,7 +3661,7 @@ public final class OnDeleteUserInfoSubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(shareId: Int, date: Int, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
+      public init(shareId: Int, date: String, userId: String, verified: Bool, placeholder1: String? = nil, placeholder2: String? = nil, placeholder3: String? = nil) {
         self.init(snapshot: ["__typename": "UserInfo", "share_id": shareId, "date": date, "userID": userId, "verified": verified, "placeholder1": placeholder1, "placeholder2": placeholder2, "placeholder3": placeholder3])
       }
 
@@ -3683,9 +3683,9 @@ public final class OnDeleteUserInfoSubscription: GraphQLSubscription {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -3779,7 +3779,7 @@ public final class OnCreateAccountLinkSubscription: GraphQLSubscription {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("code", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
       ]
 
@@ -3789,7 +3789,7 @@ public final class OnCreateAccountLinkSubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(code: Int, date: Int, userId: String) {
+      public init(code: Int, date: String, userId: String) {
         self.init(snapshot: ["__typename": "AccountLink", "code": code, "date": date, "userID": userId])
       }
 
@@ -3811,9 +3811,9 @@ public final class OnCreateAccountLinkSubscription: GraphQLSubscription {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -3871,7 +3871,7 @@ public final class OnUpdateAccountLinkSubscription: GraphQLSubscription {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("code", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
       ]
 
@@ -3881,7 +3881,7 @@ public final class OnUpdateAccountLinkSubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(code: Int, date: Int, userId: String) {
+      public init(code: Int, date: String, userId: String) {
         self.init(snapshot: ["__typename": "AccountLink", "code": code, "date": date, "userID": userId])
       }
 
@@ -3903,9 +3903,9 @@ public final class OnUpdateAccountLinkSubscription: GraphQLSubscription {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")
@@ -3963,7 +3963,7 @@ public final class OnDeleteAccountLinkSubscription: GraphQLSubscription {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("code", type: .nonNull(.scalar(Int.self))),
-        GraphQLField("date", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("userID", type: .nonNull(.scalar(String.self))),
       ]
 
@@ -3973,7 +3973,7 @@ public final class OnDeleteAccountLinkSubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(code: Int, date: Int, userId: String) {
+      public init(code: Int, date: String, userId: String) {
         self.init(snapshot: ["__typename": "AccountLink", "code": code, "date": date, "userID": userId])
       }
 
@@ -3995,9 +3995,9 @@ public final class OnDeleteAccountLinkSubscription: GraphQLSubscription {
         }
       }
 
-      public var date: Int {
+      public var date: String {
         get {
-          return snapshot["date"]! as! Int
+          return snapshot["date"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "date")

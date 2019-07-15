@@ -164,7 +164,7 @@
 {
     NSUserDefaults* kvlocal = [NSUserDefaults standardUserDefaults];
     [MKiCloudSync startWithPrefix:@"sync"];
-    [kvlocal setObject:@"ninan" forKey:@"UserID"];
+   
      tabBarController = [[UITabBarController alloc] init];
     tabBarController.delegate = self;
     pShrMgr = [[EasyGrocShareMgr alloc] init];
@@ -359,6 +359,14 @@
         
       [pShrMgr getItems];
          [kvlocal setBool:NO forKey:@"ToDownload"];
+    }
+    
+    NSString *userID = [kvlocal objectForKey:@"syncUserID"];
+    
+    if (userID != nil)
+    {
+        
+        [alexaSync runQuery:userID];
     }
 }
 

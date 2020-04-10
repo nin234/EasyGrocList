@@ -36,7 +36,6 @@
 		DBBA05F11AABB40F001E9959 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA05F01AABB40F001E9959 /* NotificationController.m */; };
 		DBBA05F41AABB40F001E9959 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA05F31AABB40F001E9959 /* GlanceController.m */; };
 		DBBA06021AABB40F001E9959 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBA06001AABB40F001E9959 /* Interface.storyboard */; };
-		DBBA06131AADABC4001E9959 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBA06121AADABC4001E9959 /* WatchKit.framework */; };
 		DBBA06181AD203A7001E9959 /* EasyGrocList.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = DBE8528316E0168600F709E7 /* EasyGrocList.xcdatamodeld */; };
 		DBBA061B1AD2A491001E9959 /* DataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA061A1AD2A491001E9959 /* DataAccessor.m */; };
 		DBBA061E1AD350E6001E9959 /* ListNames.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA061D1AD350E6001E9959 /* ListNames.m */; };
@@ -271,7 +270,6 @@
 				3BD6EAA722BEBF7A0086B502 /* Pods_EasyGrocList.framework in Frameworks */,
 				3BF7F75B1E71870600419F8D /* libcommon.a in Frameworks */,
 				3BF7F7581E71870100419F8D /* libsharing.a in Frameworks */,
-				DBBA06131AADABC4001E9959 /* WatchKit.framework in Frameworks */,
 				DBBF2C051756B5510083912F /* MobileCoreServices.framework in Frameworks */,
 				DBE8526A16E0168600F709E7 /* UIKit.framework in Frameworks */,
 				DBE8526C16E0168600F709E7 /* Foundation.framework in Frameworks */,
@@ -1101,7 +1099,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -1135,7 +1133,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

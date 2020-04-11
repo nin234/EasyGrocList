@@ -6,9 +6,9 @@ target 'EasyGrocList' do
   use_frameworks!
 
   # Pods for EasyGrocList
- pod 'AWSCore', '~> 2.9.6'
+ pod 'AWSCore', '~> 2.9.10'
 
- pod 'AWSAppSync', '~> 2.12.0'
+ pod 'AWSAppSync', '~> 2.12.2'
 
   target 'EasyGrocListTests' do
     inherit! :search_paths

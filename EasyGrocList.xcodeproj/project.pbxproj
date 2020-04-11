@@ -7,15 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3648719C1D2E48BAE0D94464 /* Pods_EasyGrocListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4BFF628171A5930878276D2 /* Pods_EasyGrocListTests.framework */; };
 		3B3D29051F1BE29000AC3D5D /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 3B3D29041F1BE29000AC3D5D /* Images */; };
 		3B4FCAAE22BAEF05005E4582 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B9CF8B81EF1F56E004F009D /* AlbumContentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CF8B71EF1F56E004F009D /* AlbumContentsTableViewCell.xib */; };
 		3BC9244D2273B4B40001FF62 /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC9244C2273B4B40001FF62 /* NotesViewController.xib */; };
-		3BD6EAA722BEBF7A0086B502 /* Pods_EasyGrocList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD6EAA622BEBF7A0086B502 /* Pods_EasyGrocList.framework */; };
-		3BD6EAAB22BEC48D0086B502 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD6EAAA22BEC48D0086B502 /* AWSCore.framework */; };
 		3BD6EABA22C035DD0086B502 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6EAB922C035DD0086B502 /* API.swift */; };
-		3BD6EABE22C039A20086B502 /* AWSAppSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD6EABD22C039A20086B502 /* AWSAppSync.framework */; };
 		3BD6EACE22C22E7C0086B502 /* AppSyncInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6EACD22C22E7C0086B502 /* AppSyncInterface.swift */; };
 		3BD6EAD422CB021E0086B502 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BD6EAD322CB021E0086B502 /* awsconfiguration.json */; };
 		3BD6EAD922DAC2420086B502 /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6EAD822DAC2420086B502 /* MKiCloudSync.m */; };
@@ -150,14 +146,13 @@
 
 /* Begin PBXFileReference section */
 		3B3D29041F1BE29000AC3D5D /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = SOURCE_ROOT; };
-		3B4FCAB022BAEF53005E4582 /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9CF8B71EF1F56E004F009D /* AlbumContentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlbumContentsTableViewCell.xib; path = EasyGrocList/AlbumContentsTableViewCell.xib; sourceTree = "<group>"; };
 		3BC9244C2273B4B40001FF62 /* NotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesViewController.xib; sourceTree = "<group>"; };
-		3BD6EAA622BEBF7A0086B502 /* Pods_EasyGrocList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_EasyGrocList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BD6EAAA22BEC48D0086B502 /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BC92A972442517400A9D9DB /* AWSAppSync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSAppSync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BC92A9B2442517B00A9D9DB /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BC92A9E2442529900A9D9DB /* AWSAppSync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSAppSync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD6EAB822C035DC0086B502 /* EasyGrocList-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyGrocList-Bridging-Header.h"; sourceTree = "<group>"; };
 		3BD6EAB922C035DD0086B502 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
-		3BD6EABD22C039A20086B502 /* AWSAppSync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSAppSync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD6EACD22C22E7C0086B502 /* AppSyncInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSyncInterface.swift; sourceTree = "<group>"; };
 		3BD6EAD322CB021E0086B502 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 		3BD6EAD722DAC2310086B502 /* MKiCloudSync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKiCloudSync.h; sourceTree = "<group>"; };
@@ -165,10 +160,8 @@
 		3BF7F7461E71863500419F8D /* common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = common.xcodeproj; path = ../common/common.xcodeproj; sourceTree = "<group>"; };
 		3BF7F74D1E71863F00419F8D /* sharing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sharing.xcodeproj; path = ../sharing/sharing.xcodeproj; sourceTree = "<group>"; };
 		3BFE75D31FA0898F005A4B56 /* sharing.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sharing.xcdatamodel; sourceTree = "<group>"; };
-		6454AAEB37C27EC8C679DF89 /* Pods_EasyGrocList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyGrocList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F116F2B8BB9998E6320220 /* Pods-EasyGrocList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGrocList.debug.xcconfig"; path = "Target Support Files/Pods-EasyGrocList/Pods-EasyGrocList.debug.xcconfig"; sourceTree = "<group>"; };
 		B40A05608EE4EE6BEEB8A95A /* Pods-EasyGrocListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGrocListTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyGrocListTests/Pods-EasyGrocListTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B4BFF628171A5930878276D2 /* Pods_EasyGrocListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyGrocListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D11FFB4F4E0F10CB5E663D44 /* Pods-EasyGrocList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGrocList.release.xcconfig"; path = "Target Support Files/Pods-EasyGrocList/Pods-EasyGrocList.release.xcconfig"; sourceTree = "<group>"; };
 		DB0C537F1AE65AD00089968D /* Grocery_list_icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grocery_list_icon_120.png; path = Images/Grocery_list_icon_120.png; sourceTree = SOURCE_ROOT; };
 		DB0C53811AE65BA70089968D /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "Images/Icon-60@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -265,9 +258,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BD6EABE22C039A20086B502 /* AWSAppSync.framework in Frameworks */,
-				3BD6EAAB22BEC48D0086B502 /* AWSCore.framework in Frameworks */,
-				3BD6EAA722BEBF7A0086B502 /* Pods_EasyGrocList.framework in Frameworks */,
 				3BF7F75B1E71870600419F8D /* libcommon.a in Frameworks */,
 				3BF7F7581E71870100419F8D /* libsharing.a in Frameworks */,
 				DBBF2C051756B5510083912F /* MobileCoreServices.framework in Frameworks */,
@@ -285,7 +275,6 @@
 				DBE8528E16E0168700F709E7 /* UIKit.framework in Frameworks */,
 				DBE8528F16E0168700F709E7 /* Foundation.framework in Frameworks */,
 				DBE8529016E0168700F709E7 /* CoreData.framework in Frameworks */,
-				3648719C1D2E48BAE0D94464 /* Pods_EasyGrocListTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,10 +389,9 @@
 		DBE8526816E0168600F709E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3BD6EABD22C039A20086B502 /* AWSAppSync.framework */,
-				3BD6EAAA22BEC48D0086B502 /* AWSCore.framework */,
-				3BD6EAA622BEBF7A0086B502 /* Pods_EasyGrocList.framework */,
-				3B4FCAB022BAEF53005E4582 /* AWSCore.framework */,
+				3BC92A9E2442529900A9D9DB /* AWSAppSync.framework */,
+				3BC92A9B2442517B00A9D9DB /* AWSCore.framework */,
+				3BC92A972442517400A9D9DB /* AWSAppSync.framework */,
 				DB5079D31B25B7910094838A /* Security.framework */,
 				DB51F6A31ADDC9BB00C3ADB7 /* StoreKit.framework */,
 				DBBA06121AADABC4001E9959 /* WatchKit.framework */,
@@ -412,8 +400,6 @@
 				DBE8526B16E0168600F709E7 /* Foundation.framework */,
 				DBE8526D16E0168600F709E7 /* CoreGraphics.framework */,
 				DBE8526F16E0168600F709E7 /* CoreData.framework */,
-				6454AAEB37C27EC8C679DF89 /* Pods_EasyGrocList.framework */,
-				B4BFF628171A5930878276D2 /* Pods_EasyGrocListTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1152,6 +1138,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 3JEQ693MKL;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSAppSync\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SQLite.swift\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EasyGrocList/EasyGrocList-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = (
@@ -1169,6 +1162,7 @@
 					"-ObjC",
 					"-v",
 				);
+				"PODS_PODFILE_DIR_PATH[arch=*]" = "${SRCROOT}/.";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rekhaninan.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = EasyGrocList;
 				PROVISIONING_PROFILE = "";
@@ -1191,6 +1185,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 3JEQ693MKL;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSAppSync\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SQLite.swift\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EasyGrocList/EasyGrocList-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = (

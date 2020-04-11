@@ -7,12 +7,12 @@
 		<key>AWSAppSync.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>AWSCore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>Pods-EasyGrocList.xcscheme</key>
 		<dict>

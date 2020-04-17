@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B26AED324425A8100EA1EE2 /* AWSAppSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B26AED224425A8100EA1EE2 /* AWSAppSync.framework */; };
+		3B26AED924425A8600EA1EE2 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B26AED824425A8600EA1EE2 /* AWSCore.framework */; };
 		3B3D29051F1BE29000AC3D5D /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 3B3D29041F1BE29000AC3D5D /* Images */; };
 		3B4FCAAE22BAEF05005E4582 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B9CF8B81EF1F56E004F009D /* AlbumContentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CF8B71EF1F56E004F009D /* AlbumContentsTableViewCell.xib */; };
@@ -18,6 +20,8 @@
 		3BF7F7581E71870100419F8D /* libsharing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7F7531E71863F00419F8D /* libsharing.a */; };
 		3BF7F75B1E71870600419F8D /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF7F74C1E71863500419F8D /* libcommon.a */; };
 		3BFE75D41FA0898F005A4B56 /* sharing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3BFE75D21FA0898F005A4B56 /* sharing.xcdatamodeld */; };
+		99FA274BC544F2251587EF1A /* Pods_EasyGrocList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC0DEF16C326B2908C80A5C /* Pods_EasyGrocList.framework */; };
+		C8F8EA5EC380CFDED4A299BF /* Pods_EasyGrocListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EB96A0C29C36384BA4A379 /* Pods_EasyGrocListTests.framework */; };
 		DB0C53801AE65AD00089968D /* Grocery_list_icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0C537F1AE65AD00089968D /* Grocery_list_icon_120.png */; };
 		DB0C53821AE65BA70089968D /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0C53811AE65BA70089968D /* Icon-60@2x.png */; };
 		DB3940E11BB4B12F004D601E /* EasyGrocTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3940E01BB4B12F004D601E /* EasyGrocTranslator.m */; };
@@ -145,6 +149,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B26AED224425A8100EA1EE2 /* AWSAppSync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSAppSync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B26AED824425A8600EA1EE2 /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3D29041F1BE29000AC3D5D /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = SOURCE_ROOT; };
 		3B9CF8B71EF1F56E004F009D /* AlbumContentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlbumContentsTableViewCell.xib; path = EasyGrocList/AlbumContentsTableViewCell.xib; sourceTree = "<group>"; };
 		3BC9244C2273B4B40001FF62 /* NotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesViewController.xib; sourceTree = "<group>"; };
@@ -160,9 +166,11 @@
 		3BF7F7461E71863500419F8D /* common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = common.xcodeproj; path = ../common/common.xcodeproj; sourceTree = "<group>"; };
 		3BF7F74D1E71863F00419F8D /* sharing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sharing.xcodeproj; path = ../sharing/sharing.xcodeproj; sourceTree = "<group>"; };
 		3BFE75D31FA0898F005A4B56 /* sharing.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sharing.xcdatamodel; sourceTree = "<group>"; };
-		B3F116F2B8BB9998E6320220 /* Pods-EasyGrocList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGrocList.debug.xcconfig"; path = "Target Support Files/Pods-EasyGrocList/Pods-EasyGrocList.debug.xcconfig"; sourceTree = "<group>"; };
-		B40A05608EE4EE6BEEB8A95A /* Pods-EasyGrocListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGrocListTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyGrocListTests/Pods-EasyGrocListTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D11FFB4F4E0F10CB5E663D44 /* Pods-EasyGrocList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGrocList.release.xcconfig"; path = "Target Support Files/Pods-EasyGrocList/Pods-EasyGrocList.release.xcconfig"; sourceTree = "<group>"; };
+		535DC9C09A85FE9A703C81FD /* Pods-EasyGrocListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGrocListTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyGrocListTests/Pods-EasyGrocListTests.debug.xcconfig"; sourceTree = "<group>"; };
+		93EB96A0C29C36384BA4A379 /* Pods_EasyGrocListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyGrocListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A607B1DB76927372B124AF60 /* Pods-EasyGrocList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGrocList.release.xcconfig"; path = "Target Support Files/Pods-EasyGrocList/Pods-EasyGrocList.release.xcconfig"; sourceTree = "<group>"; };
+		BBC0DEF16C326B2908C80A5C /* Pods_EasyGrocList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyGrocList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D391B2A4643521CE210557C9 /* Pods-EasyGrocListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGrocListTests.release.xcconfig"; path = "Target Support Files/Pods-EasyGrocListTests/Pods-EasyGrocListTests.release.xcconfig"; sourceTree = "<group>"; };
 		DB0C537F1AE65AD00089968D /* Grocery_list_icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grocery_list_icon_120.png; path = Images/Grocery_list_icon_120.png; sourceTree = SOURCE_ROOT; };
 		DB0C53811AE65BA70089968D /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "Images/Icon-60@2x.png"; sourceTree = SOURCE_ROOT; };
 		DB3940DF1BB4B12F004D601E /* EasyGrocTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyGrocTranslator.h; sourceTree = "<group>"; };
@@ -236,7 +244,7 @@
 		DBFCDAC91AE740B400E7D683 /* Grocery_list_icon_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grocery_list_icon_180.png; sourceTree = "<group>"; };
 		DBFCDACF1AE7453300E7D683 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images_watchkit.xcassets; sourceTree = "<group>"; };
-		FCF6481C23899B0485119804 /* Pods-EasyGrocListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGrocListTests.release.xcconfig"; path = "Target Support Files/Pods-EasyGrocListTests/Pods-EasyGrocListTests.release.xcconfig"; sourceTree = "<group>"; };
+		EA6914DE09AFE6E1673E7E0A /* Pods-EasyGrocList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGrocList.debug.xcconfig"; path = "Target Support Files/Pods-EasyGrocList/Pods-EasyGrocList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +266,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B26AED924425A8600EA1EE2 /* AWSCore.framework in Frameworks */,
+				3B26AED324425A8100EA1EE2 /* AWSAppSync.framework in Frameworks */,
 				3BF7F75B1E71870600419F8D /* libcommon.a in Frameworks */,
 				3BF7F7581E71870100419F8D /* libsharing.a in Frameworks */,
 				DBBF2C051756B5510083912F /* MobileCoreServices.framework in Frameworks */,
@@ -265,6 +275,7 @@
 				DBE8526C16E0168600F709E7 /* Foundation.framework in Frameworks */,
 				DBE8526E16E0168600F709E7 /* CoreGraphics.framework in Frameworks */,
 				DBE8527016E0168600F709E7 /* CoreData.framework in Frameworks */,
+				99FA274BC544F2251587EF1A /* Pods_EasyGrocList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +286,7 @@
 				DBE8528E16E0168700F709E7 /* UIKit.framework in Frameworks */,
 				DBE8528F16E0168700F709E7 /* Foundation.framework in Frameworks */,
 				DBE8529016E0168700F709E7 /* CoreData.framework in Frameworks */,
+				C8F8EA5EC380CFDED4A299BF /* Pods_EasyGrocListTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,10 +312,10 @@
 		527B8F9E294EBE6E4AD9255B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B3F116F2B8BB9998E6320220 /* Pods-EasyGrocList.debug.xcconfig */,
-				D11FFB4F4E0F10CB5E663D44 /* Pods-EasyGrocList.release.xcconfig */,
-				B40A05608EE4EE6BEEB8A95A /* Pods-EasyGrocListTests.debug.xcconfig */,
-				FCF6481C23899B0485119804 /* Pods-EasyGrocListTests.release.xcconfig */,
+				EA6914DE09AFE6E1673E7E0A /* Pods-EasyGrocList.debug.xcconfig */,
+				A607B1DB76927372B124AF60 /* Pods-EasyGrocList.release.xcconfig */,
+				535DC9C09A85FE9A703C81FD /* Pods-EasyGrocListTests.debug.xcconfig */,
+				D391B2A4643521CE210557C9 /* Pods-EasyGrocListTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -389,6 +401,8 @@
 		DBE8526816E0168600F709E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B26AED824425A8600EA1EE2 /* AWSCore.framework */,
+				3B26AED224425A8100EA1EE2 /* AWSAppSync.framework */,
 				3BC92A9E2442529900A9D9DB /* AWSAppSync.framework */,
 				3BC92A9B2442517B00A9D9DB /* AWSCore.framework */,
 				3BC92A972442517400A9D9DB /* AWSAppSync.framework */,
@@ -400,6 +414,8 @@
 				DBE8526B16E0168600F709E7 /* Foundation.framework */,
 				DBE8526D16E0168600F709E7 /* CoreGraphics.framework */,
 				DBE8526F16E0168600F709E7 /* CoreData.framework */,
+				BBC0DEF16C326B2908C80A5C /* Pods_EasyGrocList.framework */,
+				93EB96A0C29C36384BA4A379 /* Pods_EasyGrocListTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -526,12 +542,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBE8529E16E0168700F709E7 /* Build configuration list for PBXNativeTarget "EasyGrocList" */;
 			buildPhases = (
-				5D4004511B35DF44F70E991E /* [CP] Check Pods Manifest.lock */,
+				E5DCE84E20665C84FC399AA7 /* [CP] Check Pods Manifest.lock */,
 				DBE8526116E0168600F709E7 /* Sources */,
 				DBE8526216E0168600F709E7 /* Frameworks */,
 				DBE8526316E0168600F709E7 /* Resources */,
 				E9ECCBC21C704FFD004D68E9 /* Embed Watch Content */,
-				71E3AF67A1E3C3A89218A77A /* [CP] Embed Pods Frameworks */,
+				6A396E15CD2D33D1B5F6F95F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -547,7 +563,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBE852A116E0168700F709E7 /* Build configuration list for PBXNativeTarget "EasyGrocListTests" */;
 			buildPhases = (
-				7D1DAF17DA881174547F25E3 /* [CP] Check Pods Manifest.lock */,
+				55BE5A2F1A3D5BFC7DE8AE02 /* [CP] Check Pods Manifest.lock */,
 				DBE8528616E0168700F709E7 /* Sources */,
 				DBE8528716E0168700F709E7 /* Frameworks */,
 				DBE8528816E0168700F709E7 /* Resources */,
@@ -715,46 +731,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5D4004511B35DF44F70E991E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EasyGrocList-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		71E3AF67A1E3C3A89218A77A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyGrocList/Pods-EasyGrocList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyGrocList/Pods-EasyGrocList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyGrocList/Pods-EasyGrocList-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7D1DAF17DA881174547F25E3 /* [CP] Check Pods Manifest.lock */ = {
+		55BE5A2F1A3D5BFC7DE8AE02 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -776,6 +753,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6A396E15CD2D33D1B5F6F95F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyGrocList/Pods-EasyGrocList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyGrocList/Pods-EasyGrocList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyGrocList/Pods-EasyGrocList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DBE8528916E0168700F709E7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -788,6 +782,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		E5DCE84E20665C84FC399AA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyGrocList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -896,6 +912,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3.14;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -915,6 +932,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 3.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp.watchkitextension;
@@ -942,6 +960,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3.14;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -958,6 +977,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 3.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp.watchkitextension;
@@ -985,6 +1005,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3.14;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -999,6 +1020,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				IBSC_MODULE = EasyGrocList_WatchKit_Extension;
 				INFOPLIST_FILE = "EasyGrocList WatchKit App/Info.plist";
+				MARKETING_VERSION = 3.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp;
@@ -1026,6 +1048,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3.14;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1037,6 +1060,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				IBSC_MODULE = EasyGrocList_WatchKit_Extension;
 				INFOPLIST_FILE = "EasyGrocList WatchKit App/Info.plist";
+				MARKETING_VERSION = 3.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp;
@@ -1128,7 +1152,7 @@
 		};
 		DBE8529F16E0168700F709E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3F116F2B8BB9998E6320220 /* Pods-EasyGrocList.debug.xcconfig */;
+			baseConfigurationReference = EA6914DE09AFE6E1673E7E0A /* Pods-EasyGrocList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1137,6 +1161,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3.14;
 				DEVELOPMENT_TEAM = 3JEQ693MKL;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
@@ -1157,7 +1182,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ONLY_ACTIVE_ARCH = NO;
+				MARKETING_VERSION = 3.1;
+				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-ObjC",
 					"-v",
@@ -1175,7 +1201,7 @@
 		};
 		DBE852A016E0168700F709E7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D11FFB4F4E0F10CB5E663D44 /* Pods-EasyGrocList.release.xcconfig */;
+			baseConfigurationReference = A607B1DB76927372B124AF60 /* Pods-EasyGrocList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1184,6 +1210,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3.14;
 				DEVELOPMENT_TEAM = 3JEQ693MKL;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
@@ -1204,6 +1231,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 3.1;
 				ONLY_ACTIVE_ARCH = NO;
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rekhaninan.${PRODUCT_NAME:rfc1034identifier}";
@@ -1217,7 +1245,7 @@
 		};
 		DBE852A216E0168700F709E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B40A05608EE4EE6BEEB8A95A /* Pods-EasyGrocListTests.debug.xcconfig */;
+			baseConfigurationReference = 535DC9C09A85FE9A703C81FD /* Pods-EasyGrocListTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EasyGrocList.app/EasyGrocList";
@@ -1239,7 +1267,7 @@
 		};
 		DBE852A316E0168700F709E7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCF6481C23899B0485119804 /* Pods-EasyGrocListTests.release.xcconfig */;
+			baseConfigurationReference = D391B2A4643521CE210557C9 /* Pods-EasyGrocListTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EasyGrocList.app/EasyGrocList";

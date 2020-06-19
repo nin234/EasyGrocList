@@ -12,6 +12,7 @@
 		3B3D29051F1BE29000AC3D5D /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 3B3D29041F1BE29000AC3D5D /* Images */; };
 		3B4FCAAE22BAEF05005E4582 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B9CF8B81EF1F56E004F009D /* AlbumContentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CF8B71EF1F56E004F009D /* AlbumContentsTableViewCell.xib */; };
+		3BB8D66C249C641E006EDFBF /* servercert.der in Resources */ = {isa = PBXBuildFile; fileRef = 3BB8D66B249C641D006EDFBF /* servercert.der */; };
 		3BC9244D2273B4B40001FF62 /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC9244C2273B4B40001FF62 /* NotesViewController.xib */; };
 		3BD6EABA22C035DD0086B502 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6EAB922C035DD0086B502 /* API.swift */; };
 		3BD6EACE22C22E7C0086B502 /* AppSyncInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6EACD22C22E7C0086B502 /* AppSyncInterface.swift */; };
@@ -153,6 +154,7 @@
 		3B26AED824425A8600EA1EE2 /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3D29041F1BE29000AC3D5D /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = SOURCE_ROOT; };
 		3B9CF8B71EF1F56E004F009D /* AlbumContentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlbumContentsTableViewCell.xib; path = EasyGrocList/AlbumContentsTableViewCell.xib; sourceTree = "<group>"; };
+		3BB8D66B249C641D006EDFBF /* servercert.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = servercert.der; sourceTree = "<group>"; };
 		3BC9244C2273B4B40001FF62 /* NotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesViewController.xib; sourceTree = "<group>"; };
 		3BC92A972442517400A9D9DB /* AWSAppSync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSAppSync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC92A9B2442517B00A9D9DB /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -423,6 +425,7 @@
 		DBE8527116E0168600F709E7 /* EasyGrocList */ = {
 			isa = PBXGroup;
 			children = (
+				3BB8D66B249C641D006EDFBF /* servercert.der */,
 				3BD6EAD322CB021E0086B502 /* awsconfiguration.json */,
 				3BC9244C2273B4B40001FF62 /* NotesViewController.xib */,
 				DB5079D21B25B74B0094838A /* EasyKchainItemWrapper.h */,
@@ -696,6 +699,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BB8D66C249C641E006EDFBF /* servercert.der in Resources */,
 				DBA254061BF3C4C900E04844 /* SharingDelegate.xib in Resources */,
 				DBFCDACA1AE740B400E7D683 /* Grocery_list_icon_180.png in Resources */,
 				DBDCDB1B1BF05505001A277A /* 802-dog-house@2x.png in Resources */,

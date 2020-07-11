@@ -12,7 +12,6 @@
 		3B3D29051F1BE29000AC3D5D /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 3B3D29041F1BE29000AC3D5D /* Images */; };
 		3B4FCAAE22BAEF05005E4582 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B9CF8B81EF1F56E004F009D /* AlbumContentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CF8B71EF1F56E004F009D /* AlbumContentsTableViewCell.xib */; };
-		3BB8D66C249C641E006EDFBF /* servercert.der in Resources */ = {isa = PBXBuildFile; fileRef = 3BB8D66B249C641D006EDFBF /* servercert.der */; };
 		3BC9244D2273B4B40001FF62 /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC9244C2273B4B40001FF62 /* NotesViewController.xib */; };
 		3BD6EABA22C035DD0086B502 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6EAB922C035DD0086B502 /* API.swift */; };
 		3BD6EACE22C22E7C0086B502 /* AppSyncInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6EACD22C22E7C0086B502 /* AppSyncInterface.swift */; };
@@ -71,6 +70,7 @@
 		DBFCDAD01AE7453300E7D683 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDACF1AE7453300E7D683 /* Images.xcassets */; };
 		DBFCDAD31AE7531200E7D683 /* Images_watchkit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */; };
 		DBFCDAD41AE7541000E7D683 /* Images_watchkit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */; };
+		E882DF6624A91B8800C17723 /* client.der in Resources */ = {isa = PBXBuildFile; fileRef = E882DF6524A91B8800C17723 /* client.der */; };
 		E9ECCBBD1C704FFD004D68E9 /* EasyGrocList WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DBBA05E71AABB40F001E9959 /* EasyGrocList WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E9ECCBC01C704FFD004D68E9 /* EasyGrocList WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DBBA05F91AABB40F001E9959 /* EasyGrocList WatchKit App.app */; };
 /* End PBXBuildFile section */
@@ -246,6 +246,7 @@
 		DBFCDAC91AE740B400E7D683 /* Grocery_list_icon_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grocery_list_icon_180.png; sourceTree = "<group>"; };
 		DBFCDACF1AE7453300E7D683 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images_watchkit.xcassets; sourceTree = "<group>"; };
+		E882DF6524A91B8800C17723 /* client.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = client.der; sourceTree = "<group>"; };
 		EA6914DE09AFE6E1673E7E0A /* Pods-EasyGrocList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGrocList.debug.xcconfig"; path = "Target Support Files/Pods-EasyGrocList/Pods-EasyGrocList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -425,6 +426,7 @@
 		DBE8527116E0168600F709E7 /* EasyGrocList */ = {
 			isa = PBXGroup;
 			children = (
+				E882DF6524A91B8800C17723 /* client.der */,
 				3BB8D66B249C641D006EDFBF /* servercert.der */,
 				3BD6EAD322CB021E0086B502 /* awsconfiguration.json */,
 				3BC9244C2273B4B40001FF62 /* NotesViewController.xib */,
@@ -699,7 +701,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BB8D66C249C641E006EDFBF /* servercert.der in Resources */,
 				DBA254061BF3C4C900E04844 /* SharingDelegate.xib in Resources */,
 				DBFCDACA1AE740B400E7D683 /* Grocery_list_icon_180.png in Resources */,
 				DBDCDB1B1BF05505001A277A /* 802-dog-house@2x.png in Resources */,
@@ -710,6 +711,7 @@
 				DBE8527E16E0168600F709E7 /* Default.png in Resources */,
 				3BD6EAD422CB021E0086B502 /* awsconfiguration.json in Resources */,
 				DBE8528016E0168600F709E7 /* Default@2x.png in Resources */,
+				E882DF6624A91B8800C17723 /* client.der in Resources */,
 				DBDCDB141BF04432001A277A /* 895-user-group@2x.png in Resources */,
 				DBE8528216E0168600F709E7 /* Default-568h@2x.png in Resources */,
 				DBDCDB191BF04473001A277A /* 895-user-group-selected@3x.png in Resources */,
@@ -1177,8 +1179,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EasyGrocList/EasyGrocList-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = (
-					/Users/ninanthomas/projects/sharing,
-					/Users/ninanthomas/projects/common,
+					/Users/ninan/ios/sharing,
+					/Users/ninan/ios/common,
 				);
 				INFOPLIST_FILE = "EasyGrocList/EasyGrocList-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1226,8 +1228,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EasyGrocList/EasyGrocList-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = (
-					/Users/ninanthomas/projects/sharing,
-					/Users/ninanthomas/projects/common,
+					/Users/ninan/ios/sharing,
+					/Users/ninan/ios/common,
 				);
 				INFOPLIST_FILE = "EasyGrocList/EasyGrocList-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

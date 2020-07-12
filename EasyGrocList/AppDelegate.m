@@ -97,7 +97,7 @@
     
     if (userID != nil)
     {
-        
+          NSLog(@"Running Alexa query with userID=%@" ,userID);
         [alexaSync runQuery:userID];
     }
 }
@@ -366,7 +366,7 @@
     
     if (userID != nil)
     {
-        
+        NSLog(@"RUNNING Alexa query with userID=%@" ,userID);
         [alexaSync runQuery:userID];
     }
 }

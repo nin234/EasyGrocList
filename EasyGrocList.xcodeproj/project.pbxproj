@@ -71,6 +71,7 @@
 		DBFCDAD31AE7531200E7D683 /* Images_watchkit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */; };
 		DBFCDAD41AE7541000E7D683 /* Images_watchkit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */; };
 		E882DF6624A91B8800C17723 /* client.der in Resources */ = {isa = PBXBuildFile; fileRef = E882DF6524A91B8800C17723 /* client.der */; };
+		E882DF6B24BCAE5600C17723 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB51F6A31ADDC9BB00C3ADB7 /* StoreKit.framework */; };
 		E9ECCBBD1C704FFD004D68E9 /* EasyGrocList WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DBBA05E71AABB40F001E9959 /* EasyGrocList WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E9ECCBC01C704FFD004D68E9 /* EasyGrocList WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DBBA05F91AABB40F001E9959 /* EasyGrocList WatchKit App.app */; };
 /* End PBXBuildFile section */
@@ -279,6 +280,7 @@
 				DBE8526E16E0168600F709E7 /* CoreGraphics.framework in Frameworks */,
 				DBE8527016E0168600F709E7 /* CoreData.framework in Frameworks */,
 				99FA274BC544F2251587EF1A /* Pods_EasyGrocList.framework in Frameworks */,
+				E882DF6B24BCAE5600C17723 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

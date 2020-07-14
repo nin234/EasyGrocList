@@ -60,6 +60,32 @@
     
 }
 
+-(UIViewController*) topMostController
+{
+    AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    UIViewController *topController = pDlg.tabBarController;
+
+    while (topController.presentedViewController) {
+        topController = topController.presentedViewController;
+    }
+
+    return topController;
+}
+-(void) displayAlert:(NSString *)msg
+{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Sent Item"
+                                           message:msg
+                                           preferredStyle:UIAlertControllerStyleAlert];
+             
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+               handler:^(UIAlertAction * action) {}];
+             
+            [alert addAction:defaultAction];
+           
+    [[self topMostController] presentViewController:alert animated:YES completion:nil];
+               
+}
+
 -(void) shareNow:(NSString *) shareStr
 {
     
@@ -106,6 +132,8 @@
         shareStr = [shareStr stringByAppendingString:itemSeparator];
     }
     NSLog(@"Sharing item=%@ name=%@", shareStr, listName);
+    pDlg.pShrMgr.bSendAlert = true;
+    pDlg.pShrMgr.alertMsg = listName.name;
     [pDlg.pShrMgr shareItem:shareStr listName:listName.name shrId:listName.share_id];
     
     

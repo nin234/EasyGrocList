@@ -28,4 +28,5 @@
 -(void) updateEasyMainLstVwCntrl;
 -(void) cancelShare;
 -(void) shareDone;
+-(void) displayAlert:(NSString *)msg;
 @end

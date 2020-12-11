@@ -70,6 +70,7 @@
 		DBFCDAD01AE7453300E7D683 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDACF1AE7453300E7D683 /* Images.xcassets */; };
 		DBFCDAD31AE7531200E7D683 /* Images_watchkit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */; };
 		DBFCDAD41AE7541000E7D683 /* Images_watchkit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */; };
+		E800D1A5258105D800C4D48F /* sharing_new.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E800D1A3258105D800C4D48F /* sharing_new.xcdatamodeld */; };
 		E882DF6624A91B8800C17723 /* client.der in Resources */ = {isa = PBXBuildFile; fileRef = E882DF6524A91B8800C17723 /* client.der */; };
 		E882DF6B24BCAE5600C17723 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB51F6A31ADDC9BB00C3ADB7 /* StoreKit.framework */; };
 		E9ECCBBD1C704FFD004D68E9 /* EasyGrocList WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DBBA05E71AABB40F001E9959 /* EasyGrocList WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -247,6 +248,7 @@
 		DBFCDAC91AE740B400E7D683 /* Grocery_list_icon_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grocery_list_icon_180.png; sourceTree = "<group>"; };
 		DBFCDACF1AE7453300E7D683 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images_watchkit.xcassets; sourceTree = "<group>"; };
+		E800D1A4258105D800C4D48F /* sharing_new.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sharing_new.xcdatamodel; sourceTree = "<group>"; };
 		E882DF6524A91B8800C17723 /* client.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = client.der; sourceTree = "<group>"; };
 		EA6914DE09AFE6E1673E7E0A /* Pods-EasyGrocList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGrocList.debug.xcconfig"; path = "Target Support Files/Pods-EasyGrocList/Pods-EasyGrocList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -441,6 +443,7 @@
 				DBF61DA21BB175780093B83A /* EasyGrocShareMgr.m */,
 				DB3940DF1BB4B12F004D601E /* EasyGrocTranslator.h */,
 				3BFE75D21FA0898F005A4B56 /* sharing.xcdatamodeld */,
+				E800D1A3258105D800C4D48F /* sharing_new.xcdatamodeld */,
 				DB3940E01BB4B12F004D601E /* EasyGrocTranslator.m */,
 				3BD6EAB922C035DD0086B502 /* API.swift */,
 				DB3940E21BB84796004D601E /* EasyGrocDecoder.h */,
@@ -837,6 +840,7 @@
 				DBE8527816E0168600F709E7 /* main.m in Sources */,
 				3BD6EACE22C22E7C0086B502 /* AppSyncInterface.swift in Sources */,
 				DBE8527C16E0168600F709E7 /* AppDelegate.m in Sources */,
+				E800D1A5258105D800C4D48F /* sharing_new.xcdatamodeld in Sources */,
 				3BFE75D41FA0898F005A4B56 /* sharing.xcdatamodeld in Sources */,
 				DB3940E11BB4B12F004D601E /* EasyGrocTranslator.m in Sources */,
 				3BD6EABA22C035DD0086B502 /* API.swift in Sources */,
@@ -920,7 +924,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3.18;
+				CURRENT_PROJECT_VERSION = 3.19;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -940,7 +944,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 3.4;
+				MARKETING_VERSION = 3.6;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp.watchkitextension;
@@ -968,7 +972,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3.18;
+				CURRENT_PROJECT_VERSION = 3.19;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -985,7 +989,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 3.4;
+				MARKETING_VERSION = 3.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp.watchkitextension;
@@ -1013,7 +1017,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3.18;
+				CURRENT_PROJECT_VERSION = 3.19;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1028,7 +1032,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				IBSC_MODULE = EasyGrocList_WatchKit_Extension;
 				INFOPLIST_FILE = "EasyGrocList WatchKit App/Info.plist";
-				MARKETING_VERSION = 3.4;
+				MARKETING_VERSION = 3.6;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp;
@@ -1056,7 +1060,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3.18;
+				CURRENT_PROJECT_VERSION = 3.19;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1068,7 +1072,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				IBSC_MODULE = EasyGrocList_WatchKit_Extension;
 				INFOPLIST_FILE = "EasyGrocList WatchKit App/Info.plist";
-				MARKETING_VERSION = 3.4;
+				MARKETING_VERSION = 3.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp;
@@ -1169,7 +1173,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3.18;
+				CURRENT_PROJECT_VERSION = 3.19;
 				DEVELOPMENT_TEAM = 3JEQ693MKL;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
@@ -1185,12 +1189,12 @@
 					/Users/ninan/ios/common,
 				);
 				INFOPLIST_FILE = "EasyGrocList/EasyGrocList-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.4;
+				MARKETING_VERSION = 3.6;
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-ObjC",
@@ -1218,7 +1222,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3.18;
+				CURRENT_PROJECT_VERSION = 3.19;
 				DEVELOPMENT_TEAM = 3JEQ693MKL;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
@@ -1234,12 +1238,12 @@
 					/Users/ninan/ios/common,
 				);
 				INFOPLIST_FILE = "EasyGrocList/EasyGrocList-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.4;
+				MARKETING_VERSION = 3.6;
 				ONLY_ACTIVE_ARCH = NO;
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rekhaninan.${PRODUCT_NAME:rfc1034identifier}";
@@ -1363,6 +1367,16 @@
 			);
 			currentVersion = DBE8528416E0168600F709E7 /* EasyGrocList.xcdatamodel */;
 			path = EasyGrocList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		E800D1A3258105D800C4D48F /* sharing_new.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E800D1A4258105D800C4D48F /* sharing_new.xcdatamodel */,
+			);
+			currentVersion = E800D1A4258105D800C4D48F /* sharing_new.xcdatamodel */;
+			path = sharing_new.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

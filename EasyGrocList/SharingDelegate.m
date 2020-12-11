@@ -201,7 +201,7 @@
     
 }
 
--(NSURL *) getPicUrl:(long long ) shareId picName:(NSString *) name itemName:(NSString *) iName
+-(NSURL *) getPicUrl:(long long) shareId picName:(NSString *) name itemName:(NSString *) iName
 {
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
@@ -233,6 +233,9 @@
 
 -(void) updateEasyMainLstVwCntrl
 {
+    if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateBackground)
+        return;
+    
     AppDelegate *pDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [pDlg.dataSync updateEasyMainLstVwCntrl];
 }

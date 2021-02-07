@@ -173,8 +173,9 @@
     if (pShrMgr.pNtwIntf.connectAddr == nil)
     {
         pShrMgr.pNtwIntf.connectAddr = @"easygroclist.ddns.net";
+       // pShrMgr.pNtwIntf.connectAddr = @"173.61.188.111";
         pShrMgr.pNtwIntf.port = 16805;
-        NSLog(@"Set connect address=%@ port=%d", pShrMgr.pNtwIntf.connectAddr, pShrMgr.pNtwIntf.port);
+        NSLog(@"Set connect address=%@ port=%d %s:%d", pShrMgr.pNtwIntf.connectAddr, pShrMgr.pNtwIntf.port, __FILE__, __LINE__);
     }
     appUtl = [[AppShrUtil alloc] init];
     appUtl.pShrMgr = pShrMgr;

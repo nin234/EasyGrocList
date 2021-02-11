@@ -167,9 +167,11 @@
    
      tabBarController = [[UITabBarController alloc] init];
     tabBarController.delegate = self;
-    pShrMgr = [[EasyGrocShareMgr alloc] init];
-    pShrMgr.pNtwIntf.connectPort = @"16791";
+    pShrMgr = [EasyGrocShareMgr alloc];
     pShrMgr.appId = @"EasyGrocList";
+    pShrMgr = [pShrMgr init];
+    pShrMgr.pNtwIntf.connectPort = @"16791";
+    
     if (pShrMgr.pNtwIntf.connectAddr == nil)
     {
         pShrMgr.pNtwIntf.connectAddr = @"easygroclist.ddns.net";

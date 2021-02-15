@@ -168,7 +168,7 @@
      tabBarController = [[UITabBarController alloc] init];
     tabBarController.delegate = self;
     pShrMgr = [EasyGrocShareMgr alloc];
-    pShrMgr.appId = @"EasyGrocList";
+    pShrMgr.appId = 2;
     pShrMgr = [pShrMgr init];
     pShrMgr.pNtwIntf.connectPort = @"16791";
     

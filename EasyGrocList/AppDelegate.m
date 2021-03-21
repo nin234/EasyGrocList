@@ -38,7 +38,7 @@
 @synthesize no_of_template_lists;
 @synthesize no_of_edits;
 @synthesize no_of_template_edits;
-@synthesize kchain;
+
 
 @synthesize pShrMgr;
 @synthesize pShrDelegate;
@@ -167,7 +167,7 @@
    
      tabBarController = [[UITabBarController alloc] init];
     tabBarController.delegate = self;
-    pShrMgr = [EasyGrocShareMgr alloc];
+    pShrMgr = [ListShareMgr alloc];
     pShrMgr.appId = 2;
     pShrMgr = [pShrMgr init];
     pShrMgr.pNtwIntf.connectPort = @"16791";
@@ -227,6 +227,7 @@
     dataSync.navViewController = navCntrl;
     pAppCmnUtil.navViewController = navCntrl;
     pAppCmnUtil.bEasyGroc = true;
+    pAppCmnUtil.appId = EASYGROCLIST_ID;
     
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
     [[UIApplication sharedApplication] cancelAllLocalNotifications];

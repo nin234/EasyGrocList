@@ -13,9 +13,8 @@
 #import "common/List1ViewController.h"
 #import "common/DataOps.h"
 #import "sharing/InAppPurchase.h"
-#import "EasyKchainItemWrapper.h"
 #import "sharing/NtwIntf.h"
-#import "EasyGrocShareMgr.h"
+#import "common/ListShareMgr.h"
 
 #import "SharingDelegate.h"
 #import "sharing/HomeViewController.h"
@@ -59,13 +58,13 @@
 @property (nonatomic, retain) NSURL *pPicsDir;
 @property (nonatomic, retain) NSURL *pDocsDir;
 
-@property (nonatomic, retain) EasyGrocShareMgr *pShrMgr;
+@property (nonatomic, retain) ListShareMgr *pShrMgr;
 
 @property long long no_of_lists;
 @property long long no_of_template_lists;
 @property long long no_of_edits;
 @property long long no_of_template_edits;
-@property (nonatomic, retain) EasyKchainItemWrapper *kchain;
+
 @property (nonatomic, retain) AppSyncInterface *alexaSync;
 @property (nonatomic, retain) EasyViewController*  aViewController1;
 @property (nonatomic, retain) EasyViewController*  aViewController;

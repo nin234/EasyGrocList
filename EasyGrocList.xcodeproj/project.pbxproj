@@ -10,7 +10,6 @@
 		3B26AED324425A8100EA1EE2 /* AWSAppSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B26AED224425A8100EA1EE2 /* AWSAppSync.framework */; };
 		3B26AED924425A8600EA1EE2 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B26AED824425A8600EA1EE2 /* AWSCore.framework */; };
 		3B3D29051F1BE29000AC3D5D /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 3B3D29041F1BE29000AC3D5D /* Images */; };
-		3B4FCAAE22BAEF05005E4582 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B9CF8B81EF1F56E004F009D /* AlbumContentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CF8B71EF1F56E004F009D /* AlbumContentsTableViewCell.xib */; };
 		3BC9244D2273B4B40001FF62 /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC9244C2273B4B40001FF62 /* NotesViewController.xib */; };
 		3BD6EABA22C035DD0086B502 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6EAB922C035DD0086B502 /* API.swift */; };
@@ -22,8 +21,6 @@
 		3BFE75D41FA0898F005A4B56 /* sharing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3BFE75D21FA0898F005A4B56 /* sharing.xcdatamodeld */; };
 		99FA274BC544F2251587EF1A /* Pods_EasyGrocList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC0DEF16C326B2908C80A5C /* Pods_EasyGrocList.framework */; };
 		C8F8EA5EC380CFDED4A299BF /* Pods_EasyGrocListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EB96A0C29C36384BA4A379 /* Pods_EasyGrocListTests.framework */; };
-		DB0C53801AE65AD00089968D /* Grocery_list_icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0C537F1AE65AD00089968D /* Grocery_list_icon_120.png */; };
-		DB0C53821AE65BA70089968D /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0C53811AE65BA70089968D /* Icon-60@2x.png */; };
 		DB3940E11BB4B12F004D601E /* EasyGrocTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3940E01BB4B12F004D601E /* EasyGrocTranslator.m */; };
 		DB3940E41BB84796004D601E /* EasyGrocDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3940E31BB84796004D601E /* EasyGrocDecoder.m */; };
 		DB5079D11B25B72E0094838A /* EasyKchainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5079D01B25B72E0094838A /* EasyKchainItemWrapper.m */; };
@@ -31,15 +28,6 @@
 		DB7BFAFB1C1D936900D68CEE /* NotSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7BFAF91C1D936900D68CEE /* NotSelected.png */; };
 		DBA254051BF3C4C900E04844 /* SharingDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA254031BF3C4C900E04844 /* SharingDelegate.m */; };
 		DBA254061BF3C4C900E04844 /* SharingDelegate.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBA254041BF3C4C900E04844 /* SharingDelegate.xib */; };
-		DBB936FD1AE3CA4D00F1AD3B /* WRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB936FC1AE3CA4D00F1AD3B /* WRowController.m */; };
-		DBBA05EE1AABB40F001E9959 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA05ED1AABB40F001E9959 /* InterfaceController.m */; };
-		DBBA05F11AABB40F001E9959 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA05F01AABB40F001E9959 /* NotificationController.m */; };
-		DBBA05F41AABB40F001E9959 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA05F31AABB40F001E9959 /* GlanceController.m */; };
-		DBBA06021AABB40F001E9959 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBA06001AABB40F001E9959 /* Interface.storyboard */; };
-		DBBA06181AD203A7001E9959 /* EasyGrocList.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = DBE8528316E0168600F709E7 /* EasyGrocList.xcdatamodeld */; };
-		DBBA061B1AD2A491001E9959 /* DataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA061A1AD2A491001E9959 /* DataAccessor.m */; };
-		DBBA061E1AD350E6001E9959 /* ListNames.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA061D1AD350E6001E9959 /* ListNames.m */; };
-		DBBA06211AD351FF001E9959 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA06201AD351FF001E9959 /* List.m */; };
 		DBBF2BB81701B9580083912F /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BB71701B9570083912F /* camera.png */; };
 		DBBF2BD71737CE310083912F /* delete_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DBBF2BD61737CE300083912F /* delete_button.png */; };
 		DBBF2C051756B5510083912F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBF2C041756B5500083912F /* MobileCoreServices.framework */; };
@@ -68,13 +56,9 @@
 		DBF61DA31BB175780093B83A /* EasyGrocShareMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF61DA21BB175780093B83A /* EasyGrocShareMgr.m */; };
 		DBFCDACA1AE740B400E7D683 /* Grocery_list_icon_180.png in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDAC91AE740B400E7D683 /* Grocery_list_icon_180.png */; };
 		DBFCDAD01AE7453300E7D683 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDACF1AE7453300E7D683 /* Images.xcassets */; };
-		DBFCDAD31AE7531200E7D683 /* Images_watchkit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */; };
-		DBFCDAD41AE7541000E7D683 /* Images_watchkit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */; };
 		E800D1A5258105D800C4D48F /* sharing_new.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E800D1A3258105D800C4D48F /* sharing_new.xcdatamodeld */; };
 		E882DF6624A91B8800C17723 /* client.der in Resources */ = {isa = PBXBuildFile; fileRef = E882DF6524A91B8800C17723 /* client.der */; };
 		E882DF6B24BCAE5600C17723 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB51F6A31ADDC9BB00C3ADB7 /* StoreKit.framework */; };
-		E9ECCBBD1C704FFD004D68E9 /* EasyGrocList WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DBBA05E71AABB40F001E9959 /* EasyGrocList WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E9ECCBC01C704FFD004D68E9 /* EasyGrocList WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DBBA05F91AABB40F001E9959 /* EasyGrocList WatchKit App.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,52 +83,15 @@
 			remoteGlobalIDString = DBE8526416E0168600F709E7;
 			remoteInfo = EasyGrocList;
 		};
-		E9ECCBBB1C704FFD004D68E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DBE8525C16E0168600F709E7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DBBA05E61AABB40F001E9959;
-			remoteInfo = "EasyGrocList WatchKit Extension";
-		};
-		E9ECCBBE1C704FFD004D68E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DBE8525C16E0168600F709E7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DBBA05F81AABB40F001E9959;
-			remoteInfo = "EasyGrocList WatchKit App";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3B4FCAAF22BAEF05005E4582 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3B4FCAAE22BAEF05005E4582 /* (null) in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E9ECCBC11C704FFD004D68E9 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				E9ECCBBD1C704FFD004D68E9 /* EasyGrocList WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E9ECCBC21C704FFD004D68E9 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				E9ECCBC01C704FFD004D68E9 /* EasyGrocList WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,7 +139,6 @@
 		DBA254031BF3C4C900E04844 /* SharingDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharingDelegate.m; sourceTree = "<group>"; };
 		DBA254041BF3C4C900E04844 /* SharingDelegate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharingDelegate.xib; sourceTree = "<group>"; };
 		DBB936FC1AE3CA4D00F1AD3B /* WRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRowController.m; sourceTree = "<group>"; };
-		DBBA05E71AABB40F001E9959 /* EasyGrocList WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EasyGrocList WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBA05EA1AABB40F001E9959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBBA05EB1AABB40F001E9959 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		DBBA05EC1AABB40F001E9959 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = InterfaceController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -201,7 +147,6 @@
 		DBBA05F01AABB40F001E9959 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		DBBA05F21AABB40F001E9959 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
 		DBBA05F31AABB40F001E9959 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
-		DBBA05F91AABB40F001E9959 /* EasyGrocList WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EasyGrocList WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBA05FF1AABB40F001E9959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBBA06011AABB40F001E9959 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		DBBA06121AADABC4001E9959 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
@@ -254,20 +199,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		885C7EA21E1E14D496E6F703 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DBBA05E41AABB40F001E9959 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DBE8526216E0168600F709E7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -399,8 +330,6 @@
 			children = (
 				DBE8526516E0168600F709E7 /* EasyGrocList.app */,
 				DBE8528B16E0168700F709E7 /* EasyGrocListTests.xctest */,
-				DBBA05E71AABB40F001E9959 /* EasyGrocList WatchKit Extension.appex */,
-				DBBA05F91AABB40F001E9959 /* EasyGrocList WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -512,42 +441,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DBBA05E61AABB40F001E9959 /* EasyGrocList WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DBBA060D1AABB40F001E9959 /* Build configuration list for PBXNativeTarget "EasyGrocList WatchKit Extension" */;
-			buildPhases = (
-				DBBA05E31AABB40F001E9959 /* Sources */,
-				DBBA05E41AABB40F001E9959 /* Frameworks */,
-				DBBA05E51AABB40F001E9959 /* Resources */,
-				3B4FCAAF22BAEF05005E4582 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "EasyGrocList WatchKit Extension";
-			productName = "EasyGrocList WatchKit Extension";
-			productReference = DBBA05E71AABB40F001E9959 /* EasyGrocList WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
-		DBBA05F81AABB40F001E9959 /* EasyGrocList WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DBBA060C1AABB40F001E9959 /* Build configuration list for PBXNativeTarget "EasyGrocList WatchKit App" */;
-			buildPhases = (
-				DBBA05F71AABB40F001E9959 /* Resources */,
-				E9ECCBC11C704FFD004D68E9 /* Embed App Extensions */,
-				885C7EA21E1E14D496E6F703 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E9ECCBBC1C704FFD004D68E9 /* PBXTargetDependency */,
-			);
-			name = "EasyGrocList WatchKit App";
-			productName = "EasyGrocList WatchKit App";
-			productReference = DBBA05F91AABB40F001E9959 /* EasyGrocList WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
 		DBE8526416E0168600F709E7 /* EasyGrocList */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBE8529E16E0168700F709E7 /* Build configuration list for PBXNativeTarget "EasyGrocList" */;
@@ -562,7 +455,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				E9ECCBBF1C704FFD004D68E9 /* PBXTargetDependency */,
 			);
 			name = EasyGrocList;
 			productName = EasyGrocList;
@@ -599,19 +491,6 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Ninan Thomas";
 				TargetAttributes = {
-					DBBA05E61AABB40F001E9959 = {
-						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 3JEQ693MKL;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
-					DBBA05F81AABB40F001E9959 = {
-						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 3JEQ693MKL;
-					};
 					DBE8526416E0168600F709E7 = {
 						DevelopmentTeam = 3JEQ693MKL;
 						LastSwiftMigration = 1020;
@@ -658,8 +537,6 @@
 			targets = (
 				DBE8526416E0168600F709E7 /* EasyGrocList */,
 				DBE8528A16E0168700F709E7 /* EasyGrocListTests */,
-				DBBA05E61AABB40F001E9959 /* EasyGrocList WatchKit Extension */,
-				DBBA05F81AABB40F001E9959 /* EasyGrocList WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -682,26 +559,6 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DBBA05E51AABB40F001E9959 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DBFCDAD41AE7541000E7D683 /* Images_watchkit.xcassets in Resources */,
-				DB0C53801AE65AD00089968D /* Grocery_list_icon_120.png in Resources */,
-				DB0C53821AE65BA70089968D /* Icon-60@2x.png in Resources */,
-				DBBA06181AD203A7001E9959 /* EasyGrocList.xcdatamodeld in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DBBA05F71AABB40F001E9959 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DBFCDAD31AE7531200E7D683 /* Images_watchkit.xcassets in Resources */,
-				DBBA06021AABB40F001E9959 /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DBE8526316E0168600F709E7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -819,20 +676,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DBBA05E31AABB40F001E9959 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DBBA06211AD351FF001E9959 /* List.m in Sources */,
-				DBBA061E1AD350E6001E9959 /* ListNames.m in Sources */,
-				DBBA05F11AABB40F001E9959 /* NotificationController.m in Sources */,
-				DBB936FD1AE3CA4D00F1AD3B /* WRowController.m in Sources */,
-				DBBA061B1AD2A491001E9959 /* DataAccessor.m in Sources */,
-				DBBA05EE1AABB40F001E9959 /* InterfaceController.m in Sources */,
-				DBBA05F41AABB40F001E9959 /* GlanceController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DBE8526116E0168600F709E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -869,16 +712,6 @@
 			target = DBE8526416E0168600F709E7 /* EasyGrocList */;
 			targetProxy = DBE8529116E0168700F709E7 /* PBXContainerItemProxy */;
 		};
-		E9ECCBBC1C704FFD004D68E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DBBA05E61AABB40F001E9959 /* EasyGrocList WatchKit Extension */;
-			targetProxy = E9ECCBBB1C704FFD004D68E9 /* PBXContainerItemProxy */;
-		};
-		E9ECCBBF1C704FFD004D68E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DBBA05F81AABB40F001E9959 /* EasyGrocList WatchKit App */;
-			targetProxy = E9ECCBBE1C704FFD004D68E9 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -909,182 +742,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		DBBA06081AABB40F001E9959 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_ENTITLEMENTS = "EasyGrocList WatchKit Extension/EasyGrocList WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3.21;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "EasyGrocList WatchKit Extension/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 3.8;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "EasyGrocList WatchKit Extension";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
-			};
-			name = Debug;
-		};
-		DBBA06091AABB40F001E9959 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_ENTITLEMENTS = "EasyGrocList WatchKit Extension/EasyGrocList WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3.21;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "EasyGrocList WatchKit Extension/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 3.8;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "EasyGrocList WatchKit Extension";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
-			};
-			name = Release;
-		};
-		DBBA060A1AABB40F001E9959 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3.21;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				IBSC_MODULE = EasyGrocList_WatchKit_Extension;
-				INFOPLIST_FILE = "EasyGrocList WatchKit App/Info.plist";
-				MARKETING_VERSION = 3.8;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp;
-				PRODUCT_NAME = "EasyGrocList WatchKit App";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
-			};
-			name = Debug;
-		};
-		DBBA060B1AABB40F001E9959 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3.21;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				IBSC_MODULE = EasyGrocList_WatchKit_Extension;
-				INFOPLIST_FILE = "EasyGrocList WatchKit App/Info.plist";
-				MARKETING_VERSION = 3.8;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rekhaninan.EasyGrocList.watchkitapp;
-				PRODUCT_NAME = "EasyGrocList WatchKit App";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
-			};
-			name = Release;
-		};
 		DBE8529C16E0168700F709E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1173,7 +830,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3.21;
+				CURRENT_PROJECT_VERSION = 3.23;
 				DEVELOPMENT_TEAM = 3JEQ693MKL;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
@@ -1194,7 +851,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.8;
+				MARKETING_VERSION = 3.9;
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-ObjC",
@@ -1222,7 +879,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3.21;
+				CURRENT_PROJECT_VERSION = 3.23;
 				DEVELOPMENT_TEAM = 3JEQ693MKL;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
@@ -1243,7 +900,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.8;
+				MARKETING_VERSION = 3.9;
 				ONLY_ACTIVE_ARCH = NO;
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rekhaninan.${PRODUCT_NAME:rfc1034identifier}";
@@ -1302,24 +959,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DBBA060C1AABB40F001E9959 /* Build configuration list for PBXNativeTarget "EasyGrocList WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DBBA060A1AABB40F001E9959 /* Debug */,
-				DBBA060B1AABB40F001E9959 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DBBA060D1AABB40F001E9959 /* Build configuration list for PBXNativeTarget "EasyGrocList WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DBBA06081AABB40F001E9959 /* Debug */,
-				DBBA06091AABB40F001E9959 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		DBE8525F16E0168600F709E7 /* Build configuration list for PBXProject "EasyGrocList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -59,6 +59,7 @@
 		E800D1A5258105D800C4D48F /* sharing_new.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E800D1A3258105D800C4D48F /* sharing_new.xcdatamodeld */; };
 		E882DF6624A91B8800C17723 /* client.der in Resources */ = {isa = PBXBuildFile; fileRef = E882DF6524A91B8800C17723 /* client.der */; };
 		E882DF6B24BCAE5600C17723 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB51F6A31ADDC9BB00C3ADB7 /* StoreKit.framework */; };
+		E8B43B8A263AFC40000785EF /* SubscribeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8B43B89263AFC40000785EF /* SubscribeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +196,7 @@
 		DBFCDAD21AE7531200E7D683 /* Images_watchkit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images_watchkit.xcassets; sourceTree = "<group>"; };
 		E800D1A4258105D800C4D48F /* sharing_new.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sharing_new.xcdatamodel; sourceTree = "<group>"; };
 		E882DF6524A91B8800C17723 /* client.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = client.der; sourceTree = "<group>"; };
+		E8B43B89263AFC40000785EF /* SubscribeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscribeViewController.xib; sourceTree = "<group>"; };
 		EA6914DE09AFE6E1673E7E0A /* Pods-EasyGrocList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGrocList.debug.xcconfig"; path = "Target Support Files/Pods-EasyGrocList/Pods-EasyGrocList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -363,6 +365,7 @@
 				3BB8D66B249C641D006EDFBF /* servercert.der */,
 				3BD6EAD322CB021E0086B502 /* awsconfiguration.json */,
 				3BC9244C2273B4B40001FF62 /* NotesViewController.xib */,
+				E8B43B89263AFC40000785EF /* SubscribeViewController.xib */,
 				DB5079D21B25B74B0094838A /* EasyKchainItemWrapper.h */,
 				DB5079D01B25B72E0094838A /* EasyKchainItemWrapper.m */,
 				DBBA06171AC030BA001E9959 /* EasyGrocList.entitlements */,
@@ -583,6 +586,7 @@
 				DB7BFAFB1C1D936900D68CEE /* NotSelected.png in Resources */,
 				DBBF2BD71737CE310083912F /* delete_button.png in Resources */,
 				DBDCDB1D1BF0551F001A277A /* 802-dog-house-selected@2x.png in Resources */,
+				E8B43B8A263AFC40000785EF /* SubscribeViewController.xib in Resources */,
 				DBDCDB181BF04473001A277A /* 895-user-group-selected@2x.png in Resources */,
 				DB7BFAFA1C1D936900D68CEE /* IsSelected.png in Resources */,
 			);
